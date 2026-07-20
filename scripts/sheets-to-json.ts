@@ -147,7 +147,7 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
   const season = cellText(S, "B6") || "درع إحسان 2026";
   const programDays = Math.trunc(cellNum(S, "B8") ?? 11);
   const scoringDays = Math.trunc(cellNum(S, "B9") ?? 10);
-  const totalWeeks = Math.trunc(cellNum(S, "B75") ?? 4);
+  const totalWeeks = Math.trunc(cellNum(S, "B103") ?? 4);
 
   // ---- Groups (الصفوف 5..4+n) ----
   const groupsRaw = Array.from({ length: n }, (_, i) => {
@@ -204,12 +204,7 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
       completedDays++;
     }
   }
-  let completedWeeks = 0;
-  for (let c = 2; c < 2 + totalWeeks; c++) {
-    const inMub = Array.from({ length: n }, (_, i) => hasNum(MUB, mub0 + i, c)).some(Boolean);
-    const inMoh = Array.from({ length: n }, (_, i) => hasNum(MOH, moh0 + i, c)).some(Boolean);
-    if (inMub || inMoh) completedWeeks++;
-  }
+    const completedWeeks = Math.trunc(cellNum(S, "B104") ?? 0);
 
   // ---- Competition: أربعة جداول بنفس عنوان "المجموعة" ----
   const compHeaders = findRows(CMP, GROUP_HEADER);
