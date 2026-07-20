@@ -36,6 +36,21 @@ jobs:
           echo "$SHEETS_API_URL"
           npm run sync
 
+       - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: تثبيت الحزم
+        run: npm install --no-audit --no-fund
+
+      - name: توليد data.json من Google Sheets
+        env:
+          SHEETS_API_URL: ${{ secrets.SHEETS_API_URL }}
+        run: |
+          echo "API URL:"
+          echo "$SHEETS_API_URL"
+          npm run sync
+
       - name: حفظ ودفع التغييرات (إن وجدت)
         run: |
           git config user.name "github-actions[bot]"
