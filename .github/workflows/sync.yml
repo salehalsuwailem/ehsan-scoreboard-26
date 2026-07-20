@@ -60,9 +60,12 @@ jobs:
             git add src/data/data.json data/history.json
             git commit -m "تحديث النتائج تلقائياً من Google Sheets"
 
-            git pull --rebase origin main
+            git pull --rebase origin main || true
 
-            git push origin HEAD:main
+           git push origin HEAD:main || (
+            git pull --rebase origin main &&
+              git push origin HEAD:main
+                 )
 
             echo "تم دفع تحديث جديد."
           else
