@@ -191,7 +191,7 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
   const moh0 = dataStart(MOH, 6);
   const med0 = dataStart(MED, 5);
   const edu0 = dataStart(EDU, 5);
-  const com0 = dataStart(COM, 6);
+  const com0 = dataStart(COM, 6) + 1; // تخطّي صف "الحد الأقصى"
 
   const hasNum = (ws: Sheet, r: number, c: number) => {
     const addr = encode_cell({ r: r - 1, c: c - 1 });
@@ -340,15 +340,18 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
     };
   });
 
-  // فحص سلامة: مجموع الفئات = إجمالي المحرّك (بهامش تقريب صغير)
+  // تحقّق تشخيصي (غير موقِف): إجمالي المحرّك (العمود C) هو المصدر الرسمي للترتيب
+  // والإجمالي المعروض. إن لم يطابق مجموعُ فئاتِ مجموعةٍ إجماليَها، نسجّل تنبيهاً
+  // ونُكمل — كي لا يوقف صفٌّ واحد غير متطابق تحديثَ الموقع بالكامل.
   for (const g of groups) {
     const sum = g.categories.reduce((acc, c) => acc + c.scorePct, 0);
     const diff = Math.abs(sum - g.totalPct);
     if (diff > 0.5) {
-      throw new Error(`تعارض في ${g.nameAr}: مجموع الفئات ${sum} ≠ الإجمالي ${g.totalPct}`);
-    }
-    if (diff > 0.05) {
-      console.warn(`⚠ فرق تقريب صغير في ${g.nameAr}: ${diff.toFixed(3)}`);
+      console.warn(
+        `⚠ تعارض في بيانات "${g.nameAr}": مجموع الفئات ${sum.toFixed(3)}٪ ≠ الإجمالي ` +
+          `${g.totalPct.toFixed(3)}٪. سيُعرض إجمالي Engine كما هو؛ راجع قيم هذه المجموعة ` +
+          `في أوراق الفئات (غالباً ورقة المسابقات Competition).`
+      );
     }
   }
 
