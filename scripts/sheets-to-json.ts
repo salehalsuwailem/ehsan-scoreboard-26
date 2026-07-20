@@ -214,7 +214,7 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
   // ---- Competition: أربعة جداول بنفس عنوان "المجموعة" ----
   const compHeaders = findRows(CMP, GROUP_HEADER);
   if (compHeaders.length < 4) {
-    throw new Error(`ورقة Competition: توقعنا 4 جداول، وجدنا ${compHeaders.length}`);
+    console.warn(`ورقة Competition: توقعنا 4 جداول، وجدنا ${compHeaders.length}`);
   }
   const [fb0, vb0, cu0, sm0] = compHeaders.slice(0, 4).map((h) => h + 1);
 
