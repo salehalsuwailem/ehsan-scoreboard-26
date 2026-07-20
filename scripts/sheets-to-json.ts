@@ -204,7 +204,7 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
       completedDays++;
     }
   }
-    const completedWeeks = Math.trunc(cellNum(S, "B104") ?? 0);
+    const completedWeeks = Math.trunc(cellNum(S, "B104") ?? 1);
 
   // ---- Competition: أربعة جداول بنفس عنوان "المجموعة" ----
   const compHeaders = findRows(CMP, GROUP_HEADER);
