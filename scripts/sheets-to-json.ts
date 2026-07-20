@@ -191,7 +191,7 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
   const moh0 = dataStart(MOH, 6);
   const med0 = dataStart(MED, 5);
   const edu0 = dataStart(EDU, 5);
-  const com0 = dataStart(COM, 6) + 1; // تخطّي صف "الحد الأقصى"
+  const com0 = dataStart(COM, 6);
 
   const hasNum = (ws: Sheet, r: number, c: number) => {
     const addr = encode_cell({ r: r - 1, c: c - 1 });
