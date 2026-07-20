@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 221 39% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 221 39% 11%;
+    --primary: 211 76% 25%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 202 71% 52%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 28 87% 62%;
+    --accent-foreground: 221 39% 11%;
+    --success: 145 63% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 45 87% 62%;
+    --warning-foreground: 221 39% 11%;
+    --destructive: 0 79% 63%;
+    --destructive-foreground: 0 0% 100%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 9% 46%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 202 71% 52%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-secondary/20;
+  }
+}
+
+@layer utilities {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-10;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
