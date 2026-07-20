@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "sync": "tsx scripts/sync.ts",
-    "build": "tsx scripts/sync.ts && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "sync:build": "tsx scripts/sync.ts && vite build"
   },
   "dependencies": {
     "react": "^18.3.1",

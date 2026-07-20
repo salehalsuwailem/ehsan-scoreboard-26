@@ -64,34 +64,9 @@ export function decode_range(ref: string): {
 /** قيمة خلية من Google Sheets → خلية داخلية، أو null للخلايا الفارغة. */
 function toCell(v: unknown): Cell | null {
   if (v === null || v === undefined || v === "") return null;
-
-  // إذا كانت القيمة رقمًا بالفعل
-  if (typeof v === "number") {
-    return Number.isFinite(v) ? { v, t: "n" } : null;
-  }
-
-  // إذا جاءت القيمة كنص من Google Sheets، حاول تحويلها إلى رقم
-  if (typeof v === "string") {
-    const s = v.trim();
-
-    if (s !== "") {
-      const n = Number(s.replace(/,/g, ""));
-      if (!Number.isNaN(n)) {
-        return { v: n, t: "n" };
-      }
-    }
-
-    return { v: s, t: "s" };
-  }
-
-  if (typeof v === "boolean") {
-    return { v: v ? "TRUE" : "FALSE", t: "s" };
-  }
-
-  if (v instanceof Date) {
-    return { v: v.toISOString(), t: "s" };
-  }
-
+  if (typeof v === "number") return Number.isFinite(v) ? { v, t: "n" } : null;
+  if (typeof v === "boolean") return { v: v ? "TRUE" : "FALSE", t: "s" };
+  if (v instanceof Date) return { v: v.toISOString(), t: "s" };
   return { v: String(v), t: "s" };
 }
 

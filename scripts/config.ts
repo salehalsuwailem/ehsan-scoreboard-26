@@ -4,7 +4,7 @@
  * الطريقة المفضّلة: عرّف متغيّر البيئة SHEETS_API_URL (لا يُحفظ في المستودع).
  * أو ضع الرابط مباشرةً بدل النص النائب أدناه.
  */
-const PLACEHOLDER = "https://script.google.com/macros/s/AKfycbw5ncTjqiWjOb3kQX8bmz-FgHbLnaVFCey0hxr73k2rJ0_33EryC0fByfwIF6siZNaT/exec";
+const PLACEHOLDER = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
 
 export const SHEETS_API_URL = process.env.SHEETS_API_URL?.trim() || PLACEHOLDER;
 
