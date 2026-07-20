@@ -2,7 +2,7 @@
   "meta": {
     "season": "درع إحسان 2026",
     "seasonYear": 2026,
-    "generatedAt": "2026-07-20T11:13:03Z",
+    "generatedAt": "2026-07-20T13:46:45Z",
     "sourceFile": "Google Sheets",
     "programDays": 11,
     "scoringDays": 10,
@@ -80,7 +80,7 @@
       "rank": 8,
       "totalPct": 10.778,
       "medal": null,
-      "movement": -7,
+      "movement": 0,
       "categories": [
         {
           "id": "football",
@@ -250,7 +250,7 @@
       "rank": 1,
       "totalPct": 16.167,
       "medal": 1,
-      "movement": 1,
+      "movement": 0,
       "categories": [
         {
           "id": "football",
@@ -417,10 +417,10 @@
       "captain": "اوس الحداد",
       "deputy": "النائب 3",
       "members": 11,
-      "rank": 4,
+      "rank": 5,
       "totalPct": 13.389,
       "medal": null,
-      "movement": 1,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -590,7 +590,7 @@
       "rank": 2,
       "totalPct": 15.5,
       "medal": 2,
-      "movement": 1,
+      "movement": 0,
       "categories": [
         {
           "id": "football",
@@ -760,7 +760,7 @@
       "rank": 7,
       "totalPct": 10.87,
       "medal": null,
-      "movement": 1,
+      "movement": 0,
       "categories": [
         {
           "id": "football",
@@ -927,8 +927,8 @@
       "captain": "قتيبة الحبشي",
       "deputy": "النائب 6",
       "members": 11,
-      "rank": 5,
-      "totalPct": 13.148,
+      "rank": 4,
+      "totalPct": 14.148,
       "medal": null,
       "movement": 1,
       "categories": [
@@ -991,9 +991,9 @@
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 0,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 0
+          "pct": 25
         },
         {
           "id": "mubakkirun",
@@ -1100,7 +1100,7 @@
       "rank": 3,
       "totalPct": 15.167,
       "medal": 3,
-      "movement": 1,
+      "movement": 0,
       "categories": [
         {
           "id": "football",
@@ -1270,7 +1270,7 @@
       "rank": 6,
       "totalPct": 11.111,
       "medal": null,
-      "movement": 1,
+      "movement": 0,
       "categories": [
         {
           "id": "football",
@@ -1437,7 +1437,7 @@
       "groupId": "G02",
       "nameAr": "عمر بن الخطاب",
       "totalPct": 16.167,
-      "movement": 1,
+      "movement": 0,
       "medal": 1
     },
     {
@@ -1445,7 +1445,7 @@
       "groupId": "G04",
       "nameAr": "علي بن ابي طالب",
       "totalPct": 15.5,
-      "movement": 1,
+      "movement": 0,
       "medal": 2
     },
     {
@@ -1453,23 +1453,23 @@
       "groupId": "G07",
       "nameAr": "سعد بن ابي وقاص",
       "totalPct": 15.167,
-      "movement": 1,
+      "movement": 0,
       "medal": 3
     },
     {
       "rank": 4,
-      "groupId": "G03",
-      "nameAr": "عثمان بن عفان",
-      "totalPct": 13.389,
+      "groupId": "G06",
+      "nameAr": "الزبير بن العوام",
+      "totalPct": 14.148,
       "movement": 1,
       "medal": null
     },
     {
       "rank": 5,
-      "groupId": "G06",
-      "nameAr": "الزبير بن العوام",
-      "totalPct": 13.148,
-      "movement": 1,
+      "groupId": "G03",
+      "nameAr": "عثمان بن عفان",
+      "totalPct": 13.389,
+      "movement": -1,
       "medal": null
     },
     {
@@ -1477,7 +1477,7 @@
       "groupId": "G08",
       "nameAr": "عبدالرحمن بن عوف",
       "totalPct": 11.111,
-      "movement": 1,
+      "movement": 0,
       "medal": null
     },
     {
@@ -1485,7 +1485,7 @@
       "groupId": "G05",
       "nameAr": "طلحة بن عبيد الله",
       "totalPct": 10.87,
-      "movement": 1,
+      "movement": 0,
       "medal": null
     },
     {
@@ -1493,7 +1493,7 @@
       "groupId": "G01",
       "nameAr": "ابو بكر الصديق",
       "totalPct": 10.778,
-      "movement": -7,
+      "movement": 0,
       "medal": null
     }
   ],
@@ -2243,7 +2243,7 @@
     {
       "id": "bestMohsen",
       "titleAr": "أفضل محسن",
-      "groupId": "G01"
+      "groupId": "G06"
     },
     {
       "id": "bestMedia",
@@ -2253,13 +2253,13 @@
     {
       "id": "mostImproved",
       "titleAr": "الأكثر تطوّراً",
-      "groupId": "G02",
+      "groupId": "G06",
       "detail": "+مركز واحد"
     }
   ],
   "stats": {
     "highestPct": 16.167,
-    "averagePct": 13.266,
+    "averagePct": 13.391,
     "lowestPct": 10.778,
     "leaderGroupId": "G02",
     "groupsCount": 8,
@@ -2433,6 +2433,51 @@
           "groupId": "G06",
           "rank": 5,
           "totalPct": 13.148
+        },
+        {
+          "groupId": "G07",
+          "rank": 3,
+          "totalPct": 15.167
+        },
+        {
+          "groupId": "G08",
+          "rank": 6,
+          "totalPct": 11.111
+        }
+      ]
+    },
+    {
+      "syncedAt": "2026-07-20T13:46:45Z",
+      "entries": [
+        {
+          "groupId": "G01",
+          "rank": 8,
+          "totalPct": 10.778
+        },
+        {
+          "groupId": "G02",
+          "rank": 1,
+          "totalPct": 16.167
+        },
+        {
+          "groupId": "G03",
+          "rank": 5,
+          "totalPct": 13.389
+        },
+        {
+          "groupId": "G04",
+          "rank": 2,
+          "totalPct": 15.5
+        },
+        {
+          "groupId": "G05",
+          "rank": 7,
+          "totalPct": 10.87
+        },
+        {
+          "groupId": "G06",
+          "rank": 4,
+          "totalPct": 14.148
         },
         {
           "groupId": "G07",
