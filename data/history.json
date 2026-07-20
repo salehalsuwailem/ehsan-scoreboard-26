@@ -133,5 +133,50 @@
         "totalPct": 11.111
       }
     ]
+  },
+  {
+    "syncedAt": "2026-07-20T10:45:54Z",
+    "entries": [
+      {
+        "groupId": "G01",
+        "rank": 8,
+        "totalPct": 10.778
+      },
+      {
+        "groupId": "G02",
+        "rank": 1,
+        "totalPct": 16.167
+      },
+      {
+        "groupId": "G03",
+        "rank": 4,
+        "totalPct": 13.389
+      },
+      {
+        "groupId": "G04",
+        "rank": 2,
+        "totalPct": 15.5
+      },
+      {
+        "groupId": "G05",
+        "rank": 7,
+        "totalPct": 10.87
+      },
+      {
+        "groupId": "G06",
+        "rank": 5,
+        "totalPct": 13.148
+      },
+      {
+        "groupId": "G07",
+        "rank": 3,
+        "totalPct": 15.167
+      },
+      {
+        "groupId": "G08",
+        "rank": 6,
+        "totalPct": 11.111
+      }
+    ]
   }
 ]
