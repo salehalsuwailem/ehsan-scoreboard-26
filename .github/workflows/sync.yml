@@ -35,13 +35,6 @@ jobs:
           echo "API URL:"
           echo "$SHEETS_API_URL"
           npm run sync
-    
-        env:
-          SHEETS_API_URL: ${{ secrets.SHEETS_API_URL }}
-        run: |
-          echo "API URL:"
-          echo "$SHEETS_API_URL"
-          npm run sync
 
       - name: حفظ ودفع التغييرات (إن وجدت)
         run: |
