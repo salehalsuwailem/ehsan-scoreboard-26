@@ -1,12 +1,12 @@
 name: مزامنة النتائج من Google Sheets
 
 # تحديث تلقائي: يجلب أحدث بيانات Google Sheets، ويولّد data.json،
-# ويدفع أي تغيير — فيُعيد Vercel النشر تلقائياً. لا خطوات يدوية بعد تعديل الشيت.
+# ويدفع أي تغيير — فيُعيد Vercel النشر تلقائياً.
 
 on:
   schedule:
-    - cron: "*/15 * * * *" # كل 15 دقيقة (يمكن تسريعها حتى */5)
-  workflow_dispatch: {} # زر تشغيل يدوي فوري من تبويب Actions
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -18,6 +18,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -28,37 +29,19 @@ jobs:
       - name: تثبيت الحزم
         run: npm install --no-audit --no-fund
 
- group: sheets-sync
-  cancel-in-progress: false
-
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: تثبيت الحزم
-        run: npm install --no-audit --no-fund
-
-    - name: توليد data.json من Google Sheets
-  env:
-    SHEETS_API_URL: ${{ secrets.SHEETS_API_URL }}
-  run: |
-    echo "API URL:"
-    echo "$SHEETS_API_URL"
-    npm run sync
+      - name: توليد data.json من Google Sheets
+        env:
+          SHEETS_API_URL: ${{ secrets.SHEETS_API_URL }}
+        run: |
+          echo "API URL:"
+          echo "$SHEETS_API_URL"
+          npm run sync
 
       - name: حفظ ودفع التغييرات (إن وُجدت)
         run: |
-
-      - name: حفظ ودفع التغييرات (إن وُجدت)
-        run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           if [ -n "$(git status --porcelain src/data/data.json data/history.json)" ]; then
             git add src/data/data.json data/history.json
             git commit -m "تحديث النتائج تلقائياً من Google Sheets"
