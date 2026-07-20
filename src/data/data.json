@@ -2,7 +2,7 @@
   "meta": {
     "season": "درع إحسان 2026",
     "seasonYear": 2026,
-    "generatedAt": "2026-07-20T10:08:02Z",
+    "generatedAt": "2026-07-20T10:40:18Z",
     "sourceFile": "Google Sheets",
     "programDays": 11,
     "scoringDays": 10,
@@ -77,10 +77,10 @@
       "captain": "أسامة بن غيث",
       "deputy": "النائب 1",
       "members": 11,
-      "rank": 8,
-      "totalPct": 10.778,
-      "medal": null,
-      "movement": -7,
+      "rank": 1,
+      "totalPct": 17.778,
+      "medal": 1,
+      "movement": 7,
       "categories": [
         {
           "id": "football",
@@ -99,9 +99,9 @@
         {
           "id": "cultural",
           "nameAr": "المسابقة الثقافية",
-          "scorePct": 0,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 0
+          "pct": 70
         },
         {
           "id": "community",
@@ -192,16 +192,16 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 0,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 0
+          "pct": 70
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 2.778,
+          "scorePct": 9.778,
           "maxPct": 10,
-          "pct": 27.78
+          "pct": 97.78
         },
         {
           "id": "attendance",
@@ -247,10 +247,10 @@
       "captain": "غانم الغانم",
       "deputy": "النائب 2",
       "members": 12,
-      "rank": 1,
+      "rank": 2,
       "totalPct": 16.167,
-      "medal": 1,
-      "movement": 5,
+      "medal": 2,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -417,10 +417,10 @@
       "captain": "اوس الحداد",
       "deputy": "النائب 3",
       "members": 11,
-      "rank": 4,
+      "rank": 5,
       "totalPct": 13.389,
       "medal": null,
-      "movement": 0,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -587,10 +587,10 @@
       "captain": "احمد شميس",
       "deputy": "النائب 4",
       "members": 11,
-      "rank": 2,
+      "rank": 3,
       "totalPct": 15.5,
-      "medal": 2,
-      "movement": 0,
+      "medal": 3,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -757,10 +757,10 @@
       "captain": "عبدالرحمن العبدالجادر",
       "deputy": "النائب 5",
       "members": 11,
-      "rank": 7,
+      "rank": 8,
       "totalPct": 10.87,
       "medal": null,
-      "movement": -4,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -927,10 +927,10 @@
       "captain": "قتيبة الحبشي",
       "deputy": "النائب 6",
       "members": 11,
-      "rank": 5,
+      "rank": 6,
       "totalPct": 13.148,
       "medal": null,
-      "movement": 0,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -1097,10 +1097,10 @@
       "captain": "يوسف الطواله",
       "deputy": "النائب 7",
       "members": 11,
-      "rank": 3,
+      "rank": 4,
       "totalPct": 15.167,
-      "medal": 3,
-      "movement": 5,
+      "medal": null,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -1267,10 +1267,10 @@
       "captain": "احمد الحداد",
       "deputy": "النائب 8",
       "members": 11,
-      "rank": 6,
+      "rank": 7,
       "totalPct": 11.111,
       "medal": null,
-      "movement": 1,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -1434,66 +1434,66 @@
   "ranking": [
     {
       "rank": 1,
-      "groupId": "G02",
-      "nameAr": "عمر بن الخطاب",
-      "totalPct": 16.167,
-      "movement": 5,
+      "groupId": "G01",
+      "nameAr": "ابو بكر الصديق",
+      "totalPct": 17.778,
+      "movement": 7,
       "medal": 1
     },
     {
       "rank": 2,
-      "groupId": "G04",
-      "nameAr": "علي بن ابي طالب",
-      "totalPct": 15.5,
-      "movement": 0,
+      "groupId": "G02",
+      "nameAr": "عمر بن الخطاب",
+      "totalPct": 16.167,
+      "movement": -1,
       "medal": 2
     },
     {
       "rank": 3,
-      "groupId": "G07",
-      "nameAr": "سعد بن ابي وقاص",
-      "totalPct": 15.167,
-      "movement": 5,
+      "groupId": "G04",
+      "nameAr": "علي بن ابي طالب",
+      "totalPct": 15.5,
+      "movement": -1,
       "medal": 3
     },
     {
       "rank": 4,
-      "groupId": "G03",
-      "nameAr": "عثمان بن عفان",
-      "totalPct": 13.389,
-      "movement": 0,
+      "groupId": "G07",
+      "nameAr": "سعد بن ابي وقاص",
+      "totalPct": 15.167,
+      "movement": -1,
       "medal": null
     },
     {
       "rank": 5,
-      "groupId": "G06",
-      "nameAr": "الزبير بن العوام",
-      "totalPct": 13.148,
-      "movement": 0,
+      "groupId": "G03",
+      "nameAr": "عثمان بن عفان",
+      "totalPct": 13.389,
+      "movement": -1,
       "medal": null
     },
     {
       "rank": 6,
-      "groupId": "G08",
-      "nameAr": "عبدالرحمن بن عوف",
-      "totalPct": 11.111,
-      "movement": 1,
+      "groupId": "G06",
+      "nameAr": "الزبير بن العوام",
+      "totalPct": 13.148,
+      "movement": -1,
       "medal": null
     },
     {
       "rank": 7,
-      "groupId": "G05",
-      "nameAr": "طلحة بن عبيد الله",
-      "totalPct": 10.87,
-      "movement": -4,
+      "groupId": "G08",
+      "nameAr": "عبدالرحمن بن عوف",
+      "totalPct": 11.111,
+      "movement": -1,
       "medal": null
     },
     {
       "rank": 8,
-      "groupId": "G01",
-      "nameAr": "ابو بكر الصديق",
-      "totalPct": 10.778,
-      "movement": -7,
+      "groupId": "G05",
+      "nameAr": "طلحة بن عبيد الله",
+      "totalPct": 10.87,
+      "movement": -1,
       "medal": null
     }
   ],
@@ -2024,7 +2024,7 @@
           "groupId": "G01",
           "contests": [
             {
-              "position": 0,
+              "position": 7,
               "points": 0
             },
             {
@@ -2032,9 +2032,9 @@
               "points": 0
             }
           ],
-          "totalPoints": 0,
-          "scorePct": 0,
-          "rankInComp": 3
+          "totalPoints": 7,
+          "scorePct": 7,
+          "rankInComp": 1
         },
         {
           "groupId": "G02",
@@ -2050,7 +2050,7 @@
           ],
           "totalPoints": 5,
           "scorePct": 5,
-          "rankInComp": 1
+          "rankInComp": 2
         },
         {
           "groupId": "G03",
@@ -2066,7 +2066,7 @@
           ],
           "totalPoints": 0,
           "scorePct": 0,
-          "rankInComp": 3
+          "rankInComp": 4
         },
         {
           "groupId": "G04",
@@ -2082,7 +2082,7 @@
           ],
           "totalPoints": 2.5,
           "scorePct": 2.5,
-          "rankInComp": 2
+          "rankInComp": 3
         },
         {
           "groupId": "G05",
@@ -2098,7 +2098,7 @@
           ],
           "totalPoints": 0,
           "scorePct": 0,
-          "rankInComp": 3
+          "rankInComp": 4
         },
         {
           "groupId": "G06",
@@ -2114,7 +2114,7 @@
           ],
           "totalPoints": 0,
           "scorePct": 0,
-          "rankInComp": 3
+          "rankInComp": 4
         },
         {
           "groupId": "G07",
@@ -2130,7 +2130,7 @@
           ],
           "totalPoints": 0,
           "scorePct": 0,
-          "rankInComp": 3
+          "rankInComp": 4
         },
         {
           "groupId": "G08",
@@ -2146,7 +2146,7 @@
           ],
           "totalPoints": 0,
           "scorePct": 0,
-          "rankInComp": 3
+          "rankInComp": 4
         }
       ]
     },
@@ -2155,9 +2155,9 @@
         "groupId": "G01",
         "footballPct": 1.667,
         "volleyballPct": 1.111,
-        "culturalPct": 0,
-        "totalPct": 2.778,
-        "rank": 6
+        "culturalPct": 7,
+        "totalPct": 9.778,
+        "rank": 1
       },
       {
         "groupId": "G02",
@@ -2165,7 +2165,7 @@
         "volleyballPct": 0,
         "culturalPct": 5,
         "totalPct": 6.667,
-        "rank": 1
+        "rank": 2
       },
       {
         "groupId": "G03",
@@ -2173,7 +2173,7 @@
         "volleyballPct": 2.222,
         "culturalPct": 0,
         "totalPct": 3.889,
-        "rank": 4
+        "rank": 5
       },
       {
         "groupId": "G04",
@@ -2181,7 +2181,7 @@
         "volleyballPct": 0,
         "culturalPct": 2.5,
         "totalPct": 5,
-        "rank": 2
+        "rank": 3
       },
       {
         "groupId": "G05",
@@ -2197,7 +2197,7 @@
         "volleyballPct": 1.481,
         "culturalPct": 0,
         "totalPct": 3.148,
-        "rank": 5
+        "rank": 6
       },
       {
         "groupId": "G07",
@@ -2205,7 +2205,7 @@
         "volleyballPct": 3.333,
         "culturalPct": 0,
         "totalPct": 4.167,
-        "rank": 3
+        "rank": 4
       },
       {
         "groupId": "G08",
@@ -2232,13 +2232,13 @@
     {
       "id": "bestCultural",
       "titleAr": "أفضل ثقافي",
-      "groupId": "G02",
-      "detail": "50%"
+      "groupId": "G01",
+      "detail": "70%"
     },
     {
       "id": "bestSports",
       "titleAr": "أفضل رياضي",
-      "groupId": "G02"
+      "groupId": "G01"
     },
     {
       "id": "bestMohsen",
@@ -2253,15 +2253,15 @@
     {
       "id": "mostImproved",
       "titleAr": "الأكثر تطوّراً",
-      "groupId": "G02",
-      "detail": "+5 مراكز"
+      "groupId": "G01",
+      "detail": "+7 مراكز"
     }
   ],
   "stats": {
-    "highestPct": 16.167,
-    "averagePct": 13.266,
-    "lowestPct": 10.778,
-    "leaderGroupId": "G02",
+    "highestPct": 17.778,
+    "averagePct": 14.141,
+    "lowestPct": 10.87,
+    "leaderGroupId": "G01",
     "groupsCount": 8,
     "categoriesCount": 13
   },
@@ -2352,6 +2352,51 @@
         {
           "groupId": "G08",
           "rank": 6,
+          "totalPct": 11.111
+        }
+      ]
+    },
+    {
+      "syncedAt": "2026-07-20T10:40:18Z",
+      "entries": [
+        {
+          "groupId": "G01",
+          "rank": 1,
+          "totalPct": 17.778
+        },
+        {
+          "groupId": "G02",
+          "rank": 2,
+          "totalPct": 16.167
+        },
+        {
+          "groupId": "G03",
+          "rank": 5,
+          "totalPct": 13.389
+        },
+        {
+          "groupId": "G04",
+          "rank": 3,
+          "totalPct": 15.5
+        },
+        {
+          "groupId": "G05",
+          "rank": 8,
+          "totalPct": 10.87
+        },
+        {
+          "groupId": "G06",
+          "rank": 6,
+          "totalPct": 13.148
+        },
+        {
+          "groupId": "G07",
+          "rank": 4,
+          "totalPct": 15.167
+        },
+        {
+          "groupId": "G08",
+          "rank": 7,
           "totalPct": 11.111
         }
       ]
