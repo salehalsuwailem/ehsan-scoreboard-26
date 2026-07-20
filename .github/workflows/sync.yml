@@ -81,24 +81,20 @@ jobs:
           echo "API URL:"
           echo "$SHEETS_API_URL"
           npm run sync
+     - name: حفظ ودفع التغييرات (إن وُجدت)
+  run: |
+    git config user.name "github-actions[bot]"
+    git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: حفظ ودفع التغييرات (إن وُجدت)
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+    if [ -n "$(git status --porcelain src/data/data.json data/history.json)" ]; then
+      git add src/data/data.json data/history.json
+      git commit -m "تحديث النتائج تلقائياً من Google Sheets"
 
-          if [ -n "$(git status --porcelain src/data/data.json data/history.json)" ]; then
-git add src/data/data.json data/history.json
+      git pull --rebase origin main
 
-git commit -m "تحديث النتائج تلقائياً من Google Sheets"
+      git push origin HEAD:main
 
-git pull --rebase origin main
-
-git push origin HEAD:main
-            echo "تم دفع تحديث جديد."
-          else
-            echo "لا تغييرات — النتائج كما هي."
-          fi
-          else
-            echo "لا تغييرات — النتائج كما هي."
-          fi
+      echo "تم دفع تحديث جديد."
+    else
+      echo "لا تغييرات — النتائج كما هي."
+    fi
