@@ -88,9 +88,13 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           if [ -n "$(git status --porcelain src/data/data.json data/history.json)" ]; then
-            git add src/data/data.json data/history.json
-            git commit -m "تحديث النتائج تلقائياً من Google Sheets"
-            git push
+git add src/data/data.json data/history.json
+
+git commit -m "تحديث النتائج تلقائياً من Google Sheets"
+
+git pull --rebase origin main
+
+git push origin HEAD:main
             echo "تم دفع تحديث جديد."
           else
             echo "لا تغييرات — النتائج كما هي."
