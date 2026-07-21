@@ -299,9 +299,9 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
       groupPhoto: pct(cellNum(MED, `E${med0 + i}`)),
       reflections: pct(cellNum(EDU, `C${edu0 + i}`)),
       workshops: pct(cellNum(EDU, `E${edu0 + i}`)),
-      football: football[i].scorePct,
-      volleyball: volleyball[i].scorePct,
-      cultural: cultural[i].scorePct,
+      football: leagueSummary[i].footballPct,
+      volleyball: leagueSummary[i].volleyballPct,
+      cultural: leagueSummary[i].culturalPct,
       community: pct(cellNum(COM, `I${com0 + i}`)),
     };
   }
