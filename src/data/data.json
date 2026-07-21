@@ -2,7 +2,7 @@
   "meta": {
     "season": "درع إحسان 2026",
     "seasonYear": 2026,
-    "generatedAt": "2026-07-21T15:56:05Z",
+    "generatedAt": "2026-07-21T17:12:54Z",
     "sourceFile": "Google Sheets",
     "programDays": 11,
     "scoringDays": 10,
@@ -92,9 +92,9 @@
         {
           "id": "volleyball",
           "nameAr": "كرة الطائرة",
-          "scorePct": 0,
+          "scorePct": 1.111,
           "maxPct": 10,
-          "pct": 0
+          "pct": 11.11
         },
         {
           "id": "cultural",
@@ -432,9 +432,9 @@
         {
           "id": "volleyball",
           "nameAr": "كرة الطائرة",
-          "scorePct": 0,
+          "scorePct": 2.222,
           "maxPct": 10,
-          "pct": 0
+          "pct": 22.22
         },
         {
           "id": "cultural",
@@ -772,9 +772,9 @@
         {
           "id": "volleyball",
           "nameAr": "كرة الطائرة",
-          "scorePct": 0,
+          "scorePct": 0.37,
           "maxPct": 10,
-          "pct": 0
+          "pct": 3.7
         },
         {
           "id": "cultural",
@@ -942,9 +942,9 @@
         {
           "id": "volleyball",
           "nameAr": "كرة الطائرة",
-          "scorePct": 0,
+          "scorePct": 1.481,
           "maxPct": 10,
-          "pct": 0
+          "pct": 14.81
         },
         {
           "id": "cultural",
@@ -1112,9 +1112,9 @@
         {
           "id": "volleyball",
           "nameAr": "كرة الطائرة",
-          "scorePct": 0,
+          "scorePct": 3.333,
           "maxPct": 10,
-          "pct": 0
+          "pct": 33.33
         },
         {
           "id": "cultural",
@@ -1282,9 +1282,9 @@
         {
           "id": "volleyball",
           "nameAr": "كرة الطائرة",
-          "scorePct": 0,
+          "scorePct": 1.111,
           "maxPct": 10,
-          "pct": 0
+          "pct": 11.11
         },
         {
           "id": "cultural",
