@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 218 30% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 218 30% 20%;
+    --primary: 209 58% 33%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 202 66% 52%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 30 86% 61%;
+    --accent-foreground: 24 45% 22%;
+    --success: 145 52% 44%;
+    --success-foreground: 0 0% 100%;
+    --warning: 43 88% 60%;
+    --warning-foreground: 30 45% 22%;
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --muted: 40 26% 95%;
+    --muted-foreground: 220 11% 46%;
+    --border: 38 24% 90%;
+    --input: 38 24% 90%;
+    --ring: 202 66% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-secondary/20;
+  }
+}
+
+@layer utilities {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-10;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
