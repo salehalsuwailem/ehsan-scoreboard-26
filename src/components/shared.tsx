@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { MEDAL_STYLES } from "@/lib/constants";
 import { fmtDateTime, pctState } from "@/lib/format";
 import { ar } from "@/lib/i18n";
+import { timeUntil } from "@/lib/schedule";
 import { cn } from "@/lib/utils";
 import { IconArrowDown, IconArrowUp, IconClock, IconInbox, IconMinus } from "@/components/Icons";
 
@@ -112,6 +113,25 @@ export function LastUpdated({ iso }: { iso: string }) {
     <span className="inline-flex items-center gap-1.5 text-caption text-muted-foreground">
       <IconClock className="h-3.5 w-3.5" />
       {ar.hero.lastUpdate}: {fmtDateTime(iso)}
+    </span>
+  );
+}
+
+/** عدّاد تنازلي حيّ لليوم القادم — يحدّث نفسه كل دقيقة. */
+export function Countdown({ dateIso }: { dateIso: string }) {
+  const [now, setNow] = useState(() => new Date());
+  useEffect(() => {
+    const t = setInterval(() => setNow(new Date()), 60_000);
+    return () => clearInterval(t);
+  }, []);
+  const { days, hours, minutes } = timeUntil(dateIso, now);
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/15 px-3 py-1 text-caption font-semibold text-[#9a5310]">
+      <IconClock className="h-3.5 w-3.5" />
+      {ar.hero.nextDayIn}
+      <span className="tabular">
+        {days} {ar.hero.daysShort} · {hours} {ar.hero.hoursShort} · {minutes} {ar.hero.minutesShort}
+      </span>
     </span>
   );
 }

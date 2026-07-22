@@ -78,8 +78,7 @@ export interface FootballGroup {
 
 export interface VolleyballGroup {
   groupId: string;
-  round1: { w: number; d: number; l: number; points: number };
-  round2Points: number;
+  rounds: FootballRound[];
   totalPoints: number;
   maxPoints: number;
   pct: number;
@@ -87,9 +86,18 @@ export interface VolleyballGroup {
   rankInComp: number;
 }
 
+/** مرحلة داخل مسابقة ثقافية: النقاط المكتسبة وحدّها الأعلى (لاستنتاج فائز/خاسر). */
+export interface CulturalStage {
+  points: number;
+  maxPoints: number;
+}
+
 export interface CulturalGroup {
   groupId: string;
-  contests: { position: number; points: number }[];
+  /** مسابقة ١: مرحلتان — أ (فاميلي فيود، من ٣) و ب (خمّن الصورة، من ٢). */
+  contest1: { stageA: CulturalStage; stageB: CulturalStage };
+  /** مسابقة ٢: الترتيب (١–٨) والنقاط حسب المركز. */
+  contest2: { position: number; points: number };
   totalPoints: number;
   scorePct: number;
   rankInComp: number;

@@ -2,15 +2,17 @@ import { APP_VERSION, SITE_NAME } from "@/lib/constants";
 import { ar } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { Link, usePath } from "@/router";
-import { IconBarChart, IconHome } from "@/components/Icons";
+import { IconBarChart, IconHome, IconUsers } from "@/components/Icons";
 
 const LINKS = [
   { to: "/", label: ar.nav.home, icon: IconHome },
+  { to: "/groups", label: ar.nav.groups, icon: IconUsers },
   { to: "/statistics", label: ar.nav.statistics, icon: IconBarChart },
 ];
 
 function isActive(path: string, to: string): boolean {
-  if (to === "/") return path === "/" || path.startsWith("/group/");
+  if (to === "/") return path === "/";
+  if (to === "/groups") return path === "/groups" || path.startsWith("/group/");
   return path === to;
 }
 
@@ -21,12 +23,8 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur-md">
+      {/* الروابط في جهة البداية (اليمين)، والشعار في جهة النهاية (اليسار). */}
       <div className="container-site flex h-16 items-center justify-between gap-4">
-        <Link to="/" className="flex min-w-0 items-center gap-3" aria-label={SITE_NAME}>
-          <img src="/logo.png" alt="" className="h-9 w-auto" />
-          <span className="truncate font-bold text-primary">{SITE_NAME}</span>
-        </Link>
-
         <nav aria-label="التنقل الرئيسي" className="hidden items-center gap-1 md:flex">
           {LINKS.map((link) => {
             const active = isActive(path, link.to);
@@ -45,6 +43,10 @@ export function Navbar() {
             );
           })}
         </nav>
+
+        <Link to="/" className="flex items-center md:ms-auto" aria-label={SITE_NAME}>
+          <img src="/logo.png" alt={SITE_NAME} className="h-10 w-auto" />
+        </Link>
       </div>
     </header>
   );
@@ -61,7 +63,7 @@ export function BottomNav() {
       className="fixed inset-x-0 bottom-0 z-40 border-t bg-background/95 backdrop-blur-md md:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-3">
         {LINKS.map((link) => {
           const active = isActive(path, link.to);
           const Icon = link.icon;

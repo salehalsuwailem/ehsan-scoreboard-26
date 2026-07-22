@@ -122,6 +122,13 @@ const FB_ROUND_COLS = [
   ["W", "X", "Y", "Z", "AA", "AB", "AC"],
 ] as const;
 
+// كرة الطائرة: ٣ جولات بنفس تخطيط كرة القدم (فوز/تعادل/خسارة/نقاط/أقصى/نسبة/درجة).
+const VB_ROUND_COLS = [
+  ["B", "C", "D", "E", "F", "G", "H"],
+  ["I", "J", "K", "L", "M", "N", "O"],
+  ["P", "Q", "R", "S", "T", "U", "V"],
+] as const;
+
 export function parseWorkbook(wb: Workbook, source: string): SeasonData {
   function sheet(name: string): Sheet {
     const ws = wb.Sheets[name];
@@ -204,12 +211,14 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
       completedDays++;
     }
   }
-    const completedWeeks = Math.trunc(cellNum(S, "B104") ?? 1);
+  // «الأسابيع المكتملة» تُقرأ يدوياً من الخلية B104 في ورقة Settings
+  // (إجمالي الأسابيع من B103). عدّل هاتين الخليتين لتغيير ما يظهر في الموقع.
+  const completedWeeks = Math.trunc(cellNum(S, "B104") ?? 0);
 
   // ---- Competition: أربعة جداول بنفس عنوان "المجموعة" ----
   const compHeaders = findRows(CMP, GROUP_HEADER);
   if (compHeaders.length < 4) {
-    console.warn(`ورقة Competition: توقعنا 4 جداول، وجدنا ${compHeaders.length}`);
+    throw new Error(`ورقة Competition: توقعنا 4 جداول، وجدنا ${compHeaders.length}`);
   }
   const [fb0, vb0, cu0, sm0] = compHeaders.slice(0, 4).map((h) => h + 1);
 
@@ -245,28 +254,34 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
     const rv = vb0 + i;
     volleyball.push({
       groupId,
-      round1: {
-        w: Math.trunc(num(CMP, rv, "B") ?? 0),
-        d: Math.trunc(num(CMP, rv, "C") ?? 0),
-        l: Math.trunc(num(CMP, rv, "D") ?? 0),
-        points: r3(num(CMP, rv, "E") ?? 0),
-      },
-      round2Points: r3(num(CMP, rv, "F") ?? 0),
-      totalPoints: r3(num(CMP, rv, "G") ?? 0),
-      maxPoints: r3(num(CMP, rv, "H") ?? 0),
-      pct: pct(num(CMP, rv, "I")),
-      scorePct: pct(num(CMP, rv, "J")),
+      rounds: VB_ROUND_COLS.map(([cw, cd, cl, cp, cm, cpc, cs]) => ({
+        w: Math.trunc(num(CMP, rv, cw) ?? 0),
+        d: Math.trunc(num(CMP, rv, cd) ?? 0),
+        l: Math.trunc(num(CMP, rv, cl) ?? 0),
+        points: r3(num(CMP, rv, cp) ?? 0),
+        maxPoints: r3(num(CMP, rv, cm) ?? 0),
+        pct: pct(num(CMP, rv, cpc)),
+        scorePct: pct(num(CMP, rv, cs)),
+      })),
+      totalPoints: r3(num(CMP, rv, "AF") ?? 0),
+      maxPoints: r3(num(CMP, rv, "AG") ?? 0),
+      pct: pct(num(CMP, rv, "AH")),
+      scorePct: pct(num(CMP, rv, "AI")),
       rankInComp: 0,
     });
 
     const rc = cu0 + i;
+    const pts = (col: string) => r3(num(CMP, rc, col) ?? 0);
     cultural.push({
       groupId,
-      contests: [
-        { position: Math.trunc(num(CMP, rc, "B") ?? 0), points: r3(num(CMP, rc, "C") ?? 0) },
-        { position: Math.trunc(num(CMP, rc, "D") ?? 0), points: r3(num(CMP, rc, "E") ?? 0) },
-      ],
-      totalPoints: r3(num(CMP, rc, "F") ?? 0),
+      // مسابقة ١: أ = فاميلي فيود (عمود B، من ٣) — ب = خمّن الصورة (عمود C، من ٢)
+      contest1: {
+        stageA: { points: pts("B"), maxPoints: 3 },
+        stageB: { points: pts("C"), maxPoints: 2 },
+      },
+      // مسابقة ٢: الترتيب (عمود D) والنقاط (عمود E)
+      contest2: { position: Math.trunc(num(CMP, rc, "D") ?? 0), points: pts("E") },
+      totalPoints: pts("F"),
       scorePct: pct(num(CMP, rc, "G")),
       rankInComp: 0,
     });
@@ -299,6 +314,9 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
       groupPhoto: pct(cellNum(MED, `E${med0 + i}`)),
       reflections: pct(cellNum(EDU, `C${edu0 + i}`)),
       workshops: pct(cellNum(EDU, `E${edu0 + i}`)),
+      // درجات المسابقات تُقرأ من جدول «خص الدوري التنافسي» — وهو الجدول النهائي
+      // المرتّب المطابق لـ Engine — بدل جداول الإدخال، لأن بنية جداول الإدخال قد
+      // تتغيّر (مثلاً صار جدول كرة الطائرة أربعة أسابيع كجدول كرة القدم).
       football: leagueSummary[i].footballPct,
       volleyball: leagueSummary[i].volleyballPct,
       cultural: leagueSummary[i].culturalPct,
@@ -323,7 +341,20 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
         pct: c.maxPct ? r3((scores[c.id] / c.maxPct) * 100) : 0,
       })),
       components: ENGINE_META.map((c) => {
-        const scorePct = pct(en[c.id as keyof typeof en] as number);
+        // نحسب مكوّنات الرادار من درجات الفئات الصحيحة (لا من أعمدة Engine التي
+        // تغيّر ترتيبها). الدوري من ملخّص الدوري، والباقي بتجميع الفئات المناظرة.
+        const componentScore: Record<string, number> = {
+          league: leagueSummary[i].totalPct,
+          project: scores.community,
+          haraki: scores.haraki,
+          uniform: scores.uniform,
+          attendance: scores.attendance,
+          educational: scores.reflections + scores.workshops,
+          mohsen: scores.mohsen,
+          mubakkirun: scores.mubakkirun,
+          mediaPhoto: scores.media + scores.groupPhoto,
+        };
+        const scorePct = r3(componentScore[c.id] ?? 0);
         return {
           id: c.id,
           nameAr: c.nameAr,
@@ -393,23 +424,8 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
     awards.push({ id, titleAr, groupId, ...(value !== null && value > 0 ? { detail: fmt(value) } : {}) });
   }
 
-  // أفضل إعلام: نفس نمط MAX الذي تستخدمه ورقة Dashboard، على عمود Engine L
-  const bestMediaIdx = engine.reduce(
-    (best, en, i) => (en.mediaPhoto > engine[best].mediaPhoto ? i : best),
-    0
-  );
-  {
-    const groupId = groups[bestMediaIdx].id;
-    const value = catPct(groupId, "media");
-    awards.push({
-      id: "bestMedia",
-      titleAr: "أفضل إعلام",
-      groupId,
-      ...(value !== null && value > 0 ? { detail: fmt(value) } : {}),
-    });
-  }
-
-  // أفضل خواطر / أفضل ورش: MAX على قيم البنود المخزّنة، والتعادل يُحسم بالترتيب العام
+  // أفضل خواطر / أفضل ورش / أفضل إعلام: MAX على قيم البنود المخزّنة (من أوراقها
+  // الأصلية، مستقلة عن ترتيب أعمدة Engine)، والتعادل يُحسم بالترتيب العام.
   const catBest = (id: string, titleAr: string, catId: string) => {
     let winner: Group | null = null;
     let best = 0;
@@ -424,6 +440,7 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
       awards.push({ id, titleAr, groupId: winner.id, detail: fmt(best) });
     }
   };
+  catBest("bestMedia", "أفضل إعلام", "media");
   catBest("bestReflection", "أفضل خواطر تربوية", "reflections");
   catBest("bestWorkshop", "أفضل ورش تدريبية", "workshops");
 
@@ -502,8 +519,8 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
       volleyball: {
         nameAr: "كرة الطائرة",
         weightPct: 10,
-        roundsCount: 2,
-        roundScorePct: 5,
+        roundsCount: 3,
+        roundScorePct: 3.333,
         win: 3,
         draw: 1,
         loss: 0,
@@ -514,7 +531,7 @@ export function parseWorkbook(wb: Workbook, source: string): SeasonData {
         weightPct: 10,
         contestsCount: 2,
         contestScorePct: 5,
-        placePoints: [5, 4, 3, 2],
+        placePoints: [5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5],
         perGroup: cultural,
       },
       leagueSummary,

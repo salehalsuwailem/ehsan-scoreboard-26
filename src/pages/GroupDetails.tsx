@@ -1,3 +1,4 @@
+import type { Group } from "@/types";
 import { data, getGroup } from "@/lib/data";
 import { fmtPct, rankLabel } from "@/lib/format";
 import { ar } from "@/lib/i18n";
@@ -8,36 +9,35 @@ import { GroupCompetitions } from "@/components/competitions";
 import { IconAward, IconHash, IconStar, IconUsers } from "@/components/Icons";
 import { NotFound } from "@/pages/NotFound";
 
-export function GroupDetails({ id }: { id: string }) {
-  const group = getGroup(id);
-  if (!group) return <NotFound title={ar.group.notFound} />;
-
+/** تفاصيل مجموعة واحدة — يُعاد استخدامه في مسار /group ومن صفحة المجموعات. */
+export function GroupDetailView({ group, showHeader = true }: { group: Group; showHeader?: boolean }) {
   const bestCategory = [...group.categories].sort((a, b) => b.pct - a.pct)[0];
 
   return (
     <>
-      {/* الترويسة */}
-      <div className="border-b bg-card">
-        <div className="container-site flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-4">
-            <MedalBadge rank={group.rank} className="h-12 w-12 text-lg" />
-            <div>
-              <h1 className="text-hero text-primary">{group.nameAr}</h1>
-              <p className="text-muted-foreground">
-                {ar.group.captain}: <span className="font-semibold text-foreground">{group.captain}</span>
-                <span className="mx-2 text-border" aria-hidden>
-                  |
-                </span>
-                {ar.group.deputy}: <span className="font-semibold text-foreground">{group.deputy}</span>
-              </p>
+      {showHeader ? (
+        <div className="border-b bg-card">
+          <div className="container-site flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-4">
+              <MedalBadge rank={group.rank} className="h-12 w-12 text-lg" />
+              <div>
+                <h1 className="text-hero text-primary">{group.nameAr}</h1>
+                <p className="text-muted-foreground">
+                  {ar.group.captain}: <span className="font-semibold text-foreground">{group.captain}</span>
+                  <span className="mx-2 text-border" aria-hidden>
+                    |
+                  </span>
+                  {ar.group.deputy}: <span className="font-semibold text-foreground">{group.deputy}</span>
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-caption text-muted-foreground">{ar.ranking.movement}:</span>
+              <MovementBadge movement={group.movement} />
             </div>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-caption text-muted-foreground">{ar.ranking.movement}:</span>
-            <MovementBadge movement={group.movement} />
-          </div>
         </div>
-      </div>
+      ) : null}
 
       <div className="container-site space-y-14 py-10">
         {/* الملخص */}
@@ -93,4 +93,10 @@ export function GroupDetails({ id }: { id: string }) {
       </div>
     </>
   );
+}
+
+export function GroupDetails({ id }: { id: string }) {
+  const group = getGroup(id);
+  if (!group) return <NotFound title={ar.group.notFound} />;
+  return <GroupDetailView group={group} />;
 }

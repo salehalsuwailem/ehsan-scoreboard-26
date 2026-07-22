@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { Link } from "@/router";
 import { Input } from "@/components/ui";
 import { EmptyState, MedalBadge, MovementBadge } from "@/components/shared";
-import { IconSearch } from "@/components/Icons";
+import { IconCrown, IconSearch } from "@/components/Icons";
 
 const HEAD_CELL = "h-11 px-4 text-start align-middle text-caption font-semibold text-muted-foreground";
 
@@ -53,35 +53,43 @@ export function RankingTable({ rows }: { rows: RankingRow[] }) {
               </tr>
             </thead>
             <tbody>
-              {filtered.map((row) => (
-                <tr
-                  key={row.groupId}
-                  className={cn(
-                    "relative border-t transition-colors",
-                    row.medal ? MEDAL_STYLES[row.medal].row : "hover:bg-muted/50"
-                  )}
-                >
-                  <td className="px-4 py-3">
-                    <MedalBadge rank={row.rank} />
-                  </td>
-                  <td className="px-4 py-3 font-semibold">
-                    <Link
-                      to={`/group/${row.groupId}`}
-                      className="text-foreground after:absolute after:inset-0 hover:text-primary focus-visible:outline-none focus-visible:after:rounded-sm focus-visible:after:ring-2 focus-visible:after:ring-inset focus-visible:after:ring-ring"
-                    >
-                      {row.nameAr}
-                    </Link>
-                  </td>
-                  <td className="px-4 py-3 text-center font-bold text-primary tabular">
-                    {fmtPct(row.totalPct)}
-                  </td>
-                  <td className="px-4 py-3">
-                    <span className="flex justify-center">
-                      <MovementBadge movement={row.movement} />
-                    </span>
-                  </td>
-                </tr>
-              ))}
+              {filtered.map((row) => {
+                const isLeader = row.rank === 1;
+                return (
+                  <tr
+                    key={row.groupId}
+                    className={cn(
+                      "relative border-t transition-colors",
+                      row.medal ? MEDAL_STYLES[row.medal].row : "hover:bg-muted/50"
+                    )}
+                  >
+                    <td className="px-4 py-3">
+                      <MedalBadge rank={row.rank} />
+                    </td>
+                    <td className="px-4 py-3 font-semibold">
+                      <span className="flex items-center gap-1.5">
+                        {isLeader ? (
+                          <IconCrown className="h-4 w-4 shrink-0 text-[#c99700]" aria-label="المتصدّر" />
+                        ) : null}
+                        <Link
+                          to={`/group/${row.groupId}`}
+                          className="text-foreground after:absolute after:inset-0 hover:text-primary focus-visible:outline-none focus-visible:after:rounded-sm focus-visible:after:ring-2 focus-visible:after:ring-inset focus-visible:after:ring-ring"
+                        >
+                          {row.nameAr}
+                        </Link>
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-center font-bold text-primary tabular">
+                      {fmtPct(row.totalPct)}
+                    </td>
+                    <td className="px-4 py-3">
+                      <span className="flex justify-center">
+                        <MovementBadge movement={row.movement} />
+                      </span>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

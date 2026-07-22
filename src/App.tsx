@@ -1,5 +1,6 @@
 import { BottomNav, Footer, Navbar } from "@/components/layout";
 import { Home } from "@/pages/Home";
+import { Groups } from "@/pages/Groups";
 import { GroupDetails } from "@/pages/GroupDetails";
 import { Statistics } from "@/pages/Statistics";
 import { NotFound } from "@/pages/NotFound";
@@ -10,6 +11,7 @@ function Routes() {
   const groupId = matchGroup(path);
 
   if (path === "/") return <Home />;
+  if (path === "/groups") return <Groups />;
   if (path === "/statistics") return <Statistics />;
   if (groupId) return <GroupDetails id={groupId} />;
   return <NotFound />;

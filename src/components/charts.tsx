@@ -72,7 +72,11 @@ export function HistoryLineChart({
   series: SeriesDef[];
   height?: number;
 }) {
-  if (history.length < 2) {
+  // نبدأ المسار من أول لقطة بتاريخ ٢١ يوليو فما بعد (نتجاهل اللقطات التجريبية القديمة).
+  const HISTORY_VISIBLE_FROM = "2026-07-21";
+  const visible = history.filter((s) => s.syncedAt >= HISTORY_VISIBLE_FROM);
+
+  if (visible.length < 2) {
     return (
       <EmptyState
         title={ar.empty.chartNeedsHistory}
@@ -82,7 +86,7 @@ export function HistoryLineChart({
     );
   }
 
-  const data = history.map((snapshot) => {
+  const data = visible.map((snapshot) => {
     const point: Record<string, number | string> = { name: fmtDateShort(snapshot.syncedAt) };
     for (const entry of snapshot.entries) point[entry.groupId] = entry.totalPct;
     return point;

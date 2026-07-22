@@ -1,8 +1,9 @@
 import { data, getGroupName, getPodium } from "@/lib/data";
 import { fmtPct } from "@/lib/format";
 import { ar } from "@/lib/i18n";
+import { getProgramProgress } from "@/lib/schedule";
 import { Badge } from "@/components/ui";
-import { LastUpdated, SectionTitle, Wave } from "@/components/shared";
+import { Countdown, LastUpdated, SectionTitle, Wave } from "@/components/shared";
 import { Podium } from "@/components/Podium";
 import { RankingTable } from "@/components/RankingTable";
 import { StatCard } from "@/components/cards";
@@ -12,31 +13,35 @@ import { IconBarChart, IconCrown, IconTrendingDown, IconTrendingUp } from "@/com
 export function Home() {
   const { meta, stats } = data;
   const podium = getPodium();
+  const progress = getProgramProgress();
 
   return (
     <>
       {/* الترويسة */}
       <section className="relative overflow-hidden bg-card">
-        <div className="container-site flex flex-col items-center gap-5 pb-6 pt-10 text-center sm:pt-14">
+        <div className="container-site flex flex-col items-center gap-7 pb-8 pt-12 text-center sm:pt-16 animate-fade-up">
           <img src="/logo.png" alt={ar.siteName} className="w-52 sm:w-64" width={911} height={378} />
-          <div className="space-y-2">
+          <div className="space-y-3">
             <h1 className="text-hero text-primary">{ar.siteName}</h1>
             <p className="text-lg text-muted-foreground">
               {ar.siteTagline} — {ar.seasonLabel}
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2.5">
             <Badge variant="secondary">
-              {ar.hero.day} {meta.completedDays} {ar.hero.of} {meta.programDays}
+              {ar.hero.day} {progress.completedDays} {ar.hero.of} {progress.programDays}
             </Badge>
             <Badge variant="default">
-              {ar.hero.week} {meta.completedWeeks} {ar.hero.of} {meta.totalWeeks}
+              {ar.hero.week} {progress.completedWeeks} {ar.hero.of} {progress.totalWeeks}
             </Badge>
             <Badge variant="success">
-              {ar.hero.completion}: {fmtPct(meta.completionPct)}
+              {ar.hero.completion}: {fmtPct(progress.completionPct)}
             </Badge>
           </div>
-          <LastUpdated iso={meta.generatedAt} />
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 pt-1">
+            {progress.nextDay ? <Countdown dateIso={progress.nextDay.date} /> : null}
+            <LastUpdated iso={meta.generatedAt} />
+          </div>
         </div>
         <Wave />
       </section>
