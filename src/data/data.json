@@ -2,13 +2,13 @@
   "meta": {
     "season": "درع إحسان 2026",
     "seasonYear": 2026,
-    "generatedAt": "2026-07-22T11:42:45Z",
+    "generatedAt": "2026-07-22T12:04:33Z",
     "sourceFile": "Google Sheets",
     "programDays": 11,
     "scoringDays": 10,
     "completedDays": 3,
     "totalWeeks": 4,
-    "completedWeeks": 1,
+    "completedWeeks": 0,
     "completionPct": 30,
     "comment": "حفل ختامي - يوم 11"
   },
@@ -178,58 +178,58 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 2.5,
+          "scorePct": 3.611,
           "maxPct": 30,
-          "pct": 8.333
+          "pct": 12.037
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 1.111,
+          "scorePct": 0,
           "maxPct": 20,
-          "pct": 5.555
+          "pct": 0
         },
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 10,
-          "pct": 0
+          "pct": 20
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 3.611,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 36.11
+          "pct": 30
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 0,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 0
+          "pct": 30
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 2,
+          "scorePct": 0,
           "maxPct": 8,
-          "pct": 25
+          "pct": 0
         },
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 4,
-          "pct": 75
+          "pct": 0
         },
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 4,
-          "pct": 75
+          "pct": 0
         },
         {
           "id": "mediaPhoto",
@@ -348,9 +348,9 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 2.292,
+          "scorePct": 7.292,
           "maxPct": 30,
-          "pct": 7.64
+          "pct": 24.307
         },
         {
           "id": "project",
@@ -362,44 +362,44 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 5,
+          "scorePct": 2.5,
           "maxPct": 10,
-          "pct": 50
+          "pct": 25
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 7.292,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 72.92
+          "pct": 30
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 0,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 0
+          "pct": 30
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 2.5,
+          "scorePct": 0,
           "maxPct": 8,
-          "pct": 31.25
+          "pct": 0
         },
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 4,
-          "pct": 75
+          "pct": 0
         },
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 3,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 75
+          "pct": 25
         },
         {
           "id": "mediaPhoto",
@@ -518,58 +518,58 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 2.083,
+          "scorePct": 4.306,
           "maxPct": 30,
-          "pct": 6.943
+          "pct": 14.353
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 2.222,
+          "scorePct": 0,
           "maxPct": 20,
-          "pct": 11.11
+          "pct": 0
         },
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 0,
+          "scorePct": 2.5,
           "maxPct": 10,
-          "pct": 0
+          "pct": 25
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 4.306,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 43.06
+          "pct": 30
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 0,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 0
+          "pct": 30
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 2.5,
+          "scorePct": 0,
           "maxPct": 8,
-          "pct": 31.25
+          "pct": 0
         },
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 4,
-          "pct": 75
+          "pct": 0
         },
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 3,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 75
+          "pct": 25
         },
         {
           "id": "mediaPhoto",
@@ -688,9 +688,9 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 5,
+          "scorePct": 7.5,
           "maxPct": 30,
-          "pct": 16.667
+          "pct": 25
         },
         {
           "id": "project",
@@ -702,44 +702,44 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 2.5,
+          "scorePct": 4.5,
           "maxPct": 10,
-          "pct": 25
+          "pct": 45
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 7.5,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 75
+          "pct": 30
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 0,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 0
+          "pct": 30
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 4.5,
+          "scorePct": 0,
           "maxPct": 8,
-          "pct": 56.25
+          "pct": 0
         },
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 4,
-          "pct": 75
+          "pct": 0
         },
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 4,
-          "pct": 75
+          "pct": 0
         },
         {
           "id": "mediaPhoto",
@@ -858,58 +858,58 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 1.458,
+          "scorePct": 1.829,
           "maxPct": 30,
-          "pct": 4.86
+          "pct": 6.097
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 0.37,
+          "scorePct": 0,
           "maxPct": 20,
-          "pct": 1.85
+          "pct": 0
         },
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 0,
+          "scorePct": 3.5,
           "maxPct": 10,
-          "pct": 0
+          "pct": 35
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 1.829,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 18.29
+          "pct": 30
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 0,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 0
+          "pct": 30
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 3.5,
+          "scorePct": 0,
           "maxPct": 8,
-          "pct": 43.75
+          "pct": 0
         },
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 4,
-          "pct": 75
+          "pct": 0
         },
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 3,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 75
+          "pct": 25
         },
         {
           "id": "mediaPhoto",
@@ -1028,58 +1028,58 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 3.125,
+          "scorePct": 4.606,
           "maxPct": 30,
-          "pct": 10.417
+          "pct": 15.353
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 1.481,
+          "scorePct": 0,
           "maxPct": 20,
-          "pct": 7.405
+          "pct": 0
         },
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 0,
+          "scorePct": 4,
           "maxPct": 10,
-          "pct": 0
+          "pct": 40
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 4.606,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 46.06
+          "pct": 30
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 0,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 0
+          "pct": 30
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 4,
+          "scorePct": 0,
           "maxPct": 8,
-          "pct": 50
+          "pct": 0
         },
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 3,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 75
+          "pct": 25
         },
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 4,
-          "pct": 75
+          "pct": 0
         },
         {
           "id": "mediaPhoto",
@@ -1198,58 +1198,58 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 2.917,
+          "scorePct": 6.25,
           "maxPct": 30,
-          "pct": 9.723
+          "pct": 20.833
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 3.333,
+          "scorePct": 0,
           "maxPct": 20,
-          "pct": 16.665
+          "pct": 0
         },
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 0,
+          "scorePct": 5,
           "maxPct": 10,
-          "pct": 0
+          "pct": 50
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 6.25,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 62.5
+          "pct": 30
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 0,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 0
+          "pct": 30
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 5,
+          "scorePct": 0,
           "maxPct": 8,
-          "pct": 62.5
+          "pct": 0
         },
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 4,
-          "pct": 75
+          "pct": 0
         },
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 4,
-          "pct": 75
+          "pct": 0
         },
         {
           "id": "mediaPhoto",
@@ -1368,58 +1368,58 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 0,
+          "scorePct": 1.111,
           "maxPct": 30,
-          "pct": 0
+          "pct": 3.703
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 1.111,
+          "scorePct": 0,
           "maxPct": 20,
-          "pct": 5.555
+          "pct": 0
         },
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 0,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 0
+          "pct": 30
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 1.111,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 11.11
+          "pct": 30
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 0,
+          "scorePct": 3,
           "maxPct": 10,
-          "pct": 0
+          "pct": 30
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 8,
-          "pct": 37.5
+          "pct": 0
         },
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 3,
+          "scorePct": 0,
           "maxPct": 4,
-          "pct": 75
+          "pct": 0
         },
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 3,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 75
+          "pct": 25
         },
         {
           "id": "mediaPhoto",
@@ -1880,131 +1880,307 @@
     "volleyball": {
       "nameAr": "كرة الطائرة",
       "weightPct": 10,
-      "roundsCount": 2,
-      "roundScorePct": 5,
+      "roundsCount": 3,
+      "roundScorePct": 3.333,
       "win": 3,
       "draw": 1,
       "loss": 0,
       "perGroup": [
         {
           "groupId": "G01",
-          "round1": {
-            "w": 1,
-            "d": 0,
-            "l": 2,
-            "points": 3
-          },
-          "round2Points": 9,
-          "totalPoints": 0.333,
-          "maxPoints": 0.011,
-          "pct": 0,
-          "scorePct": 0,
-          "rankInComp": 1
+          "rounds": [
+            {
+              "w": 1,
+              "d": 0,
+              "l": 2,
+              "points": 3,
+              "maxPoints": 9,
+              "pct": 33.333,
+              "scorePct": 1.111
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            }
+          ],
+          "totalPoints": 3,
+          "maxPoints": 9,
+          "pct": 33.333,
+          "scorePct": 1.111,
+          "rankInComp": 4
         },
         {
           "groupId": "G02",
-          "round1": {
-            "w": 0,
-            "d": 0,
-            "l": 0,
-            "points": 0
-          },
-          "round2Points": 9,
+          "rounds": [
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 9,
+              "pct": 0,
+              "scorePct": 0
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            }
+          ],
           "totalPoints": 0,
-          "maxPoints": 0,
+          "maxPoints": 9,
           "pct": 0,
           "scorePct": 0,
-          "rankInComp": 1
+          "rankInComp": 7
         },
         {
           "groupId": "G03",
-          "round1": {
-            "w": 2,
-            "d": 0,
-            "l": 1,
-            "points": 6
-          },
-          "round2Points": 9,
-          "totalPoints": 0.667,
-          "maxPoints": 0.022,
-          "pct": 0,
-          "scorePct": 0,
-          "rankInComp": 1
+          "rounds": [
+            {
+              "w": 2,
+              "d": 0,
+              "l": 1,
+              "points": 6,
+              "maxPoints": 9,
+              "pct": 66.667,
+              "scorePct": 2.222
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            }
+          ],
+          "totalPoints": 6,
+          "maxPoints": 9,
+          "pct": 66.667,
+          "scorePct": 2.222,
+          "rankInComp": 2
         },
         {
           "groupId": "G04",
-          "round1": {
-            "w": 0,
-            "d": 0,
-            "l": 0,
-            "points": 0
-          },
-          "round2Points": 9,
+          "rounds": [
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 9,
+              "pct": 0,
+              "scorePct": 0
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            }
+          ],
           "totalPoints": 0,
-          "maxPoints": 0,
+          "maxPoints": 9,
           "pct": 0,
           "scorePct": 0,
-          "rankInComp": 1
+          "rankInComp": 7
         },
         {
           "groupId": "G05",
-          "round1": {
-            "w": 0,
-            "d": 1,
-            "l": 2,
-            "points": 1
-          },
-          "round2Points": 9,
-          "totalPoints": 0.111,
-          "maxPoints": 0.004,
-          "pct": 0,
-          "scorePct": 0,
-          "rankInComp": 1
+          "rounds": [
+            {
+              "w": 0,
+              "d": 1,
+              "l": 2,
+              "points": 1,
+              "maxPoints": 9,
+              "pct": 11.111,
+              "scorePct": 0.37
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            }
+          ],
+          "totalPoints": 1,
+          "maxPoints": 9,
+          "pct": 11.111,
+          "scorePct": 0.37,
+          "rankInComp": 6
         },
         {
           "groupId": "G06",
-          "round1": {
-            "w": 1,
-            "d": 1,
-            "l": 1,
-            "points": 4
-          },
-          "round2Points": 9,
-          "totalPoints": 0.444,
-          "maxPoints": 0.015,
-          "pct": 0,
-          "scorePct": 0,
-          "rankInComp": 1
+          "rounds": [
+            {
+              "w": 1,
+              "d": 1,
+              "l": 1,
+              "points": 4,
+              "maxPoints": 9,
+              "pct": 44.444,
+              "scorePct": 1.481
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            }
+          ],
+          "totalPoints": 4,
+          "maxPoints": 9,
+          "pct": 44.444,
+          "scorePct": 1.481,
+          "rankInComp": 3
         },
         {
           "groupId": "G07",
-          "round1": {
-            "w": 3,
-            "d": 0,
-            "l": 0,
-            "points": 9
-          },
-          "round2Points": 9,
-          "totalPoints": 1,
-          "maxPoints": 0.033,
-          "pct": 0,
-          "scorePct": 0,
+          "rounds": [
+            {
+              "w": 3,
+              "d": 0,
+              "l": 0,
+              "points": 9,
+              "maxPoints": 9,
+              "pct": 100,
+              "scorePct": 3.333
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            }
+          ],
+          "totalPoints": 9,
+          "maxPoints": 9,
+          "pct": 100,
+          "scorePct": 3.333,
           "rankInComp": 1
         },
         {
           "groupId": "G08",
-          "round1": {
-            "w": 1,
-            "d": 0,
-            "l": 2,
-            "points": 3
-          },
-          "round2Points": 9,
-          "totalPoints": 0.333,
-          "maxPoints": 0.011,
-          "pct": 0,
-          "scorePct": 0,
-          "rankInComp": 1
+          "rounds": [
+            {
+              "w": 1,
+              "d": 0,
+              "l": 2,
+              "points": 3,
+              "maxPoints": 9,
+              "pct": 33.333,
+              "scorePct": 1.111
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            },
+            {
+              "w": 0,
+              "d": 0,
+              "l": 0,
+              "points": 0,
+              "maxPoints": 0,
+              "pct": 0,
+              "scorePct": 0
+            }
+          ],
+          "totalPoints": 3,
+          "maxPoints": 9,
+          "pct": 33.333,
+          "scorePct": 1.111,
+          "rankInComp": 4
         }
       ]
     },
@@ -2015,135 +2191,171 @@
       "contestScorePct": 5,
       "placePoints": [
         5,
+        4.5,
         4,
+        3.5,
         3,
-        2
+        2.5,
+        2,
+        1.5
       ],
       "perGroup": [
         {
           "groupId": "G01",
-          "contests": [
-            {
-              "position": 0,
-              "points": 0
+          "contest1": {
+            "stageA": {
+              "points": 0,
+              "maxPoints": 3
             },
-            {
-              "position": 0,
-              "points": 0
+            "stageB": {
+              "points": 0,
+              "maxPoints": 2
             }
-          ],
+          },
+          "contest2": {
+            "position": 0,
+            "points": 0
+          },
           "totalPoints": 0,
           "scorePct": 0,
           "rankInComp": 3
         },
         {
           "groupId": "G02",
-          "contests": [
-            {
-              "position": 3,
-              "points": 2
+          "contest1": {
+            "stageA": {
+              "points": 3,
+              "maxPoints": 3
             },
-            {
-              "position": 0,
-              "points": 0
+            "stageB": {
+              "points": 2,
+              "maxPoints": 2
             }
-          ],
+          },
+          "contest2": {
+            "position": 0,
+            "points": 0
+          },
           "totalPoints": 5,
           "scorePct": 5,
           "rankInComp": 1
         },
         {
           "groupId": "G03",
-          "contests": [
-            {
-              "position": 0,
-              "points": 0
+          "contest1": {
+            "stageA": {
+              "points": 0,
+              "maxPoints": 3
             },
-            {
-              "position": 0,
-              "points": 0
+            "stageB": {
+              "points": 0,
+              "maxPoints": 2
             }
-          ],
+          },
+          "contest2": {
+            "position": 0,
+            "points": 0
+          },
           "totalPoints": 0,
           "scorePct": 0,
           "rankInComp": 3
         },
         {
           "groupId": "G04",
-          "contests": [
-            {
-              "position": 1,
-              "points": 1
+          "contest1": {
+            "stageA": {
+              "points": 1.5,
+              "maxPoints": 3
             },
-            {
-              "position": 0,
-              "points": 0
+            "stageB": {
+              "points": 1,
+              "maxPoints": 2
             }
-          ],
+          },
+          "contest2": {
+            "position": 0,
+            "points": 0
+          },
           "totalPoints": 2.5,
           "scorePct": 2.5,
           "rankInComp": 2
         },
         {
           "groupId": "G05",
-          "contests": [
-            {
-              "position": 0,
-              "points": 0
+          "contest1": {
+            "stageA": {
+              "points": 0,
+              "maxPoints": 3
             },
-            {
-              "position": 0,
-              "points": 0
+            "stageB": {
+              "points": 0,
+              "maxPoints": 2
             }
-          ],
+          },
+          "contest2": {
+            "position": 0,
+            "points": 0
+          },
           "totalPoints": 0,
           "scorePct": 0,
           "rankInComp": 3
         },
         {
           "groupId": "G06",
-          "contests": [
-            {
-              "position": 0,
-              "points": 0
+          "contest1": {
+            "stageA": {
+              "points": 0,
+              "maxPoints": 3
             },
-            {
-              "position": 0,
-              "points": 0
+            "stageB": {
+              "points": 0,
+              "maxPoints": 2
             }
-          ],
+          },
+          "contest2": {
+            "position": 0,
+            "points": 0
+          },
           "totalPoints": 0,
           "scorePct": 0,
           "rankInComp": 3
         },
         {
           "groupId": "G07",
-          "contests": [
-            {
-              "position": 0,
-              "points": 0
+          "contest1": {
+            "stageA": {
+              "points": 0,
+              "maxPoints": 3
             },
-            {
-              "position": 0,
-              "points": 0
+            "stageB": {
+              "points": 0,
+              "maxPoints": 2
             }
-          ],
+          },
+          "contest2": {
+            "position": 0,
+            "points": 0
+          },
           "totalPoints": 0,
           "scorePct": 0,
           "rankInComp": 3
         },
         {
           "groupId": "G08",
-          "contests": [
-            {
-              "position": 0,
-              "points": 0
+          "contest1": {
+            "stageA": {
+              "points": 0,
+              "maxPoints": 3
             },
-            {
-              "position": 0,
-              "points": 0
+            "stageB": {
+              "points": 0,
+              "maxPoints": 2
             }
-          ],
+          },
+          "contest2": {
+            "position": 0,
+            "points": 0
+          },
           "totalPoints": 0,
           "scorePct": 0,
           "rankInComp": 3
@@ -2244,11 +2456,6 @@
       "id": "bestMohsen",
       "titleAr": "أفضل محسن",
       "groupId": "G06"
-    },
-    {
-      "id": "bestMedia",
-      "titleAr": "أفضل إعلام",
-      "groupId": "G01"
     },
     {
       "id": "mostImproved",
