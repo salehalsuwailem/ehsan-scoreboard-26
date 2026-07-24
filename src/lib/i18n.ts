@@ -22,11 +22,6 @@ export const ar = {
     of: "من",
     week: "الأسبوع",
     completion: "نسبة إنجاز البرنامج",
-    nextDayIn: "اليوم القادم بعد",
-    daysShort: "يوم",
-    hoursShort: "س",
-    minutesShort: "د",
-    programEnded: "انتهى البرنامج 🎉",
   },
   home: {
     podiumTitle: "منصة التتويج",
