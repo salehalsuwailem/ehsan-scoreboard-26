@@ -3,7 +3,7 @@ import { fmtPct } from "@/lib/format";
 import { ar } from "@/lib/i18n";
 import { getProgramProgress } from "@/lib/schedule";
 import { Badge } from "@/components/ui";
-import { Countdown, LastUpdated, SectionTitle, Wave } from "@/components/shared";
+import { LastUpdated, SectionTitle, Wave } from "@/components/shared";
 import { Podium } from "@/components/Podium";
 import { RankingTable } from "@/components/RankingTable";
 import { StatCard } from "@/components/cards";
@@ -32,14 +32,13 @@ export function Home() {
               {ar.hero.day} {progress.completedDays} {ar.hero.of} {progress.programDays}
             </Badge>
             <Badge variant="default">
-              {ar.hero.week} {progress.completedWeeks} {ar.hero.of} {progress.totalWeeks}
+              {ar.hero.week} {progress.currentWeek} {ar.hero.of} {progress.totalWeeks}
             </Badge>
             <Badge variant="success">
               {ar.hero.completion}: {fmtPct(progress.completionPct)}
             </Badge>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 pt-1">
-            {progress.nextDay ? <Countdown dateIso={progress.nextDay.date} /> : null}
+          <div className="pt-1">
             <LastUpdated iso={meta.generatedAt} />
           </div>
         </div>
