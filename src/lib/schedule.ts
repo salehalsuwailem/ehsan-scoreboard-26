@@ -4,8 +4,10 @@
  * القواعد المتّفق عليها:
  *  - «اليوم X من N»: X = عدد الأيام التي حان تاريخها (‎<= اليوم‎). بين البرامج
  *    يبقى الرقم على آخر يوم تم.
- *  - «الأسبوع X من W»: الأسبوع يُعدّ مكتملاً بعد أن ينتهي تاريخ آخر يوم فيه
- *    (أي أن تاريخه أصبح < اليوم).
+ *  - «الأسبوع X من W»: رقم الأسبوع يتغيّر فور بداية أول يوم برنامج فيه (لا ينتظر
+ *    انتهاء آخر يوم). أي: X = أكبر رقم أسبوع تاريخ أول يوم منه ‎<= اليوم‎.
+ *    بين الأسابيع (بعد آخر يوم في أسبوع وقبل أول يوم في التالي) يبقى الرقم على
+ *    آخر أسبوع بدأ.
  *  - نسبة الإنجاز = الأيام المكتملة ÷ إجمالي الأيام.
  *
  * كل شيء يُحسب في المتصفّح من التاريخ الحالي، فيتحدّث يومياً بلا حاجة لمزامنة.
@@ -48,7 +50,8 @@ function toDayNumber(iso: string): number {
 export interface ProgramProgress {
   completedDays: number;
   programDays: number;
-  completedWeeks: number;
+  /** رقم الأسبوع الحالي — يبدأ من أول يوم في الأسبوع، لا بعد آخر يوم فيه. */
+  currentWeek: number;
   totalWeeks: number;
   completionPct: number;
   /** أقرب يوم قادم لم يبدأ بعد (للعدّاد التنازلي)، أو null إن انتهى البرنامج. */
@@ -60,15 +63,16 @@ export function getProgramProgress(now: Date = new Date()): ProgramProgress {
 
   const completedDays = SCHEDULE.filter((d) => toDayNumber(d.date) <= today).length;
 
-  // آخر يوم في كل أسبوع
-  const lastDayOfWeek = new Map<number, number>();
+  // أول يوم في كل أسبوع — الأسبوع "يبدأ" (يصبح الحالي) بمجرّد وصول هذا التاريخ.
+  const firstDayOfWeek = new Map<number, number>();
   for (const d of SCHEDULE) {
     const n = toDayNumber(d.date);
-    lastDayOfWeek.set(d.week, Math.max(lastDayOfWeek.get(d.week) ?? 0, n));
+    const existing = firstDayOfWeek.get(d.week);
+    if (existing === undefined || n < existing) firstDayOfWeek.set(d.week, n);
   }
-  let completedWeeks = 0;
-  for (const [, lastN] of lastDayOfWeek) {
-    if (lastN < today) completedWeeks++;
+  let currentWeek = 0;
+  for (const [week, firstN] of firstDayOfWeek) {
+    if (firstN <= today) currentWeek = Math.max(currentWeek, week);
   }
 
   const completionPct = PROGRAM_DAYS ? Math.round((completedDays / PROGRAM_DAYS) * 100) : 0;
@@ -77,21 +81,9 @@ export function getProgramProgress(now: Date = new Date()): ProgramProgress {
   return {
     completedDays,
     programDays: PROGRAM_DAYS,
-    completedWeeks,
+    currentWeek,
     totalWeeks: TOTAL_WEEKS,
     completionPct,
     nextDay,
   };
-}
-
-/** المدة المتبقّية حتى منتصف ليل يوم معيّن، مقسّمة أيام/ساعات/دقائق. */
-export function timeUntil(dateIso: string, now: Date = new Date()) {
-  const [y, m, d] = dateIso.split("-").map(Number);
-  const target = new Date(y, m - 1, d, 0, 0, 0, 0).getTime();
-  const diff = Math.max(0, target - now.getTime());
-  const totalMinutes = Math.floor(diff / 60000);
-  const days = Math.floor(totalMinutes / (60 * 24));
-  const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
-  const minutes = totalMinutes % 60;
-  return { days, hours, minutes, done: diff === 0 };
 }
