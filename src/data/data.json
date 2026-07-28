@@ -2,7 +2,7 @@
   "meta": {
     "season": "درع إحسان 2026",
     "seasonYear": 2026,
-    "generatedAt": "2026-07-28T20:46:21Z",
+    "generatedAt": "2026-07-28T21:04:12Z",
     "sourceFile": "Google Sheets",
     "programDays": 11,
     "scoringDays": 10,
@@ -77,10 +77,10 @@
       "captain": "أسامة بن غيث",
       "deputy": "النائب 1",
       "members": 5,
-      "rank": 6,
-      "totalPct": 19.911,
+      "rank": 7,
+      "totalPct": 20.911,
       "medal": null,
-      "movement": 1,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -127,9 +127,9 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 6,
           "maxPct": 10,
-          "pct": 50
+          "pct": 60
         },
         {
           "id": "reflections",
@@ -199,9 +199,9 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 6,
           "maxPct": 10,
-          "pct": 50
+          "pct": 60
         },
         {
           "id": "attendance",
@@ -248,7 +248,7 @@
       "deputy": "النائب 2",
       "members": 5,
       "rank": 5,
-      "totalPct": 21.792,
+      "totalPct": 23.792,
       "medal": null,
       "movement": 0,
       "categories": [
@@ -290,9 +290,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "uniform",
@@ -376,9 +376,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "educational",
@@ -417,10 +417,10 @@
       "captain": "اوس الحداد",
       "deputy": "النائب 3",
       "members": 5,
-      "rank": 3,
-      "totalPct": 23.806,
-      "medal": 3,
-      "movement": 0,
+      "rank": 4,
+      "totalPct": 26.006,
+      "medal": null,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -460,16 +460,16 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 6.8,
           "maxPct": 10,
-          "pct": 50
+          "pct": 68
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 5.4,
           "maxPct": 10,
-          "pct": 50
+          "pct": 54
         },
         {
           "id": "reflections",
@@ -539,16 +539,16 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 5.4,
           "maxPct": 10,
-          "pct": 50
+          "pct": 54
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 6.8,
           "maxPct": 10,
-          "pct": 50
+          "pct": 68
         },
         {
           "id": "educational",
@@ -587,10 +587,10 @@
       "captain": "احمد شميس",
       "deputy": "النائب 4",
       "members": 5,
-      "rank": 4,
-      "totalPct": 23.111,
-      "medal": null,
-      "movement": 0,
+      "rank": 3,
+      "totalPct": 26.111,
+      "medal": 3,
+      "movement": 1,
       "categories": [
         {
           "id": "football",
@@ -630,16 +630,16 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 6,
           "maxPct": 10,
-          "pct": 50
+          "pct": 60
         },
         {
           "id": "reflections",
@@ -709,16 +709,16 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 6,
           "maxPct": 10,
-          "pct": 50
+          "pct": 60
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "educational",
@@ -757,10 +757,10 @@
       "captain": "عبدالرحمن العبدالجادر",
       "deputy": "النائب 5",
       "members": 5,
-      "rank": 7,
-      "totalPct": 18.181,
+      "rank": 6,
+      "totalPct": 21.181,
       "medal": null,
-      "movement": -1,
+      "movement": 1,
       "categories": [
         {
           "id": "football",
@@ -800,16 +800,16 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 6,
           "maxPct": 10,
-          "pct": 50
+          "pct": 60
         },
         {
           "id": "reflections",
@@ -879,16 +879,16 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 6,
           "maxPct": 10,
-          "pct": 50
+          "pct": 60
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "educational",
@@ -928,7 +928,7 @@
       "deputy": "النائب 6",
       "members": 5,
       "rank": 2,
-      "totalPct": 26.681,
+      "totalPct": 28.681,
       "medal": 2,
       "movement": 0,
       "categories": [
@@ -977,9 +977,9 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "reflections",
@@ -1049,9 +1049,9 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "attendance",
@@ -1098,7 +1098,7 @@
       "deputy": "النائب 7",
       "members": 5,
       "rank": 1,
-      "totalPct": 27.383,
+      "totalPct": 31.383,
       "medal": 1,
       "movement": 0,
       "categories": [
@@ -1140,16 +1140,16 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 4.8,
+          "scorePct": 6.8,
           "maxPct": 10,
-          "pct": 48
+          "pct": 68
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "reflections",
@@ -1219,16 +1219,16 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 4.8,
+          "scorePct": 6.8,
           "maxPct": 10,
-          "pct": 48
+          "pct": 68
         },
         {
           "id": "educational",
@@ -1268,7 +1268,7 @@
       "deputy": "النائب 8",
       "members": 5,
       "rank": 8,
-      "totalPct": 15.111,
+      "totalPct": 19.111,
       "medal": null,
       "movement": 0,
       "categories": [
@@ -1310,16 +1310,16 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "reflections",
@@ -1389,16 +1389,16 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "educational",
@@ -1436,7 +1436,7 @@
       "rank": 1,
       "groupId": "G07",
       "nameAr": "سعد بن ابي وقاص",
-      "totalPct": 27.383,
+      "totalPct": 31.383,
       "movement": 0,
       "medal": 1
     },
@@ -1444,47 +1444,47 @@
       "rank": 2,
       "groupId": "G06",
       "nameAr": "الزبير بن العوام",
-      "totalPct": 26.681,
+      "totalPct": 28.681,
       "movement": 0,
       "medal": 2
     },
     {
       "rank": 3,
-      "groupId": "G03",
-      "nameAr": "عثمان بن عفان",
-      "totalPct": 23.806,
-      "movement": 0,
+      "groupId": "G04",
+      "nameAr": "علي بن ابي طالب",
+      "totalPct": 26.111,
+      "movement": 1,
       "medal": 3
     },
     {
       "rank": 4,
-      "groupId": "G04",
-      "nameAr": "علي بن ابي طالب",
-      "totalPct": 23.111,
-      "movement": 0,
+      "groupId": "G03",
+      "nameAr": "عثمان بن عفان",
+      "totalPct": 26.006,
+      "movement": -1,
       "medal": null
     },
     {
       "rank": 5,
       "groupId": "G02",
       "nameAr": "عمر بن الخطاب",
-      "totalPct": 21.792,
+      "totalPct": 23.792,
       "movement": 0,
       "medal": null
     },
     {
       "rank": 6,
-      "groupId": "G01",
-      "nameAr": "ابو بكر الصديق",
-      "totalPct": 19.911,
+      "groupId": "G05",
+      "nameAr": "طلحة بن عبيد الله",
+      "totalPct": 21.181,
       "movement": 1,
       "medal": null
     },
     {
       "rank": 7,
-      "groupId": "G05",
-      "nameAr": "طلحة بن عبيد الله",
-      "totalPct": 18.181,
+      "groupId": "G01",
+      "nameAr": "ابو بكر الصديق",
+      "totalPct": 20.911,
       "movement": -1,
       "medal": null
     },
@@ -1492,7 +1492,7 @@
       "rank": 8,
       "groupId": "G08",
       "nameAr": "عبدالرحمن بن عوف",
-      "totalPct": 15.111,
+      "totalPct": 19.111,
       "movement": 0,
       "medal": null
     }
@@ -2433,7 +2433,7 @@
     {
       "id": "bestAttendance",
       "titleAr": "أفضل حضور",
-      "groupId": "G06",
+      "groupId": "G02",
       "detail": "70%"
     },
     {
@@ -2460,14 +2460,14 @@
     {
       "id": "mostImproved",
       "titleAr": "الأكثر تطوّراً",
-      "groupId": "G01",
+      "groupId": "G04",
       "detail": "+مركز واحد"
     }
   ],
   "stats": {
-    "highestPct": 27.383,
-    "averagePct": 21.997,
-    "lowestPct": 15.111,
+    "highestPct": 31.383,
+    "averagePct": 24.647,
+    "lowestPct": 19.111,
     "leaderGroupId": "G07",
     "groupsCount": 8,
     "categoriesCount": 13
@@ -2920,6 +2920,51 @@
           "groupId": "G08",
           "rank": 8,
           "totalPct": 15.111
+        }
+      ]
+    },
+    {
+      "syncedAt": "2026-07-28T21:04:12Z",
+      "entries": [
+        {
+          "groupId": "G01",
+          "rank": 7,
+          "totalPct": 20.911
+        },
+        {
+          "groupId": "G02",
+          "rank": 5,
+          "totalPct": 23.792
+        },
+        {
+          "groupId": "G03",
+          "rank": 4,
+          "totalPct": 26.006
+        },
+        {
+          "groupId": "G04",
+          "rank": 3,
+          "totalPct": 26.111
+        },
+        {
+          "groupId": "G05",
+          "rank": 6,
+          "totalPct": 21.181
+        },
+        {
+          "groupId": "G06",
+          "rank": 2,
+          "totalPct": 28.681
+        },
+        {
+          "groupId": "G07",
+          "rank": 1,
+          "totalPct": 31.383
+        },
+        {
+          "groupId": "G08",
+          "rank": 8,
+          "totalPct": 19.111
         }
       ]
     }
