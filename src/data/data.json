@@ -2,14 +2,14 @@
   "meta": {
     "season": "درع إحسان 2026",
     "seasonYear": 2026,
-    "generatedAt": "2026-07-28T20:20:58Z",
+    "generatedAt": "2026-07-28T20:46:21Z",
     "sourceFile": "Google Sheets",
     "programDays": 11,
     "scoringDays": 10,
-    "completedDays": 5,
+    "completedDays": 7,
     "totalWeeks": 4,
     "completedWeeks": 0,
-    "completionPct": 50,
+    "completionPct": 70,
     "comment": "حفل ختامي - يوم 11"
   },
   "weights": [
@@ -76,11 +76,11 @@
       "nameAr": "ابو بكر الصديق",
       "captain": "أسامة بن غيث",
       "deputy": "النائب 1",
-      "members": 7,
-      "rank": 7,
-      "totalPct": 17.968,
+      "members": 5,
+      "rank": 6,
+      "totalPct": 19.911,
       "medal": null,
-      "movement": 0,
+      "movement": 1,
       "categories": [
         {
           "id": "football",
@@ -120,9 +120,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 4.857,
+          "scorePct": 6.8,
           "maxPct": 10,
-          "pct": 48.57
+          "pct": 68
         },
         {
           "id": "uniform",
@@ -206,9 +206,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 4.857,
+          "scorePct": 6.8,
           "maxPct": 10,
-          "pct": 48.57
+          "pct": 68
         },
         {
           "id": "educational",
@@ -246,9 +246,9 @@
       "nameAr": "عمر بن الخطاب",
       "captain": "غانم الغانم",
       "deputy": "النائب 2",
-      "members": 7,
+      "members": 5,
       "rank": 5,
-      "totalPct": 20.792,
+      "totalPct": 21.792,
       "medal": null,
       "movement": 0,
       "categories": [
@@ -318,9 +318,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 1,
+          "scorePct": 2,
           "maxPct": 4,
-          "pct": 25
+          "pct": 50
         },
         {
           "id": "workshops",
@@ -397,9 +397,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 1,
+          "scorePct": 2,
           "maxPct": 4,
-          "pct": 25
+          "pct": 50
         },
         {
           "id": "mediaPhoto",
@@ -416,9 +416,9 @@
       "nameAr": "عثمان بن عفان",
       "captain": "اوس الحداد",
       "deputy": "النائب 3",
-      "members": 7,
+      "members": 5,
       "rank": 3,
-      "totalPct": 22.377,
+      "totalPct": 23.806,
       "medal": 3,
       "movement": 0,
       "categories": [
@@ -460,9 +460,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 4.571,
+          "scorePct": 5,
           "maxPct": 10,
-          "pct": 45.71
+          "pct": 50
         },
         {
           "id": "uniform",
@@ -488,9 +488,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 1,
+          "scorePct": 2,
           "maxPct": 4,
-          "pct": 25
+          "pct": 50
         },
         {
           "id": "workshops",
@@ -546,9 +546,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 4.571,
+          "scorePct": 5,
           "maxPct": 10,
-          "pct": 45.71
+          "pct": 50
         },
         {
           "id": "educational",
@@ -567,9 +567,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 1,
+          "scorePct": 2,
           "maxPct": 4,
-          "pct": 25
+          "pct": 50
         },
         {
           "id": "mediaPhoto",
@@ -586,9 +586,9 @@
       "nameAr": "علي بن ابي طالب",
       "captain": "احمد شميس",
       "deputy": "النائب 4",
-      "members": 7,
+      "members": 5,
       "rank": 4,
-      "totalPct": 21.714,
+      "totalPct": 23.111,
       "medal": null,
       "movement": 0,
       "categories": [
@@ -602,9 +602,9 @@
         {
           "id": "volleyball",
           "nameAr": "كرة الطائرة",
-          "scorePct": 0,
+          "scorePct": 1.111,
           "maxPct": 10,
-          "pct": 0
+          "pct": 11.11
         },
         {
           "id": "cultural",
@@ -630,9 +630,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 4.714,
+          "scorePct": 5,
           "maxPct": 10,
-          "pct": 47.14
+          "pct": 50
         },
         {
           "id": "uniform",
@@ -688,9 +688,9 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 7.5,
+          "scorePct": 8.611,
           "maxPct": 30,
-          "pct": 25
+          "pct": 28.703
         },
         {
           "id": "project",
@@ -716,9 +716,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 4.714,
+          "scorePct": 5,
           "maxPct": 10,
-          "pct": 47.14
+          "pct": 50
         },
         {
           "id": "educational",
@@ -756,11 +756,11 @@
       "nameAr": "طلحة بن عبيد الله",
       "captain": "عبدالرحمن العبدالجادر",
       "deputy": "النائب 5",
-      "members": 7,
-      "rank": 6,
+      "members": 5,
+      "rank": 7,
       "totalPct": 18.181,
       "medal": null,
-      "movement": 0,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -926,9 +926,9 @@
       "nameAr": "الزبير بن العوام",
       "captain": "قتيبة الحبشي",
       "deputy": "النائب 6",
-      "members": 7,
+      "members": 5,
       "rank": 2,
-      "totalPct": 23.681,
+      "totalPct": 26.681,
       "medal": 2,
       "movement": 0,
       "categories": [
@@ -970,9 +970,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "uniform",
@@ -998,9 +998,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 0,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 0
+          "pct": 25
         },
         {
           "id": "workshops",
@@ -1056,9 +1056,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 50
+          "pct": 70
         },
         {
           "id": "educational",
@@ -1077,9 +1077,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 0,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 0
+          "pct": 25
         },
         {
           "id": "mediaPhoto",
@@ -1096,9 +1096,9 @@
       "nameAr": "سعد بن ابي وقاص",
       "captain": "يوسف الطواله",
       "deputy": "النائب 7",
-      "members": 7,
+      "members": 5,
       "rank": 1,
-      "totalPct": 25.012,
+      "totalPct": 27.383,
       "medal": 1,
       "movement": 0,
       "categories": [
@@ -1140,9 +1140,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 4.429,
+          "scorePct": 4.8,
           "maxPct": 10,
-          "pct": 44.29
+          "pct": 48
         },
         {
           "id": "uniform",
@@ -1161,9 +1161,9 @@
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 0,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 0
+          "pct": 25
         },
         {
           "id": "mubakkirun",
@@ -1189,9 +1189,9 @@
         {
           "id": "groupPhoto",
           "nameAr": "الصورة الجماعية",
-          "scorePct": 0,
+          "scorePct": 1,
           "maxPct": 2,
-          "pct": 0
+          "pct": 50
         }
       ],
       "components": [
@@ -1226,9 +1226,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 4.429,
+          "scorePct": 4.8,
           "maxPct": 10,
-          "pct": 44.29
+          "pct": 48
         },
         {
           "id": "educational",
@@ -1240,9 +1240,9 @@
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 0,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 0
+          "pct": 25
         },
         {
           "id": "mubakkirun",
@@ -1254,9 +1254,9 @@
         {
           "id": "mediaPhoto",
           "nameAr": "الإعلام والصورة",
-          "scorePct": 0,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 0
+          "pct": 25
         }
       ]
     },
@@ -1266,7 +1266,7 @@
       "nameAr": "عبدالرحمن بن عوف",
       "captain": "احمد الحداد",
       "deputy": "النائب 8",
-      "members": 7,
+      "members": 5,
       "rank": 8,
       "totalPct": 15.111,
       "medal": null,
@@ -1436,7 +1436,7 @@
       "rank": 1,
       "groupId": "G07",
       "nameAr": "سعد بن ابي وقاص",
-      "totalPct": 25.012,
+      "totalPct": 27.383,
       "movement": 0,
       "medal": 1
     },
@@ -1444,7 +1444,7 @@
       "rank": 2,
       "groupId": "G06",
       "nameAr": "الزبير بن العوام",
-      "totalPct": 23.681,
+      "totalPct": 26.681,
       "movement": 0,
       "medal": 2
     },
@@ -1452,7 +1452,7 @@
       "rank": 3,
       "groupId": "G03",
       "nameAr": "عثمان بن عفان",
-      "totalPct": 22.377,
+      "totalPct": 23.806,
       "movement": 0,
       "medal": 3
     },
@@ -1460,7 +1460,7 @@
       "rank": 4,
       "groupId": "G04",
       "nameAr": "علي بن ابي طالب",
-      "totalPct": 21.714,
+      "totalPct": 23.111,
       "movement": 0,
       "medal": null
     },
@@ -1468,24 +1468,24 @@
       "rank": 5,
       "groupId": "G02",
       "nameAr": "عمر بن الخطاب",
-      "totalPct": 20.792,
+      "totalPct": 21.792,
       "movement": 0,
       "medal": null
     },
     {
       "rank": 6,
-      "groupId": "G05",
-      "nameAr": "طلحة بن عبيد الله",
-      "totalPct": 18.181,
-      "movement": 0,
+      "groupId": "G01",
+      "nameAr": "ابو بكر الصديق",
+      "totalPct": 19.911,
+      "movement": 1,
       "medal": null
     },
     {
       "rank": 7,
-      "groupId": "G01",
-      "nameAr": "ابو بكر الصديق",
-      "totalPct": 17.968,
-      "movement": 0,
+      "groupId": "G05",
+      "nameAr": "طلحة بن عبيد الله",
+      "totalPct": 18.181,
+      "movement": -1,
       "medal": null
     },
     {
@@ -1958,7 +1958,7 @@
           "maxPoints": 18,
           "pct": 0,
           "scorePct": 0,
-          "rankInComp": 7
+          "rankInComp": 8
         },
         {
           "groupId": "G03",
@@ -2010,13 +2010,13 @@
               "scorePct": 0
             },
             {
-              "w": 0,
+              "w": 1,
               "d": 0,
-              "l": 3,
-              "points": 0,
+              "l": 2,
+              "points": 3,
               "maxPoints": 9,
-              "pct": 0,
-              "scorePct": 0
+              "pct": 33.333,
+              "scorePct": 1.111
             },
             {
               "w": 0,
@@ -2028,11 +2028,11 @@
               "scorePct": 0
             }
           ],
-          "totalPoints": 0,
+          "totalPoints": 3,
           "maxPoints": 18,
-          "pct": 0,
-          "scorePct": 0,
-          "rankInComp": 7
+          "pct": 16.667,
+          "scorePct": 1.111,
+          "rankInComp": 5
         },
         {
           "groupId": "G05",
@@ -2390,9 +2390,9 @@
       {
         "groupId": "G04",
         "footballPct": 5,
-        "volleyballPct": 0,
+        "volleyballPct": 1.111,
         "culturalPct": 2.5,
-        "totalPct": 7.5,
+        "totalPct": 8.611,
         "rank": 4
       },
       {
@@ -2433,8 +2433,8 @@
     {
       "id": "bestAttendance",
       "titleAr": "أفضل حضور",
-      "groupId": "G02",
-      "detail": "50%"
+      "groupId": "G06",
+      "detail": "70%"
     },
     {
       "id": "bestProject",
@@ -2456,11 +2456,17 @@
       "id": "bestMohsen",
       "titleAr": "أفضل محسن",
       "groupId": "G06"
+    },
+    {
+      "id": "mostImproved",
+      "titleAr": "الأكثر تطوّراً",
+      "groupId": "G01",
+      "detail": "+مركز واحد"
     }
   ],
   "stats": {
-    "highestPct": 25.012,
-    "averagePct": 20.604,
+    "highestPct": 27.383,
+    "averagePct": 21.997,
     "lowestPct": 15.111,
     "leaderGroupId": "G07",
     "groupsCount": 8,
@@ -2864,6 +2870,51 @@
           "groupId": "G07",
           "rank": 1,
           "totalPct": 25.012
+        },
+        {
+          "groupId": "G08",
+          "rank": 8,
+          "totalPct": 15.111
+        }
+      ]
+    },
+    {
+      "syncedAt": "2026-07-28T20:46:21Z",
+      "entries": [
+        {
+          "groupId": "G01",
+          "rank": 6,
+          "totalPct": 19.911
+        },
+        {
+          "groupId": "G02",
+          "rank": 5,
+          "totalPct": 21.792
+        },
+        {
+          "groupId": "G03",
+          "rank": 3,
+          "totalPct": 23.806
+        },
+        {
+          "groupId": "G04",
+          "rank": 4,
+          "totalPct": 23.111
+        },
+        {
+          "groupId": "G05",
+          "rank": 7,
+          "totalPct": 18.181
+        },
+        {
+          "groupId": "G06",
+          "rank": 2,
+          "totalPct": 26.681
+        },
+        {
+          "groupId": "G07",
+          "rank": 1,
+          "totalPct": 27.383
         },
         {
           "groupId": "G08",
