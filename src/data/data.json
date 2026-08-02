@@ -2,7 +2,7 @@
   "meta": {
     "season": "درع إحسان 2026",
     "seasonYear": 2026,
-    "generatedAt": "2026-08-02T19:46:22Z",
+    "generatedAt": "2026-08-02T20:15:27Z",
     "sourceFile": "Google Sheets",
     "programDays": 11,
     "scoringDays": 10,
@@ -78,7 +78,7 @@
       "deputy": "النائب 1",
       "members": 5,
       "rank": 8,
-      "totalPct": 22.281,
+      "totalPct": 25.781,
       "medal": null,
       "movement": 0,
       "categories": [
@@ -113,9 +113,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 2,
+          "scorePct": 5.5,
           "maxPct": 10,
-          "pct": 20
+          "pct": 55
         },
         {
           "id": "attendance",
@@ -192,9 +192,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 2,
+          "scorePct": 5.5,
           "maxPct": 10,
-          "pct": 20
+          "pct": 55
         },
         {
           "id": "uniform",
@@ -248,7 +248,7 @@
       "deputy": "النائب 2",
       "members": 5,
       "rank": 4,
-      "totalPct": 28.736,
+      "totalPct": 33.736,
       "medal": null,
       "movement": 0,
       "categories": [
@@ -283,9 +283,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 2.5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 25
+          "pct": 70
         },
         {
           "id": "attendance",
@@ -318,9 +318,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 2,
+          "scorePct": 2.5,
           "maxPct": 4,
-          "pct": 50
+          "pct": 62.5
         },
         {
           "id": "workshops",
@@ -362,9 +362,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 2.5,
+          "scorePct": 7,
           "maxPct": 10,
-          "pct": 25
+          "pct": 70
         },
         {
           "id": "uniform",
@@ -397,9 +397,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 2,
+          "scorePct": 2.5,
           "maxPct": 4,
-          "pct": 50
+          "pct": 62.5
         },
         {
           "id": "mediaPhoto",
@@ -417,10 +417,10 @@
       "captain": "اوس الحداد",
       "deputy": "النائب 3",
       "members": 5,
-      "rank": 6,
-      "totalPct": 28.117,
+      "rank": 5,
+      "totalPct": 32.117,
       "medal": null,
-      "movement": 0,
+      "movement": 1,
       "categories": [
         {
           "id": "football",
@@ -453,9 +453,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 2.5,
+          "scorePct": 6.5,
           "maxPct": 10,
-          "pct": 25
+          "pct": 65
         },
         {
           "id": "attendance",
@@ -532,9 +532,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 2.5,
+          "scorePct": 6.5,
           "maxPct": 10,
-          "pct": 25
+          "pct": 65
         },
         {
           "id": "uniform",
@@ -588,7 +588,7 @@
       "deputy": "النائب 4",
       "members": 5,
       "rank": 3,
-      "totalPct": 32.078,
+      "totalPct": 37.078,
       "medal": 3,
       "movement": 0,
       "categories": [
@@ -623,9 +623,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 4.5,
+          "scorePct": 9.5,
           "maxPct": 10,
-          "pct": 45
+          "pct": 95
         },
         {
           "id": "attendance",
@@ -702,9 +702,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 4.5,
+          "scorePct": 9.5,
           "maxPct": 10,
-          "pct": 45
+          "pct": 95
         },
         {
           "id": "uniform",
@@ -757,10 +757,10 @@
       "captain": "عبدالرحمن العبدالجادر",
       "deputy": "النائب 5",
       "members": 5,
-      "rank": 5,
-      "totalPct": 28.68,
+      "rank": 6,
+      "totalPct": 31.68,
       "medal": null,
-      "movement": 0,
+      "movement": -1,
       "categories": [
         {
           "id": "football",
@@ -793,9 +793,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 3.5,
+          "scorePct": 6.5,
           "maxPct": 10,
-          "pct": 35
+          "pct": 65
         },
         {
           "id": "attendance",
@@ -872,9 +872,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 3.5,
+          "scorePct": 6.5,
           "maxPct": 10,
-          "pct": 35
+          "pct": 65
         },
         {
           "id": "uniform",
@@ -928,7 +928,7 @@
       "deputy": "النائب 6",
       "members": 5,
       "rank": 2,
-      "totalPct": 32.94,
+      "totalPct": 38.94,
       "medal": 2,
       "movement": 0,
       "categories": [
@@ -963,23 +963,23 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 4,
+          "scorePct": 8,
           "maxPct": 10,
-          "pct": 40
+          "pct": 80
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 7,
+          "scorePct": 8,
           "maxPct": 10,
-          "pct": 70
+          "pct": 80
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 7,
+          "scorePct": 8,
           "maxPct": 10,
-          "pct": 70
+          "pct": 80
         },
         {
           "id": "reflections",
@@ -1042,23 +1042,23 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 4,
+          "scorePct": 8,
           "maxPct": 10,
-          "pct": 40
+          "pct": 80
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 7,
+          "scorePct": 8,
           "maxPct": 10,
-          "pct": 70
+          "pct": 80
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 7,
+          "scorePct": 8,
           "maxPct": 10,
-          "pct": 70
+          "pct": 80
         },
         {
           "id": "educational",
@@ -1098,7 +1098,7 @@
       "deputy": "النائب 7",
       "members": 5,
       "rank": 1,
-      "totalPct": 38.983,
+      "totalPct": 43.483,
       "medal": 1,
       "movement": 0,
       "categories": [
@@ -1133,9 +1133,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 5,
+          "scorePct": 9.5,
           "maxPct": 10,
-          "pct": 50
+          "pct": 95
         },
         {
           "id": "attendance",
@@ -1212,9 +1212,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 5,
+          "scorePct": 9.5,
           "maxPct": 10,
-          "pct": 50
+          "pct": 95
         },
         {
           "id": "uniform",
@@ -1268,7 +1268,7 @@
       "deputy": "النائب 8",
       "members": 5,
       "rank": 7,
-      "totalPct": 23.889,
+      "totalPct": 27.889,
       "medal": null,
       "movement": 0,
       "categories": [
@@ -1303,9 +1303,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 3,
+          "scorePct": 6.5,
           "maxPct": 10,
-          "pct": 30
+          "pct": 65
         },
         {
           "id": "attendance",
@@ -1338,9 +1338,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 1,
+          "scorePct": 1.5,
           "maxPct": 4,
-          "pct": 25
+          "pct": 37.5
         },
         {
           "id": "workshops",
@@ -1382,9 +1382,9 @@
         {
           "id": "haraki",
           "nameAr": "البرنامج الحركي",
-          "scorePct": 3,
+          "scorePct": 6.5,
           "maxPct": 10,
-          "pct": 30
+          "pct": 65
         },
         {
           "id": "uniform",
@@ -1417,9 +1417,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 1,
+          "scorePct": 1.5,
           "maxPct": 4,
-          "pct": 25
+          "pct": 37.5
         },
         {
           "id": "mediaPhoto",
@@ -1436,7 +1436,7 @@
       "rank": 1,
       "groupId": "G07",
       "nameAr": "سعد بن ابي وقاص",
-      "totalPct": 38.983,
+      "totalPct": 43.483,
       "movement": 0,
       "medal": 1
     },
@@ -1444,7 +1444,7 @@
       "rank": 2,
       "groupId": "G06",
       "nameAr": "الزبير بن العوام",
-      "totalPct": 32.94,
+      "totalPct": 38.94,
       "movement": 0,
       "medal": 2
     },
@@ -1452,7 +1452,7 @@
       "rank": 3,
       "groupId": "G04",
       "nameAr": "علي بن ابي طالب",
-      "totalPct": 32.078,
+      "totalPct": 37.078,
       "movement": 0,
       "medal": 3
     },
@@ -1460,31 +1460,31 @@
       "rank": 4,
       "groupId": "G02",
       "nameAr": "عمر بن الخطاب",
-      "totalPct": 28.736,
+      "totalPct": 33.736,
       "movement": 0,
       "medal": null
     },
     {
       "rank": 5,
-      "groupId": "G05",
-      "nameAr": "طلحة بن عبيد الله",
-      "totalPct": 28.68,
-      "movement": 0,
+      "groupId": "G03",
+      "nameAr": "عثمان بن عفان",
+      "totalPct": 32.117,
+      "movement": 1,
       "medal": null
     },
     {
       "rank": 6,
-      "groupId": "G03",
-      "nameAr": "عثمان بن عفان",
-      "totalPct": 28.117,
-      "movement": 0,
+      "groupId": "G05",
+      "nameAr": "طلحة بن عبيد الله",
+      "totalPct": 31.68,
+      "movement": -1,
       "medal": null
     },
     {
       "rank": 7,
       "groupId": "G08",
       "nameAr": "عبدالرحمن بن عوف",
-      "totalPct": 23.889,
+      "totalPct": 27.889,
       "movement": 0,
       "medal": null
     },
@@ -1492,7 +1492,7 @@
       "rank": 8,
       "groupId": "G01",
       "nameAr": "ابو بكر الصديق",
-      "totalPct": 22.281,
+      "totalPct": 25.781,
       "movement": 0,
       "medal": null
     }
@@ -2456,12 +2456,18 @@
       "id": "bestMohsen",
       "titleAr": "أفضل محسن",
       "groupId": "G06"
+    },
+    {
+      "id": "mostImproved",
+      "titleAr": "الأكثر تطوّراً",
+      "groupId": "G03",
+      "detail": "+مركز واحد"
     }
   ],
   "stats": {
-    "highestPct": 38.983,
-    "averagePct": 29.463,
-    "lowestPct": 22.281,
+    "highestPct": 43.483,
+    "averagePct": 33.838,
+    "lowestPct": 25.781,
     "leaderGroupId": "G07",
     "groupsCount": 8,
     "categoriesCount": 13
@@ -3049,6 +3055,51 @@
           "groupId": "G08",
           "rank": 7,
           "totalPct": 23.889
+        }
+      ]
+    },
+    {
+      "syncedAt": "2026-08-02T20:15:27Z",
+      "entries": [
+        {
+          "groupId": "G01",
+          "rank": 8,
+          "totalPct": 25.781
+        },
+        {
+          "groupId": "G02",
+          "rank": 4,
+          "totalPct": 33.736
+        },
+        {
+          "groupId": "G03",
+          "rank": 5,
+          "totalPct": 32.117
+        },
+        {
+          "groupId": "G04",
+          "rank": 3,
+          "totalPct": 37.078
+        },
+        {
+          "groupId": "G05",
+          "rank": 6,
+          "totalPct": 31.68
+        },
+        {
+          "groupId": "G06",
+          "rank": 2,
+          "totalPct": 38.94
+        },
+        {
+          "groupId": "G07",
+          "rank": 1,
+          "totalPct": 43.483
+        },
+        {
+          "groupId": "G08",
+          "rank": 7,
+          "totalPct": 27.889
         }
       ]
     }
