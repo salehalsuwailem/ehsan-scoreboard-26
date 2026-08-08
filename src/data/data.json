@@ -2,14 +2,14 @@
   "meta": {
     "season": "درع إحسان 2026",
     "seasonYear": 2026,
-    "generatedAt": "2026-08-05T22:58:59Z",
+    "generatedAt": "2026-08-08T18:27:39Z",
     "sourceFile": "Google Sheets",
     "programDays": 11,
     "scoringDays": 10,
-    "completedDays": 9,
+    "completedDays": 10,
     "totalWeeks": 4,
     "completedWeeks": 0,
-    "completionPct": 90,
+    "completionPct": 100,
     "comment": "حفل ختامي - يوم 11"
   },
   "weights": [
@@ -78,37 +78,37 @@
       "deputy": "النائب 1",
       "members": 5,
       "rank": 8,
-      "totalPct": 28.281,
+      "totalPct": 66.481,
       "medal": null,
       "movement": 0,
       "categories": [
         {
           "id": "football",
           "nameAr": "كرة القدم",
-          "scorePct": 2.5,
+          "scorePct": 2.778,
           "maxPct": 10,
-          "pct": 25
+          "pct": 27.78
         },
         {
           "id": "volleyball",
           "nameAr": "كرة الطائرة",
-          "scorePct": 1.481,
+          "scorePct": 3.704,
           "maxPct": 10,
-          "pct": 14.81
+          "pct": 37.04
         },
         {
           "id": "cultural",
           "nameAr": "المسابقة الثقافية",
-          "scorePct": 2.5,
+          "scorePct": 7.5,
           "maxPct": 10,
-          "pct": 25
+          "pct": 75
         },
         {
           "id": "community",
           "nameAr": "اترك أثراً",
-          "scorePct": 0,
+          "scorePct": 18.2,
           "maxPct": 20,
-          "pct": 0
+          "pct": 91
         },
         {
           "id": "haraki",
@@ -120,23 +120,23 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 8.8,
+          "scorePct": 9.8,
           "maxPct": 10,
-          "pct": 88
+          "pct": 98
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 6,
+          "scorePct": 7.8,
           "maxPct": 10,
-          "pct": 60
+          "pct": 78
         },
         {
           "id": "reflections",
           "nameAr": "الخواطر التربوية",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 5,
-          "pct": 0
+          "pct": 40
         },
         {
           "id": "mohsen",
@@ -148,9 +148,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 0.5,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 12.5
+          "pct": 25
         },
         {
           "id": "workshops",
@@ -162,9 +162,9 @@
         {
           "id": "media",
           "nameAr": "الظهور الإعلامي",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 2,
-          "pct": 0
+          "pct": 100
         },
         {
           "id": "groupPhoto",
@@ -178,16 +178,16 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 6.481,
+          "scorePct": 13.981,
           "maxPct": 30,
-          "pct": 21.603
+          "pct": 46.603
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 0,
+          "scorePct": 18.2,
           "maxPct": 20,
-          "pct": 0
+          "pct": 91
         },
         {
           "id": "haraki",
@@ -199,23 +199,23 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 6,
+          "scorePct": 7.8,
           "maxPct": 10,
-          "pct": 60
+          "pct": 78
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 8.8,
+          "scorePct": 9.8,
           "maxPct": 10,
-          "pct": 88
+          "pct": 98
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 8,
-          "pct": 0
+          "pct": 25
         },
         {
           "id": "mohsen",
@@ -227,16 +227,16 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 0.5,
+          "scorePct": 1,
           "maxPct": 4,
-          "pct": 12.5
+          "pct": 25
         },
         {
           "id": "mediaPhoto",
           "nameAr": "الإعلام والصورة",
-          "scorePct": 1,
+          "scorePct": 3,
           "maxPct": 4,
-          "pct": 25
+          "pct": 75
         }
       ]
     },
@@ -248,16 +248,16 @@
       "deputy": "النائب 2",
       "members": 5,
       "rank": 4,
-      "totalPct": 39.203,
+      "totalPct": 76.097,
       "medal": null,
-      "movement": -1,
+      "movement": 0,
       "categories": [
         {
           "id": "football",
           "nameAr": "كرة القدم",
-          "scorePct": 4.792,
+          "scorePct": 6.736,
           "maxPct": 10,
-          "pct": 47.92
+          "pct": 67.36
         },
         {
           "id": "volleyball",
@@ -269,16 +269,16 @@
         {
           "id": "cultural",
           "nameAr": "المسابقة الثقافية",
-          "scorePct": 5,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 50
+          "pct": 100
         },
         {
           "id": "community",
           "nameAr": "اترك أثراً",
-          "scorePct": 0,
+          "scorePct": 17.3,
           "maxPct": 20,
-          "pct": 0
+          "pct": 86.5
         },
         {
           "id": "haraki",
@@ -290,9 +290,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 9,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 90
+          "pct": 100
         },
         {
           "id": "uniform",
@@ -304,9 +304,9 @@
         {
           "id": "reflections",
           "nameAr": "الخواطر التربوية",
-          "scorePct": 0,
+          "scorePct": 2.75,
           "maxPct": 5,
-          "pct": 0
+          "pct": 55
         },
         {
           "id": "mohsen",
@@ -318,9 +318,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 2.5,
+          "scorePct": 3.5,
           "maxPct": 4,
-          "pct": 62.5
+          "pct": 87.5
         },
         {
           "id": "workshops",
@@ -332,9 +332,9 @@
         {
           "id": "media",
           "nameAr": "الظهور الإعلامي",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 2,
-          "pct": 0
+          "pct": 100
         },
         {
           "id": "groupPhoto",
@@ -348,16 +348,16 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 10.903,
+          "scorePct": 17.847,
           "maxPct": 30,
-          "pct": 36.343
+          "pct": 59.49
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 0,
+          "scorePct": 17.3,
           "maxPct": 20,
-          "pct": 0
+          "pct": 86.5
         },
         {
           "id": "haraki",
@@ -376,16 +376,16 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 9,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 90
+          "pct": 100
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 0,
+          "scorePct": 2.75,
           "maxPct": 8,
-          "pct": 0
+          "pct": 34.375
         },
         {
           "id": "mohsen",
@@ -397,16 +397,16 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 2.5,
+          "scorePct": 3.5,
           "maxPct": 4,
-          "pct": 62.5
+          "pct": 87.5
         },
         {
           "id": "mediaPhoto",
           "nameAr": "الإعلام والصورة",
-          "scorePct": 1,
+          "scorePct": 3,
           "maxPct": 4,
-          "pct": 25
+          "pct": 75
         }
       ]
     },
@@ -418,37 +418,37 @@
       "deputy": "النائب 3",
       "members": 5,
       "rank": 6,
-      "totalPct": 33.117,
+      "totalPct": 70.022,
       "medal": null,
       "movement": 0,
       "categories": [
         {
           "id": "football",
           "nameAr": "كرة القدم",
-          "scorePct": 2.083,
+          "scorePct": 2.917,
           "maxPct": 10,
-          "pct": 20.83
+          "pct": 29.17
         },
         {
           "id": "volleyball",
           "nameAr": "كرة الطائرة",
-          "scorePct": 3.333,
+          "scorePct": 5.556,
           "maxPct": 10,
-          "pct": 33.33
+          "pct": 55.56
         },
         {
           "id": "cultural",
           "nameAr": "المسابقة الثقافية",
-          "scorePct": 5,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 50
+          "pct": 100
         },
         {
           "id": "community",
           "nameAr": "اترك أثراً",
-          "scorePct": 0,
+          "scorePct": 17.2,
           "maxPct": 20,
-          "pct": 0
+          "pct": 86
         },
         {
           "id": "haraki",
@@ -460,23 +460,23 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 8.8,
+          "scorePct": 9.8,
           "maxPct": 10,
-          "pct": 88
+          "pct": 98
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5.4,
+          "scorePct": 6.2,
           "maxPct": 10,
-          "pct": 54
+          "pct": 62
         },
         {
           "id": "reflections",
           "nameAr": "الخواطر التربوية",
-          "scorePct": 0,
+          "scorePct": 2.25,
           "maxPct": 5,
-          "pct": 0
+          "pct": 45
         },
         {
           "id": "mohsen",
@@ -488,9 +488,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 2,
+          "scorePct": 2.5,
           "maxPct": 4,
-          "pct": 50
+          "pct": 62.5
         },
         {
           "id": "workshops",
@@ -502,9 +502,9 @@
         {
           "id": "media",
           "nameAr": "الظهور الإعلامي",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 2,
-          "pct": 0
+          "pct": 100
         },
         {
           "id": "groupPhoto",
@@ -518,16 +518,16 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 10.417,
+          "scorePct": 18.472,
           "maxPct": 30,
-          "pct": 34.723
+          "pct": 61.573
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 0,
+          "scorePct": 17.2,
           "maxPct": 20,
-          "pct": 0
+          "pct": 86
         },
         {
           "id": "haraki",
@@ -539,23 +539,23 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 5.4,
+          "scorePct": 6.2,
           "maxPct": 10,
-          "pct": 54
+          "pct": 62
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 8.8,
+          "scorePct": 9.8,
           "maxPct": 10,
-          "pct": 88
+          "pct": 98
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 0,
+          "scorePct": 2.25,
           "maxPct": 8,
-          "pct": 0
+          "pct": 28.125
         },
         {
           "id": "mohsen",
@@ -567,16 +567,16 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 2,
+          "scorePct": 2.5,
           "maxPct": 4,
-          "pct": 50
+          "pct": 62.5
         },
         {
           "id": "mediaPhoto",
           "nameAr": "الإعلام والصورة",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 4,
-          "pct": 0
+          "pct": 50
         }
       ]
     },
@@ -588,37 +588,37 @@
       "deputy": "النائب 4",
       "members": 5,
       "rank": 3,
-      "totalPct": 39.578,
+      "totalPct": 78.622,
       "medal": 3,
-      "movement": 1,
+      "movement": 0,
       "categories": [
         {
           "id": "football",
           "nameAr": "كرة القدم",
-          "scorePct": 5.833,
+          "scorePct": 6.944,
           "maxPct": 10,
-          "pct": 58.33
+          "pct": 69.44
         },
         {
           "id": "volleyball",
           "nameAr": "كرة الطائرة",
-          "scorePct": 4.444,
+          "scorePct": 7.778,
           "maxPct": 10,
-          "pct": 44.44
+          "pct": 77.78
         },
         {
           "id": "cultural",
           "nameAr": "المسابقة الثقافية",
-          "scorePct": 2.5,
+          "scorePct": 7.5,
           "maxPct": 10,
-          "pct": 25
+          "pct": 75
         },
         {
           "id": "community",
           "nameAr": "اترك أثراً",
-          "scorePct": 0,
+          "scorePct": 16.1,
           "maxPct": 20,
-          "pct": 0
+          "pct": 80.5
         },
         {
           "id": "haraki",
@@ -630,23 +630,23 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 9,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 90
+          "pct": 100
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 6.8,
+          "scorePct": 9.2,
           "maxPct": 10,
-          "pct": 68
+          "pct": 92
         },
         {
           "id": "reflections",
           "nameAr": "الخواطر التربوية",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 5,
-          "pct": 0
+          "pct": 40
         },
         {
           "id": "mohsen",
@@ -672,9 +672,9 @@
         {
           "id": "media",
           "nameAr": "الظهور الإعلامي",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 2,
-          "pct": 0
+          "pct": 100
         },
         {
           "id": "groupPhoto",
@@ -688,16 +688,16 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 12.778,
+          "scorePct": 22.222,
           "maxPct": 30,
-          "pct": 42.593
+          "pct": 74.073
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 0,
+          "scorePct": 16.1,
           "maxPct": 20,
-          "pct": 0
+          "pct": 80.5
         },
         {
           "id": "haraki",
@@ -709,23 +709,23 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 6.8,
+          "scorePct": 9.2,
           "maxPct": 10,
-          "pct": 68
+          "pct": 92
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 9,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 90
+          "pct": 100
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 8,
-          "pct": 0
+          "pct": 25
         },
         {
           "id": "mohsen",
@@ -744,9 +744,9 @@
         {
           "id": "mediaPhoto",
           "nameAr": "الإعلام والصورة",
-          "scorePct": 1,
+          "scorePct": 3,
           "maxPct": 4,
-          "pct": 25
+          "pct": 75
         }
       ]
     },
@@ -758,37 +758,37 @@
       "deputy": "النائب 5",
       "members": 5,
       "rank": 5,
-      "totalPct": 35.013,
+      "totalPct": 70.447,
       "medal": null,
       "movement": 0,
       "categories": [
         {
           "id": "football",
           "nameAr": "كرة القدم",
-          "scorePct": 3.125,
+          "scorePct": 4.236,
           "maxPct": 10,
-          "pct": 31.25
+          "pct": 42.36
         },
         {
           "id": "volleyball",
           "nameAr": "كرة الطائرة",
-          "scorePct": 2.222,
+          "scorePct": 4.444,
           "maxPct": 10,
-          "pct": 22.22
+          "pct": 44.44
         },
         {
           "id": "cultural",
           "nameAr": "المسابقة الثقافية",
-          "scorePct": 2.5,
+          "scorePct": 7.5,
           "maxPct": 10,
-          "pct": 25
+          "pct": 75
         },
         {
           "id": "community",
           "nameAr": "اترك أثراً",
-          "scorePct": 0,
+          "scorePct": 17.3,
           "maxPct": 20,
-          "pct": 0
+          "pct": 86.5
         },
         {
           "id": "haraki",
@@ -800,9 +800,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 9,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 90
+          "pct": 100
         },
         {
           "id": "uniform",
@@ -814,16 +814,16 @@
         {
           "id": "reflections",
           "nameAr": "الخواطر التربوية",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 5,
-          "pct": 0
+          "pct": 40
         },
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 1,
+          "scorePct": 2,
           "maxPct": 4,
-          "pct": 25
+          "pct": 50
         },
         {
           "id": "mubakkirun",
@@ -842,9 +842,9 @@
         {
           "id": "media",
           "nameAr": "الظهور الإعلامي",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 2,
-          "pct": 0
+          "pct": 100
         },
         {
           "id": "groupPhoto",
@@ -858,16 +858,16 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 7.847,
+          "scorePct": 16.181,
           "maxPct": 30,
-          "pct": 26.157
+          "pct": 53.937
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 0,
+          "scorePct": 17.3,
           "maxPct": 20,
-          "pct": 0
+          "pct": 86.5
         },
         {
           "id": "haraki",
@@ -886,23 +886,23 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 9,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 90
+          "pct": 100
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 8,
-          "pct": 0
+          "pct": 25
         },
         {
           "id": "mohsen",
           "nameAr": "وسام محسن",
-          "scorePct": 1,
+          "scorePct": 2,
           "maxPct": 4,
-          "pct": 25
+          "pct": 50
         },
         {
           "id": "mubakkirun",
@@ -914,9 +914,9 @@
         {
           "id": "mediaPhoto",
           "nameAr": "الإعلام والصورة",
-          "scorePct": 0.666,
+          "scorePct": 2.666,
           "maxPct": 4,
-          "pct": 16.65
+          "pct": 66.65
         }
       ]
     },
@@ -928,16 +928,16 @@
       "deputy": "النائب 6",
       "members": 5,
       "rank": 2,
-      "totalPct": 40.94,
+      "totalPct": 81.572,
       "medal": 2,
       "movement": 0,
       "categories": [
         {
           "id": "football",
           "nameAr": "كرة القدم",
-          "scorePct": 4.792,
+          "scorePct": 6.458,
           "maxPct": 10,
-          "pct": 47.92
+          "pct": 64.58
         },
         {
           "id": "volleyball",
@@ -949,16 +949,16 @@
         {
           "id": "cultural",
           "nameAr": "المسابقة الثقافية",
-          "scorePct": 0,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 0
+          "pct": 100
         },
         {
           "id": "community",
           "nameAr": "اترك أثراً",
-          "scorePct": 0,
+          "scorePct": 18.9,
           "maxPct": 20,
-          "pct": 0
+          "pct": 94.5
         },
         {
           "id": "haraki",
@@ -970,9 +970,9 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 9,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 90
+          "pct": 100
         },
         {
           "id": "uniform",
@@ -984,9 +984,9 @@
         {
           "id": "reflections",
           "nameAr": "الخواطر التربوية",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 5,
-          "pct": 0
+          "pct": 40
         },
         {
           "id": "mohsen",
@@ -998,9 +998,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 1,
+          "scorePct": 2,
           "maxPct": 4,
-          "pct": 25
+          "pct": 50
         },
         {
           "id": "workshops",
@@ -1012,32 +1012,32 @@
         {
           "id": "media",
           "nameAr": "الظهور الإعلامي",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 2,
-          "pct": 0
+          "pct": 100
         },
         {
           "id": "groupPhoto",
           "nameAr": "الصورة الجماعية",
-          "scorePct": 0,
+          "scorePct": 0.666,
           "maxPct": 2,
-          "pct": 0
+          "pct": 33.3
         }
       ],
       "components": [
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 12.94,
+          "scorePct": 24.606,
           "maxPct": 30,
-          "pct": 43.133
+          "pct": 82.02
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 0,
+          "scorePct": 18.9,
           "maxPct": 20,
-          "pct": 0
+          "pct": 94.5
         },
         {
           "id": "haraki",
@@ -1056,16 +1056,16 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 9,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 90
+          "pct": 100
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 8,
-          "pct": 0
+          "pct": 25
         },
         {
           "id": "mohsen",
@@ -1077,16 +1077,16 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 1,
+          "scorePct": 2,
           "maxPct": 4,
-          "pct": 25
+          "pct": 50
         },
         {
           "id": "mediaPhoto",
           "nameAr": "الإعلام والصورة",
-          "scorePct": 0,
+          "scorePct": 2.666,
           "maxPct": 4,
-          "pct": 0
+          "pct": 66.65
         }
       ]
     },
@@ -1098,16 +1098,16 @@
       "deputy": "النائب 7",
       "members": 5,
       "rank": 1,
-      "totalPct": 46.15,
+      "totalPct": 82.683,
       "medal": 1,
       "movement": 0,
       "categories": [
         {
           "id": "football",
           "nameAr": "كرة القدم",
-          "scorePct": 4.583,
+          "scorePct": 5.417,
           "maxPct": 10,
-          "pct": 45.83
+          "pct": 54.17
         },
         {
           "id": "volleyball",
@@ -1119,16 +1119,16 @@
         {
           "id": "cultural",
           "nameAr": "المسابقة الثقافية",
-          "scorePct": 5,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 50
+          "pct": 100
         },
         {
           "id": "community",
           "nameAr": "اترك أثراً",
-          "scorePct": 0,
+          "scorePct": 16.1,
           "maxPct": 20,
-          "pct": 0
+          "pct": 80.5
         },
         {
           "id": "haraki",
@@ -1140,23 +1140,23 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 8.6,
+          "scorePct": 9.4,
           "maxPct": 10,
-          "pct": 86
+          "pct": 94
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 7.8,
+          "scorePct": 8.8,
           "maxPct": 10,
-          "pct": 78
+          "pct": 88
         },
         {
           "id": "reflections",
           "nameAr": "الخواطر التربوية",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 5,
-          "pct": 0
+          "pct": 40
         },
         {
           "id": "mohsen",
@@ -1168,9 +1168,9 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 2,
+          "scorePct": 3,
           "maxPct": 4,
-          "pct": 50
+          "pct": 75
         },
         {
           "id": "workshops",
@@ -1182,9 +1182,9 @@
         {
           "id": "media",
           "nameAr": "الظهور الإعلامي",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 2,
-          "pct": 0
+          "pct": 100
         },
         {
           "id": "groupPhoto",
@@ -1198,16 +1198,16 @@
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 16.25,
+          "scorePct": 22.083,
           "maxPct": 30,
-          "pct": 54.167
+          "pct": 73.61
         },
         {
           "id": "project",
           "nameAr": "المشروع المجتمعي",
-          "scorePct": 0,
+          "scorePct": 16.1,
           "maxPct": 20,
-          "pct": 0
+          "pct": 80.5
         },
         {
           "id": "haraki",
@@ -1219,23 +1219,23 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 7.8,
+          "scorePct": 8.8,
           "maxPct": 10,
-          "pct": 78
+          "pct": 88
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 8.6,
+          "scorePct": 9.4,
           "maxPct": 10,
-          "pct": 86
+          "pct": 94
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 8,
-          "pct": 0
+          "pct": 25
         },
         {
           "id": "mohsen",
@@ -1247,16 +1247,16 @@
         {
           "id": "mubakkirun",
           "nameAr": "فقرة مبكرون",
-          "scorePct": 2,
+          "scorePct": 3,
           "maxPct": 4,
-          "pct": 50
+          "pct": 75
         },
         {
           "id": "mediaPhoto",
           "nameAr": "الإعلام والصورة",
-          "scorePct": 1,
+          "scorePct": 3,
           "maxPct": 4,
-          "pct": 25
+          "pct": 75
         }
       ]
     },
@@ -1268,16 +1268,16 @@
       "deputy": "النائب 8",
       "members": 5,
       "rank": 7,
-      "totalPct": 30.889,
+      "totalPct": 68.289,
       "medal": null,
       "movement": 0,
       "categories": [
         {
           "id": "football",
           "nameAr": "كرة القدم",
-          "scorePct": 1.667,
+          "scorePct": 3.333,
           "maxPct": 10,
-          "pct": 16.67
+          "pct": 33.33
         },
         {
           "id": "volleyball",
@@ -1289,9 +1289,9 @@
         {
           "id": "cultural",
           "nameAr": "المسابقة الثقافية",
-          "scorePct": 0,
+          "scorePct": 7.5,
           "maxPct": 10,
-          "pct": 0
+          "pct": 75
         },
         {
           "id": "community",
@@ -1310,23 +1310,23 @@
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 9,
+          "scorePct": 9.8,
           "maxPct": 10,
-          "pct": 90
+          "pct": 98
         },
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 9,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 90
+          "pct": 100
         },
         {
           "id": "reflections",
           "nameAr": "الخواطر التربوية",
-          "scorePct": 0,
+          "scorePct": 3,
           "maxPct": 5,
-          "pct": 0
+          "pct": 60
         },
         {
           "id": "mohsen",
@@ -1352,25 +1352,25 @@
         {
           "id": "media",
           "nameAr": "الظهور الإعلامي",
-          "scorePct": 0,
+          "scorePct": 2,
           "maxPct": 2,
-          "pct": 0
+          "pct": 100
         },
         {
           "id": "groupPhoto",
           "nameAr": "الصورة الجماعية",
-          "scorePct": 1,
+          "scorePct": 1.333,
           "maxPct": 2,
-          "pct": 50
+          "pct": 66.65
         }
       ],
       "components": [
         {
           "id": "league",
           "nameAr": "الدوري التنافسي",
-          "scorePct": 3.889,
+          "scorePct": 13.056,
           "maxPct": 30,
-          "pct": 12.963
+          "pct": 43.52
         },
         {
           "id": "project",
@@ -1389,23 +1389,23 @@
         {
           "id": "uniform",
           "nameAr": "الزي الموحد",
-          "scorePct": 9,
+          "scorePct": 10,
           "maxPct": 10,
-          "pct": 90
+          "pct": 100
         },
         {
           "id": "attendance",
           "nameAr": "الحضور",
-          "scorePct": 9,
+          "scorePct": 9.8,
           "maxPct": 10,
-          "pct": 90
+          "pct": 98
         },
         {
           "id": "educational",
           "nameAr": "الخواطر والورش",
-          "scorePct": 0,
+          "scorePct": 3,
           "maxPct": 8,
-          "pct": 0
+          "pct": 37.5
         },
         {
           "id": "mohsen",
@@ -1424,9 +1424,9 @@
         {
           "id": "mediaPhoto",
           "nameAr": "الإعلام والصورة",
-          "scorePct": 1,
+          "scorePct": 3.333,
           "maxPct": 4,
-          "pct": 25
+          "pct": 83.325
         }
       ]
     }
@@ -1436,7 +1436,7 @@
       "rank": 1,
       "groupId": "G07",
       "nameAr": "سعد بن ابي وقاص",
-      "totalPct": 46.15,
+      "totalPct": 82.683,
       "movement": 0,
       "medal": 1
     },
@@ -1444,7 +1444,7 @@
       "rank": 2,
       "groupId": "G06",
       "nameAr": "الزبير بن العوام",
-      "totalPct": 40.94,
+      "totalPct": 81.572,
       "movement": 0,
       "medal": 2
     },
@@ -1452,23 +1452,23 @@
       "rank": 3,
       "groupId": "G04",
       "nameAr": "علي بن ابي طالب",
-      "totalPct": 39.578,
-      "movement": 1,
+      "totalPct": 78.622,
+      "movement": 0,
       "medal": 3
     },
     {
       "rank": 4,
       "groupId": "G02",
       "nameAr": "عمر بن الخطاب",
-      "totalPct": 39.203,
-      "movement": -1,
+      "totalPct": 76.097,
+      "movement": 0,
       "medal": null
     },
     {
       "rank": 5,
       "groupId": "G05",
       "nameAr": "طلحة بن عبيد الله",
-      "totalPct": 35.013,
+      "totalPct": 70.447,
       "movement": 0,
       "medal": null
     },
@@ -1476,7 +1476,7 @@
       "rank": 6,
       "groupId": "G03",
       "nameAr": "عثمان بن عفان",
-      "totalPct": 33.117,
+      "totalPct": 70.022,
       "movement": 0,
       "medal": null
     },
@@ -1484,7 +1484,7 @@
       "rank": 7,
       "groupId": "G08",
       "nameAr": "عبدالرحمن بن عوف",
-      "totalPct": 30.889,
+      "totalPct": 68.289,
       "movement": 0,
       "medal": null
     },
@@ -1492,7 +1492,7 @@
       "rank": 8,
       "groupId": "G01",
       "nameAr": "ابو بكر الصديق",
-      "totalPct": 28.281,
+      "totalPct": 66.481,
       "movement": 0,
       "medal": null
     }
@@ -1539,19 +1539,19 @@
             },
             {
               "w": 0,
-              "d": 0,
-              "l": 0,
-              "points": 0,
-              "maxPoints": 0,
-              "pct": 0,
-              "scorePct": 0
+              "d": 1,
+              "l": 2,
+              "points": 1,
+              "maxPoints": 9,
+              "pct": 11.111,
+              "scorePct": 0.278
             }
           ],
-          "totalPoints": 10,
-          "maxPoints": 30,
-          "pct": 33.333,
-          "scorePct": 2.5,
-          "rankInComp": 6
+          "totalPoints": 11,
+          "maxPoints": 39,
+          "pct": 28.205,
+          "scorePct": 2.778,
+          "rankInComp": 8
         },
         {
           "groupId": "G02",
@@ -1584,19 +1584,19 @@
               "scorePct": 2.5
             },
             {
-              "w": 0,
-              "d": 0,
+              "w": 2,
+              "d": 1,
               "l": 0,
-              "points": 0,
-              "maxPoints": 0,
-              "pct": 0,
-              "scorePct": 0
+              "points": 7,
+              "maxPoints": 9,
+              "pct": 77.778,
+              "scorePct": 1.944
             }
           ],
-          "totalPoints": 18,
-          "maxPoints": 30,
-          "pct": 60,
-          "scorePct": 4.792,
+          "totalPoints": 25,
+          "maxPoints": 39,
+          "pct": 64.103,
+          "scorePct": 6.736,
           "rankInComp": 2
         },
         {
@@ -1630,19 +1630,19 @@
               "scorePct": 0
             },
             {
-              "w": 0,
+              "w": 1,
               "d": 0,
-              "l": 0,
-              "points": 0,
-              "maxPoints": 0,
-              "pct": 0,
-              "scorePct": 0
+              "l": 2,
+              "points": 3,
+              "maxPoints": 9,
+              "pct": 33.333,
+              "scorePct": 0.833
             }
           ],
-          "totalPoints": 8,
-          "maxPoints": 30,
-          "pct": 26.667,
-          "scorePct": 2.083,
+          "totalPoints": 11,
+          "maxPoints": 39,
+          "pct": 28.205,
+          "scorePct": 2.917,
           "rankInComp": 7
         },
         {
@@ -1676,19 +1676,19 @@
               "scorePct": 0.833
             },
             {
-              "w": 0,
-              "d": 0,
-              "l": 0,
-              "points": 0,
-              "maxPoints": 0,
-              "pct": 0,
-              "scorePct": 0
+              "w": 1,
+              "d": 1,
+              "l": 1,
+              "points": 4,
+              "maxPoints": 9,
+              "pct": 44.444,
+              "scorePct": 1.111
             }
           ],
-          "totalPoints": 24,
-          "maxPoints": 30,
-          "pct": 80,
-          "scorePct": 5.833,
+          "totalPoints": 28,
+          "maxPoints": 39,
+          "pct": 71.795,
+          "scorePct": 6.944,
           "rankInComp": 1
         },
         {
@@ -1722,19 +1722,19 @@
               "scorePct": 1.667
             },
             {
-              "w": 0,
-              "d": 0,
-              "l": 0,
-              "points": 0,
-              "maxPoints": 0,
-              "pct": 0,
-              "scorePct": 0
+              "w": 1,
+              "d": 1,
+              "l": 1,
+              "points": 4,
+              "maxPoints": 9,
+              "pct": 44.444,
+              "scorePct": 1.111
             }
           ],
-          "totalPoints": 13,
-          "maxPoints": 30,
-          "pct": 43.333,
-          "scorePct": 3.125,
+          "totalPoints": 17,
+          "maxPoints": 39,
+          "pct": 43.59,
+          "scorePct": 4.236,
           "rankInComp": 5
         },
         {
@@ -1768,20 +1768,20 @@
               "scorePct": 1.667
             },
             {
-              "w": 0,
+              "w": 2,
               "d": 0,
-              "l": 0,
-              "points": 0,
-              "maxPoints": 0,
-              "pct": 0,
-              "scorePct": 0
+              "l": 1,
+              "points": 6,
+              "maxPoints": 9,
+              "pct": 66.667,
+              "scorePct": 1.667
             }
           ],
-          "totalPoints": 19,
-          "maxPoints": 30,
-          "pct": 63.333,
-          "scorePct": 4.792,
-          "rankInComp": 2
+          "totalPoints": 25,
+          "maxPoints": 39,
+          "pct": 64.103,
+          "scorePct": 6.458,
+          "rankInComp": 3
         },
         {
           "groupId": "G07",
@@ -1814,19 +1814,19 @@
               "scorePct": 1.667
             },
             {
-              "w": 0,
+              "w": 1,
               "d": 0,
-              "l": 0,
-              "points": 0,
-              "maxPoints": 0,
-              "pct": 0,
-              "scorePct": 0
+              "l": 2,
+              "points": 3,
+              "maxPoints": 9,
+              "pct": 33.333,
+              "scorePct": 0.833
             }
           ],
-          "totalPoints": 19,
-          "maxPoints": 30,
-          "pct": 63.333,
-          "scorePct": 4.583,
+          "totalPoints": 22,
+          "maxPoints": 39,
+          "pct": 56.41,
+          "scorePct": 5.417,
           "rankInComp": 4
         },
         {
@@ -1860,20 +1860,20 @@
               "scorePct": 1.667
             },
             {
-              "w": 0,
+              "w": 2,
               "d": 0,
-              "l": 0,
-              "points": 0,
-              "maxPoints": 0,
-              "pct": 0,
-              "scorePct": 0
+              "l": 1,
+              "points": 6,
+              "maxPoints": 9,
+              "pct": 66.667,
+              "scorePct": 1.667
             }
           ],
-          "totalPoints": 6,
-          "maxPoints": 30,
-          "pct": 20,
-          "scorePct": 1.667,
-          "rankInComp": 8
+          "totalPoints": 12,
+          "maxPoints": 39,
+          "pct": 30.769,
+          "scorePct": 3.333,
+          "rankInComp": 6
         }
       ]
     },
@@ -1917,11 +1917,11 @@
               "scorePct": 0.37
             }
           ],
-          "totalPoints": 4,
+          "totalPoints": 10,
           "maxPoints": 27,
-          "pct": 14.815,
-          "scorePct": 1.481,
-          "rankInComp": 7
+          "pct": 37.037,
+          "scorePct": 3.704,
+          "rankInComp": 6
         },
         {
           "groupId": "G02",
@@ -1991,10 +1991,10 @@
               "scorePct": 1.111
             }
           ],
-          "totalPoints": 9,
+          "totalPoints": 15,
           "maxPoints": 27,
-          "pct": 33.333,
-          "scorePct": 3.333,
+          "pct": 55.556,
+          "scorePct": 5.556,
           "rankInComp": 4
         },
         {
@@ -2028,11 +2028,11 @@
               "scorePct": 3.333
             }
           ],
-          "totalPoints": 12,
+          "totalPoints": 21,
           "maxPoints": 27,
-          "pct": 44.444,
-          "scorePct": 4.444,
-          "rankInComp": 3
+          "pct": 77.778,
+          "scorePct": 7.778,
+          "rankInComp": 2
         },
         {
           "groupId": "G05",
@@ -2065,10 +2065,10 @@
               "scorePct": 0
             }
           ],
-          "totalPoints": 6,
+          "totalPoints": 12,
           "maxPoints": 27,
-          "pct": 22.222,
-          "scorePct": 2.222,
+          "pct": 44.444,
+          "scorePct": 4.444,
           "rankInComp": 5
         },
         {
@@ -2143,7 +2143,7 @@
           "maxPoints": 27,
           "pct": 66.667,
           "scorePct": 6.667,
-          "rankInComp": 2
+          "rankInComp": 3
         },
         {
           "groupId": "G08",
@@ -2180,7 +2180,7 @@
           "maxPoints": 27,
           "pct": 22.222,
           "scorePct": 2.222,
-          "rankInComp": 5
+          "rankInComp": 7
         }
       ]
     },
@@ -2213,12 +2213,12 @@
             }
           },
           "contest2": {
-            "position": 0,
-            "points": 0
+            "position": 3,
+            "points": 2
           },
-          "totalPoints": 2.5,
-          "scorePct": 2.5,
-          "rankInComp": 4
+          "totalPoints": 7.5,
+          "scorePct": 7.5,
+          "rankInComp": 5
         },
         {
           "groupId": "G02",
@@ -2233,11 +2233,11 @@
             }
           },
           "contest2": {
-            "position": 0,
-            "points": 0
+            "position": 3,
+            "points": 2
           },
-          "totalPoints": 5,
-          "scorePct": 5,
+          "totalPoints": 10,
+          "scorePct": 10,
           "rankInComp": 1
         },
         {
@@ -2253,11 +2253,11 @@
             }
           },
           "contest2": {
-            "position": 0,
-            "points": 0
+            "position": 3,
+            "points": 2
           },
-          "totalPoints": 5,
-          "scorePct": 5,
+          "totalPoints": 10,
+          "scorePct": 10,
           "rankInComp": 1
         },
         {
@@ -2273,12 +2273,12 @@
             }
           },
           "contest2": {
-            "position": 0,
-            "points": 0
+            "position": 3,
+            "points": 2
           },
-          "totalPoints": 2.5,
-          "scorePct": 2.5,
-          "rankInComp": 4
+          "totalPoints": 7.5,
+          "scorePct": 7.5,
+          "rankInComp": 5
         },
         {
           "groupId": "G05",
@@ -2293,32 +2293,32 @@
             }
           },
           "contest2": {
-            "position": 0,
-            "points": 0
+            "position": 3,
+            "points": 2
           },
-          "totalPoints": 2.5,
-          "scorePct": 2.5,
-          "rankInComp": 4
+          "totalPoints": 7.5,
+          "scorePct": 7.5,
+          "rankInComp": 5
         },
         {
           "groupId": "G06",
           "contest1": {
             "stageA": {
-              "points": 0,
+              "points": 3,
               "maxPoints": 3
             },
             "stageB": {
-              "points": 0,
+              "points": 2,
               "maxPoints": 2
             }
           },
           "contest2": {
-            "position": 0,
-            "points": 0
+            "position": 3,
+            "points": 2
           },
-          "totalPoints": 0,
-          "scorePct": 0,
-          "rankInComp": 7
+          "totalPoints": 10,
+          "scorePct": 10,
+          "rankInComp": 1
         },
         {
           "groupId": "G07",
@@ -2333,98 +2333,98 @@
             }
           },
           "contest2": {
-            "position": 0,
-            "points": 0
+            "position": 3,
+            "points": 2
           },
-          "totalPoints": 5,
-          "scorePct": 5,
+          "totalPoints": 10,
+          "scorePct": 10,
           "rankInComp": 1
         },
         {
           "groupId": "G08",
           "contest1": {
             "stageA": {
-              "points": 0,
+              "points": 1.5,
               "maxPoints": 3
             },
             "stageB": {
-              "points": 0,
+              "points": 1,
               "maxPoints": 2
             }
           },
           "contest2": {
-            "position": 0,
-            "points": 0
+            "position": 3,
+            "points": 2
           },
-          "totalPoints": 0,
-          "scorePct": 0,
-          "rankInComp": 7
+          "totalPoints": 7.5,
+          "scorePct": 7.5,
+          "rankInComp": 5
         }
       ]
     },
     "leagueSummary": [
       {
         "groupId": "G01",
-        "footballPct": 2.5,
-        "volleyballPct": 1.481,
-        "culturalPct": 2.5,
-        "totalPct": 6.481,
+        "footballPct": 2.778,
+        "volleyballPct": 3.704,
+        "culturalPct": 7.5,
+        "totalPct": 13.981,
         "rank": 7
       },
       {
         "groupId": "G02",
-        "footballPct": 4.792,
+        "footballPct": 6.736,
         "volleyballPct": 1.111,
-        "culturalPct": 5,
-        "totalPct": 10.903,
-        "rank": 4
-      },
-      {
-        "groupId": "G03",
-        "footballPct": 2.083,
-        "volleyballPct": 3.333,
-        "culturalPct": 5,
-        "totalPct": 10.417,
+        "culturalPct": 10,
+        "totalPct": 17.847,
         "rank": 5
       },
       {
+        "groupId": "G03",
+        "footballPct": 2.917,
+        "volleyballPct": 5.556,
+        "culturalPct": 10,
+        "totalPct": 18.472,
+        "rank": 4
+      },
+      {
         "groupId": "G04",
-        "footballPct": 5.833,
-        "volleyballPct": 4.444,
-        "culturalPct": 2.5,
-        "totalPct": 12.778,
-        "rank": 3
+        "footballPct": 6.944,
+        "volleyballPct": 7.778,
+        "culturalPct": 7.5,
+        "totalPct": 22.222,
+        "rank": 2
       },
       {
         "groupId": "G05",
-        "footballPct": 3.125,
-        "volleyballPct": 2.222,
-        "culturalPct": 2.5,
-        "totalPct": 7.847,
+        "footballPct": 4.236,
+        "volleyballPct": 4.444,
+        "culturalPct": 7.5,
+        "totalPct": 16.181,
         "rank": 6
       },
       {
         "groupId": "G06",
-        "footballPct": 4.792,
+        "footballPct": 6.458,
         "volleyballPct": 8.148,
-        "culturalPct": 0,
-        "totalPct": 12.94,
-        "rank": 2
-      },
-      {
-        "groupId": "G07",
-        "footballPct": 4.583,
-        "volleyballPct": 6.667,
-        "culturalPct": 5,
-        "totalPct": 16.25,
+        "culturalPct": 10,
+        "totalPct": 24.606,
         "rank": 1
       },
       {
+        "groupId": "G07",
+        "footballPct": 5.417,
+        "volleyballPct": 6.667,
+        "culturalPct": 10,
+        "totalPct": 22.083,
+        "rank": 3
+      },
+      {
         "groupId": "G08",
-        "footballPct": 1.667,
+        "footballPct": 3.333,
         "volleyballPct": 2.222,
-        "culturalPct": 0,
-        "totalPct": 3.889,
+        "culturalPct": 7.5,
+        "totalPct": 13.056,
         "rank": 8
       }
     ]
@@ -2434,23 +2434,24 @@
       "id": "bestAttendance",
       "titleAr": "أفضل حضور",
       "groupId": "G02",
-      "detail": "90%"
+      "detail": "100%"
     },
     {
       "id": "bestProject",
       "titleAr": "أفضل مشروع",
-      "groupId": "G01"
+      "groupId": "G07",
+      "detail": "80.5%"
     },
     {
       "id": "bestCultural",
       "titleAr": "أفضل ثقافي",
       "groupId": "G02",
-      "detail": "50%"
+      "detail": "100%"
     },
     {
       "id": "bestSports",
       "titleAr": "أفضل رياضي",
-      "groupId": "G07"
+      "groupId": "G06"
     },
     {
       "id": "bestMohsen",
@@ -2458,16 +2459,22 @@
       "groupId": "G05"
     },
     {
-      "id": "mostImproved",
-      "titleAr": "الأكثر تطوّراً",
-      "groupId": "G04",
-      "detail": "+مركز واحد"
+      "id": "bestMedia",
+      "titleAr": "أفضل إعلام",
+      "groupId": "G07",
+      "detail": "100%"
+    },
+    {
+      "id": "bestReflection",
+      "titleAr": "أفضل خواطر تربوية",
+      "groupId": "G08",
+      "detail": "60%"
     }
   ],
   "stats": {
-    "highestPct": 46.15,
-    "averagePct": 36.646,
-    "lowestPct": 28.281,
+    "highestPct": 82.683,
+    "averagePct": 74.277,
+    "lowestPct": 66.481,
     "leaderGroupId": "G07",
     "groupsCount": 8,
     "categoriesCount": 13
@@ -3280,6 +3287,51 @@
           "groupId": "G08",
           "rank": 7,
           "totalPct": 30.889
+        }
+      ]
+    },
+    {
+      "syncedAt": "2026-08-08T18:27:39Z",
+      "entries": [
+        {
+          "groupId": "G01",
+          "rank": 8,
+          "totalPct": 66.481
+        },
+        {
+          "groupId": "G02",
+          "rank": 4,
+          "totalPct": 76.097
+        },
+        {
+          "groupId": "G03",
+          "rank": 6,
+          "totalPct": 70.022
+        },
+        {
+          "groupId": "G04",
+          "rank": 3,
+          "totalPct": 78.622
+        },
+        {
+          "groupId": "G05",
+          "rank": 5,
+          "totalPct": 70.447
+        },
+        {
+          "groupId": "G06",
+          "rank": 2,
+          "totalPct": 81.572
+        },
+        {
+          "groupId": "G07",
+          "rank": 1,
+          "totalPct": 82.683
+        },
+        {
+          "groupId": "G08",
+          "rank": 7,
+          "totalPct": 68.289
         }
       ]
     }
