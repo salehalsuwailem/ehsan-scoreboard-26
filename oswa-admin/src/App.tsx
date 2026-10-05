@@ -42,6 +42,7 @@ export default function App() {
 // data from a previous session ever lingers in state.
 function Workspace() {
   const [profile, setProfile] = useState<StaffProfile | null | undefined>(undefined);
+  const [managerExists, setManagerExists] = useState(false);
   const [term, setTerm] = useState<Term | null>(null);
   const [groups, setGroups] = useState<Group[]>([]);
   const [participants, setParticipants] = useState<Participant[]>([]);
@@ -55,8 +56,12 @@ function Workspace() {
     const { data: userData } = await supabase.auth.getUser();
     const uid = userData.user?.id;
     if (!uid) return setProfile(null);
-    const { data } = await supabase.from("staff_profiles").select("user_id,role,group_id").eq("user_id", uid).maybeSingle();
-    setProfile((data as StaffProfile) ?? null);
+    const [profileRes, existsRes] = await Promise.all([
+      supabase.from("staff_profiles").select("user_id,role,group_id").eq("user_id", uid).maybeSingle(),
+      supabase.rpc("manager_exists"),
+    ]);
+    setManagerExists(existsRes.data === true);
+    setProfile((profileRes.data as StaffProfile) ?? null);
   };
 
   const loadData = async () => {
@@ -119,7 +124,7 @@ function Workspace() {
         </div>
       </header>
       <main>
-        <AccessRequests profile={profile} groups={groups} onClaim={claimManager} />
+        <AccessRequests profile={profile} managerExists={managerExists} groups={groups} onClaim={claimManager} />
 
         {profile && term && (
           <>

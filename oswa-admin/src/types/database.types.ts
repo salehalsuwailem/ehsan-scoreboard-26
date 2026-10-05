@@ -141,6 +141,7 @@ export type Database = {
       claim_first_manager: { Args: Record<string, never>; Returns: boolean };
       submit_staff_access_request: { Args: { p_group_id: string; p_display_name: string }; Returns: string };
       review_staff_access_request: { Args: { p_request_id: string; p_action: string; p_group_id?: string | null }; Returns: boolean };
+      manager_exists: { Args: Record<string, never>; Returns: boolean };
     };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;

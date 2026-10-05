@@ -9,10 +9,12 @@ import type { AccessRequest, Group, StaffProfile } from "../lib/types";
 // the fully-working request/review flow both copies shared.
 export function AccessRequests({
   profile,
+  managerExists,
   groups,
   onClaim,
 }: {
   profile: StaffProfile | null;
+  managerExists: boolean;
   groups: Group[];
   onClaim: () => void;
 }) {
@@ -35,7 +37,11 @@ export function AccessRequests({
     load();
   }, [profile?.role]);
 
-  if (!profile) {
+  // No profile row for this user yet. Which screen that means depends on
+  // whether a manager already exists ANYWHERE in the system (managerExists,
+  // fetched via the manager_exists() RPC) -- not on this user's own profile,
+  // which is always null/missing for every brand-new signup regardless.
+  if (!profile && !managerExists) {
     return (
       <section className="accessRequest panel">
         <h3>تفعيل حساب المدير</h3>
@@ -46,6 +52,10 @@ export function AccessRequests({
       </section>
     );
   }
+
+  // Already has a role (manager handled below, supervisor has nothing to
+  // request) -- nothing to show here.
+  if (profile && profile.role !== "manager") return null;
 
   const submit = async () => {
     const g = group || groups[0]?.id;
@@ -64,7 +74,7 @@ export function AccessRequests({
     else load();
   };
 
-  if (profile.role !== "manager") {
+  if (!profile) {
     return (
       <section className="accessRequest panel">
         <h3>طلب صلاحية مشرف</h3>
