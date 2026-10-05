@@ -11,6 +11,7 @@ export function Board({
   participants,
   criteria,
   scores,
+  staff,
   onScoreSaved,
 }: {
   profile: StaffProfile;
@@ -18,6 +19,7 @@ export function Board({
   participants: Participant[];
   criteria: Criterion[];
   scores: Score[];
+  staff: StaffProfile[];
   onScoreSaved: (score: Score) => void;
 }) {
   const [view, setView] = useState<"entry" | "results">("entry");
@@ -67,16 +69,29 @@ export function Board({
 
   const groupById = useMemo(() => new Map(groups.map((g) => [g.id, g])), [groups]);
 
+  // "آخر تعديل" per score: the editor's own display name if they ever set
+  // one, otherwise a role fallback -- never a raw id or email.
+  const editorName = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const s of staff) m.set(s.user_id, s.display_name || (s.role === "manager" ? "المدير" : "مشرف"));
+    return m;
+  }, [staff]);
+
+  const formatWhen = (iso: string) =>
+    new Date(iso).toLocaleString("ar", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" });
+
   const saveScore = async (participantId: string, criterionId: string, raw: string) => {
     const value = raw.trim() === "" ? 0 : Number(raw);
     if (!Number.isFinite(value) || value < 0) return;
     // Upsert on the DB's own unique(participant_id, criterion_id) index —
     // this is what actually prevents duplicate score rows, not anything
-    // the client has to track; always exactly one row per pair.
+    // the client has to track; always exactly one row per pair. updated_by
+    // is set server-side by a trigger from auth.uid(), never trusted from
+    // the client, so it's never part of this payload.
     const { data, error } = await supabase
       .from("scores")
       .upsert({ participant_id: participantId, criterion_id: criterionId, value }, { onConflict: "participant_id,criterion_id" })
-      .select("id,participant_id,criterion_id,value,note")
+      .select("id,participant_id,criterion_id,value,note,updated_by,updated_at")
       .single();
     if (error) setMsg(error.message);
     else if (data) onScoreSaved(data as Score);
@@ -197,12 +212,19 @@ export function Board({
                   {open && (
                     <div className="resultDetail">
                       {criteria.map((c) => {
-                        const v = scoreValue(p.id, c.id, scores);
-                        if (v === null) return null;
-                        const signed = signedContribution(v, c.kind);
+                        const s = scores.find((x) => x.participant_id === p.id && x.criterion_id === c.id);
+                        if (!s) return null;
+                        const signed = signedContribution(s.value, c.kind);
                         return (
                           <div key={c.id} className="resultDetailRow">
                             <span>{c.name}</span>
+                            <span className="resultDetailWho">
+                              {s.updated_by && (
+                                <>
+                                  {editorName.get(s.updated_by) || "—"} · {formatWhen(s.updated_at)}
+                                </>
+                              )}
+                            </span>
                             <b className={signed < 0 ? "neg" : ""}>
                               {signed > 0 ? "+" : ""}
                               {signed}

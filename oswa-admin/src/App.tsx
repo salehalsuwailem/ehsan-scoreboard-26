@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import type { FormEvent } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "./lib/supabase";
 import type { Criterion, Group, Participant, Recognition, Score, StaffProfile, Term } from "./lib/types";
@@ -50,6 +51,7 @@ function Workspace() {
   const [criteria, setCriteria] = useState<Criterion[]>([]);
   const [scores, setScores] = useState<Score[]>([]);
   const [recognitions, setRecognitions] = useState<Recognition[]>([]);
+  const [staff, setStaff] = useState<StaffProfile[]>([]);
   const [tab, setTab] = useState<Tab>("board");
   const [busy, setBusy] = useState(false);
 
@@ -58,7 +60,7 @@ function Workspace() {
     const uid = userData.user?.id;
     if (!uid) return setProfile(null);
     const [profileRes, existsRes] = await Promise.all([
-      supabase.from("staff_profiles").select("user_id,role,group_id").eq("user_id", uid).maybeSingle(),
+      supabase.from("staff_profiles").select("user_id,role,group_id,display_name").eq("user_id", uid).maybeSingle(),
       supabase.rpc("manager_exists"),
     ]);
     setManagerExists(existsRes.data === true);
@@ -67,13 +69,14 @@ function Workspace() {
 
   const loadData = async () => {
     setBusy(true);
-    const [termRes, groupsRes, participantsRes, criteriaRes, scoresRes, recognitionsRes] = await Promise.all([
+    const [termRes, groupsRes, participantsRes, criteriaRes, scoresRes, recognitionsRes, staffRes] = await Promise.all([
       supabase.from("terms").select("id,name,year,is_active").eq("is_active", true).maybeSingle(),
       supabase.from("groups").select("id,term_id,name"),
       supabase.from("participants").select("id,group_id,name,grade,is_active"),
       supabase.from("criteria").select("id,term_id,name,kind,sort_order,is_active").eq("is_active", true).order("sort_order"),
-      supabase.from("scores").select("id,participant_id,criterion_id,value,note"),
+      supabase.from("scores").select("id,participant_id,criterion_id,value,note,updated_by,updated_at"),
       supabase.from("recognitions").select("id,term_id,participant_id,type,week_date,event_date,note"),
+      supabase.from("staff_profiles").select("user_id,role,group_id,display_name"),
     ]);
     setTerm((termRes.data as Term) ?? null);
     setGroups((groupsRes.data as Group[]) || []);
@@ -81,6 +84,7 @@ function Workspace() {
     setCriteria((criteriaRes.data as Criterion[]) || []);
     setScores((scoresRes.data as Score[]) || []);
     setRecognitions((recognitionsRes.data as Recognition[]) || []);
+    setStaff((staffRes.data as StaffProfile[]) || []);
     setBusy(false);
   };
 
@@ -128,7 +132,7 @@ function Workspace() {
           </div>
         </div>
         <div className="headActions">
-          <span>{profile?.role === "manager" ? "المدير" : profile ? "مشرف " + (groups.find((g) => g.id === profile.group_id)?.name || "") : ""}</span>
+          {profile && <NameTag profile={profile} groups={groups} onRenamed={loadProfile} />}
           <button onClick={() => supabase.auth.signOut()}>خروج</button>
         </div>
       </header>
@@ -169,6 +173,7 @@ function Workspace() {
                 participants={activeParticipants}
                 criteria={criteria}
                 scores={scores}
+                staff={staff}
                 onScoreSaved={onScoreSaved}
               />
             )}
@@ -184,5 +189,45 @@ function Workspace() {
         {busy && <div className="loading">جارٍ التحديث…</div>}
       </main>
     </div>
+  );
+}
+
+// Shows this user's own name (or a role fallback if they've never set one)
+// plus a small inline control to set/change it -- needed so score edits in
+// النتائج can attribute "من عدّل" to a real name instead of a raw id.
+function NameTag({ profile, groups, onRenamed }: { profile: StaffProfile; groups: Group[]; onRenamed: () => void }) {
+  const [editing, setEditing] = useState(false);
+  const [name, setName] = useState(profile.display_name ?? "");
+  const [busy, setBusy] = useState(false);
+
+  const roleLabel = profile.role === "manager" ? "المدير" : "مشرف " + (groups.find((g) => g.id === profile.group_id)?.name || "");
+
+  const save = async (e: FormEvent) => {
+    e.preventDefault();
+    setBusy(true);
+    await supabase.rpc("update_own_display_name", { p_display_name: name });
+    setBusy(false);
+    setEditing(false);
+    onRenamed();
+  };
+
+  if (editing) {
+    return (
+      <form className="nameTag" onSubmit={save}>
+        <input autoFocus value={name} onChange={(e) => setName(e.target.value)} placeholder="اكتب اسمك" />
+        <button type="submit" disabled={busy} className="primary">
+          حفظ
+        </button>
+      </form>
+    );
+  }
+
+  return (
+    <span className="nameTag">
+      {profile.display_name || roleLabel}
+      <button className="link" onClick={() => setEditing(true)} title="تعديل الاسم">
+        ✎
+      </button>
+    </span>
   );
 }

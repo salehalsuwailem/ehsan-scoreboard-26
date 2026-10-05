@@ -60,6 +60,7 @@ export type Database = {
           criterion_id: string;
           value: number;
           note: string | null;
+          updated_by: string | null;
           created_at: string;
           updated_at: string;
         };
@@ -69,6 +70,7 @@ export type Database = {
           criterion_id: string;
           value?: number;
           note?: string | null;
+          updated_by?: string | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -76,8 +78,15 @@ export type Database = {
         Relationships: [];
       };
       staff_profiles: {
-        Row: { user_id: string; role: string; group_id: string | null; created_at: string; updated_at: string };
-        Insert: { user_id: string; role: string; group_id?: string | null; created_at?: string; updated_at?: string };
+        Row: { user_id: string; role: string; group_id: string | null; display_name: string | null; created_at: string; updated_at: string };
+        Insert: {
+          user_id: string;
+          role: string;
+          group_id?: string | null;
+          display_name?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
         Update: Partial<Database["public"]["Tables"]["staff_profiles"]["Insert"]>;
         Relationships: [];
       };
@@ -142,6 +151,7 @@ export type Database = {
       submit_staff_access_request: { Args: { p_group_id: string; p_display_name: string }; Returns: string };
       review_staff_access_request: { Args: { p_request_id: string; p_action: string; p_group_id?: string | null }; Returns: boolean };
       manager_exists: { Args: Record<string, never>; Returns: boolean };
+      update_own_display_name: { Args: { p_display_name: string }; Returns: undefined };
     };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;

@@ -26,6 +26,10 @@
 .resultRowHead small{color:#7c8a88;font-size:11px}
 .resultTotal{font-size:15px;color:var(--brand-blue-deep)}
 .resultDetail{background:#f8faf9;padding:10px 16px;border-top:1px solid #edf1ef}
-.resultDetailRow{display:flex;justify-content:space-between;padding:5px 0;font-size:12px}
-.resultDetailRow b{color:#1e7a3a}.resultDetailRow b.neg{color:#b44f46}
+.resultDetailRow{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:5px 0;font-size:12px}
+.resultDetailRow b{color:#1e7a3a;flex:none}.resultDetailRow b.neg{color:#b44f46}
+.resultDetailWho{flex:1;color:#9aa6a3;font-size:10px;text-align:center}
+.nameTag{display:flex;align-items:center;gap:5px;font-size:13px;color:#45615e}
+.nameTag input{border:1px solid #d8e2df;border-radius:9px;padding:6px 9px;width:130px}
+.nameTag button.primary{width:auto;margin-top:0;padding:6px 10px}
 @media(max-width:800px){.podiumTile{width:100px}.podium{gap:8px}}

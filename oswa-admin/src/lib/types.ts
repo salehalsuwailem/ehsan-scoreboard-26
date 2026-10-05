@@ -40,6 +40,8 @@ export type Score = {
   criterion_id: string;
   value: number;
   note: string | null;
+  updated_by: string | null;
+  updated_at: string;
 };
 
 export type StaffRole = "manager" | "supervisor";
@@ -48,6 +50,7 @@ export type StaffProfile = {
   user_id: string;
   role: StaffRole;
   group_id: string | null;
+  display_name: string | null;
 };
 
 export type AccessRequestStatus = "pending" | "approved" | "rejected";
