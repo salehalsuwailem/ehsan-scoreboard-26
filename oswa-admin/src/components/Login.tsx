@@ -2,6 +2,7 @@ import { useState } from "react";
 import { supabase } from "../lib/supabase";
 
 const logo = "/logo-mughamirun.png";
+const oswaLogo = "/logo-oswa.png";
 
 export function Login() {
   const [email, setEmail] = useState("");
@@ -29,9 +30,17 @@ export function Login() {
   return (
     <div className="login">
       <div className="loginCard">
+        <div className="motifs" aria-hidden="true">
+          <span>🏀</span>
+          <span>📖</span>
+          <span>⚽</span>
+          <span>⭐</span>
+        </div>
         <img src={logo} alt="شعار المغامرون" />
         <h1>لوحة نقاط المغامرون</h1>
-        <p>أُسوة · 2026</p>
+        <p>
+          <img className="oswaBadge" src={oswaLogo} alt="" /> أُسوة · 2026
+        </p>
         <input dir="ltr" placeholder="البريد الإلكتروني" value={email} onChange={(e) => setEmail(e.target.value)} />
         <input dir="ltr" type="password" placeholder="كلمة المرور" value={password} onChange={(e) => setPassword(e.target.value)} />
         <div className="loginBtns">

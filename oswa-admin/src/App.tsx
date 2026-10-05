@@ -10,6 +10,7 @@ import { Criteria } from "./components/Criteria";
 import { Recognitions } from "./components/Recognitions";
 
 const logo = "/logo-mughamirun.png";
+const oswaLogo = "/logo-oswa.png";
 
 type Tab = "board" | "participants" | "criteria" | "recognitions";
 const TABS: [Tab, string][] = [
@@ -111,11 +112,19 @@ function Workspace() {
   return (
     <div>
       <header>
+        <div className="motifs" aria-hidden="true">
+          <span>🏀</span>
+          <span>📖</span>
+          <span>⚽</span>
+          <span>🏊</span>
+        </div>
         <div className="brand">
           <img src={logo} alt="شعار المغامرون" />
           <div>
             <b>لوحة نقاط المغامرون</b>
-            <small>أُسوة · 2026</small>
+            <small>
+              <img className="oswaBadge" src={oswaLogo} alt="" /> أُسوة · 2026
+            </small>
           </div>
         </div>
         <div className="headActions">
@@ -129,6 +138,14 @@ function Workspace() {
         {profile && term && (
           <>
             <section className="hero">
+              <div className="motifs" aria-hidden="true">
+                <span>🎨</span>
+                <span>🏀</span>
+                <span>📖</span>
+                <span>⚽</span>
+                <span>🔬</span>
+                <span>⭐</span>
+              </div>
               <div>
                 <small>الفصل الحالي</small>
                 <h1>{term.name}</h1>
