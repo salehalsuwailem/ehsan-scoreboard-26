@@ -36,11 +36,12 @@ export function Login() {
           <span>⚽</span>
           <span>⭐</span>
         </div>
-        <img src={logo} alt="شعار المغامرون" />
-        <h1>لوحة نقاط المغامرون</h1>
-        <p>
-          <img className="oswaBadge" src={oswaLogo} alt="" /> أُسوة · 2026
-        </p>
+        <div className="loginLogos">
+          <img src={oswaLogo} alt="شعار فصل أُسوة" />
+          <img src={logo} alt="شعار نادي المغامرون" />
+        </div>
+        <h1>فصل أُسوة · 2026</h1>
+        <p>نادي المغامرون</p>
         <input dir="ltr" placeholder="البريد الإلكتروني" value={email} onChange={(e) => setEmail(e.target.value)} />
         <input dir="ltr" type="password" placeholder="كلمة المرور" value={password} onChange={(e) => setPassword(e.target.value)} />
         <div className="loginBtns">
