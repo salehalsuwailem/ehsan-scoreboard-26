@@ -40,7 +40,7 @@ export function Login() {
           <img src={oswaLogo} alt="شعار فصل أُسوة" />
           <img src={logo} alt="شعار نادي المغامرون" />
         </div>
-        <h1>فصل أُسوة · 2026</h1>
+        <h1>فصل أُسوة 2026</h1>
         <p>نادي المغامرون</p>
         <input dir="ltr" placeholder="البريد الإلكتروني" value={email} onChange={(e) => setEmail(e.target.value)} />
         <input dir="ltr" type="password" placeholder="كلمة المرور" value={password} onChange={(e) => setPassword(e.target.value)} />

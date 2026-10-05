@@ -3,8 +3,6 @@ import { supabase } from "../lib/supabase";
 import type { Criterion, Group, Participant, Score, StaffProfile } from "../lib/types";
 import { computeTotal, rankByTotal, scoreValue, signedContribution } from "../lib/ranking";
 
-const GRADES = [3, 4, 5, 6, 7, 8];
-
 type RankedParticipant = Participant & { total: number; rank: number };
 
 export function Board({
@@ -30,6 +28,15 @@ export function Board({
   const [openId, setOpenId] = useState<string | null>(null);
 
   const criteriaById = useMemo(() => new Map(criteria.map((c) => [c.id, c])), [criteria]);
+
+  // Only the grades that actually exist within the currently selected group
+  // (and, for a supervisor, participants are already RLS-scoped to their
+  // own group) -- not a hardcoded 3..8, so nobody is offered grades that
+  // don't apply to what they're looking at.
+  const availableGrades = useMemo(() => {
+    const scoped = participants.filter((p) => groupFilter === "all" || p.group_id === groupFilter);
+    return [...new Set(scoped.map((p) => p.grade))].sort((a, b) => a - b);
+  }, [participants, groupFilter]);
 
   const filtered = useMemo(
     () =>
@@ -87,8 +94,8 @@ export function Board({
     <section className="panel">
       <div className="toolbar">
         <div>
-          <h2>لوحة النقاط</h2>
-          <p>البونص يُضاف والخصم يُطرح تلقائيًا.</p>
+          <h2>{view === "entry" ? "إدخال النقاط" : "لوحة النتائج"}</h2>
+          <p>{view === "entry" ? "البونص يُضاف والخصم يُطرح تلقائيًا." : "الترتيب والتفاصيل لكل مغامر."}</p>
         </div>
         <div className="filters">
           <div className="viewToggle">
@@ -100,7 +107,13 @@ export function Board({
             </button>
           </div>
           {profile.role === "manager" && (
-            <select value={groupFilter} onChange={(e) => setGroupFilter(e.target.value)}>
+            <select
+              value={groupFilter}
+              onChange={(e) => {
+                setGroupFilter(e.target.value);
+                setGradeFilter("all");
+              }}
+            >
               <option value="all">كل الفئات</option>
               {groups.map((g) => (
                 <option value={g.id} key={g.id}>
@@ -111,7 +124,7 @@ export function Board({
           )}
           <select value={gradeFilter} onChange={(e) => setGradeFilter(e.target.value)}>
             <option value="all">كل الصفوف</option>
-            {GRADES.map((g) => (
+            {availableGrades.map((g) => (
               <option key={g} value={g}>
                 الصف {g}
               </option>
