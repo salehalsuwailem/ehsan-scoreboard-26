@@ -8,12 +8,14 @@ function ParticipantForm({
   initial,
   groups,
   defaultGroupId,
+  canChangeGroup,
   onDone,
   onCancel,
 }: {
   initial?: Participant;
   groups: Group[];
   defaultGroupId: string;
+  canChangeGroup: boolean;
   onDone: () => void;
   onCancel: () => void;
 }) {
@@ -21,7 +23,6 @@ function ParticipantForm({
   const [grade, setGrade] = useState(initial?.grade ?? 3);
   const [groupId, setGroupId] = useState(initial?.group_id ?? defaultGroupId);
   const [msg, setMsg] = useState("");
-  const canChangeGroup = groups.length > 1;
 
   const save = async () => {
     if (!name.trim()) return setMsg("اكتب اسم المغامر");
@@ -75,6 +76,7 @@ export function Participants({
   const [adding, setAdding] = useState(false);
   const [editing, setEditing] = useState<Participant | null>(null);
   const [showArchived, setShowArchived] = useState(false);
+  const isManager = profile.role === "manager";
 
   const visible = useMemo(() => participants.filter((p) => p.is_active !== showArchived), [participants, showArchived]);
   const defaultGroupId = profile.role === "supervisor" && profile.group_id ? profile.group_id : groups[0]?.id ?? "";
@@ -105,6 +107,7 @@ export function Participants({
           <ParticipantForm
             groups={groups}
             defaultGroupId={defaultGroupId}
+            canChangeGroup={isManager}
             onDone={() => {
               setAdding(false);
               onChanged();
@@ -119,6 +122,7 @@ export function Participants({
             initial={editing}
             groups={groups}
             defaultGroupId={defaultGroupId}
+            canChangeGroup={isManager}
             onDone={() => {
               setEditing(null);
               onChanged();
