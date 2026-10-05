@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { supabase } from "../lib/supabase";
 
-const logo = "https://raw.githubusercontent.com/salehalsuwailem/ehsan-scoreboard-26/main/public/logo.png";
+const logo = "/logo-mughamirun.png";
 
 export function Login() {
   const [email, setEmail] = useState("");

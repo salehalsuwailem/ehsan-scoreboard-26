@@ -5,3 +5,4 @@
 .rank2{background:#fde2c3;color:#9a5a12}
 .rank3{background:#fdf3c0;color:#8a7417}
 .filters label{display:flex;align-items:center;gap:5px;font-size:12px;color:#45615e}
+@media(max-width:800px){table th:first-child,table td:first-child,table th:nth-child(2),table td:nth-child(2){position:sticky;inset-inline-start:0}table th:first-child,table th:nth-child(2){background:#f1f6f3;z-index:3}table td:first-child,table td:nth-child(2){background:#fff;z-index:2}table td.name:nth-child(2){box-shadow:-6px 0 6px -6px #17353a26}}

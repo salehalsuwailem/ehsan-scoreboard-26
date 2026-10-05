@@ -9,7 +9,7 @@ import { Participants } from "./components/Participants";
 import { Criteria } from "./components/Criteria";
 import { Recognitions } from "./components/Recognitions";
 
-const logo = "https://raw.githubusercontent.com/salehalsuwailem/ehsan-scoreboard-26/main/public/logo.png";
+const logo = "/logo-mughamirun.png";
 
 type Tab = "board" | "participants" | "criteria" | "recognitions";
 const TABS: [Tab, string][] = [
