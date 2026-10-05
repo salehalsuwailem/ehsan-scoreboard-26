@@ -1,4 +1,167 @@
-import{useEffect,useMemo,useState}from"react";import{Session}from"@supabase/supabase-js";import{supabase}from"./lib/supabase";
-type P={id:string;name:string;grade:number;group_id:string};type C={id:string;name:string;kind:string;sort_order:number};type S={participant_id:string;criterion_id:string;value:number};
-const logo="https://raw.githubusercontent.com/salehalsuwailem/ehsan-scoreboard-26/main/public/logo.png";
-function Login(){const[email,setEmail]=useState("");const[password,setPassword]=useState("");const[busy,setBusy]=useState(false);const[msg,setMsg]=useState("");const sign=async()=>{setBusy(true);setMsg("");const{error}=await supabase.auth.signInWithPassword({email,password});if(error)setMsg(error.message);setBusy(false)};const signup=async()=>{setBusy(true);setMsg("");const{data,error}=await supabase.auth.signUp({email,password});if(error)setMsg(error.message);else if(data.user)setMsg("تم إنشاء الحساب. إذا طُلب تأكيد البريد، أكّده ثم سجّل الدخول.");setBusy(false)};return <div className="login"><div className="loginCard"><img src={logo}/><h1>لوحة نقاط المغامرون</h1><p>أُسوة · 2026</p><input dir="ltr" placeholder="البريد الإلكتروني" value={email} onChange={e=>setEmail(e.target.value)}/><input dir="ltr" type="password" placeholder="كلمة المرور" value={password} onChange={e=>setPassword(e.target.value)}/><div className="loginBtns"><button className="primary" disabled={busy} onClick={sign}>دخول</button><button disabled={busy} onClick={signup}>إنشاء حساب</button></div>{msg&&<div className="error">{msg}</div>}</div></div>}function AccessRequests({profile,groups,onClaim}:{profile:any;groups:any[];onClaim:()=>void}){const[requests,setRequests]=useState<any[]>([]);const[name,setName]=useState("");const[group,setGroup]=useState("");const[msg,setMsg]=useState("");const load=async()=>{if(profile?.role==="manager"){const r=await supabase.from("staff_access_requests").select("*").eq("status","pending").order("created_at",{ascending:false});setRequests(r.data||[])}};useEffect(()=>{load()},[profile?.role]);if(!profile)return <section className="accessRequest panel"><h3>تفعيل حساب المدير</h3><p>هذا الحساب هو أول حساب للنظام. فعّله كحساب المدير الرئيسي.</p><button className="primary" onClick={onClaim}>تفعيل كمدير</button></section>;const submit=async()=>{const g=group||groups[0]?.id;if(!g||!name.trim())return setMsg("اكتب الاسم واختر الفئة");const{error}=await supabase.rpc("submit_staff_access_request",{p_group_id:g,p_display_name:name.trim()});setMsg(error?error.message:"تم إرسال طلبك للمدير");if(!error){setName("");setGroup("")}};const review=async(id:string,action:"approve"|"reject",gid?:string)=>{const{error}=await supabase.rpc("review_staff_access_request",{p_request_id:id,p_action:action,p_group_id:gid||null});if(error)setMsg(error.message);else load()};if(profile.role!=="manager")return <section className="accessRequest panel"><h3>طلب صلاحية مشرف</h3><p>اختر الفئة وأرسل الطلب للمدير لاعتماده.</p><div className="requestForm"><input placeholder="اسمك" value={name} onChange={e=>setName(e.target.value)}/><select value={group} onChange={e=>setGroup(e.target.value)}><option value="">اختر الفئة</option>{groups.map(g=><option key={g.id} value={g.id}>{g.name}</option>)}</select><button className="primary" onClick={submit}>إرسال الطلب</button></div>{msg&&<small>{msg}</small>}</section>;return <section className="accessRequest panel"><div className="toolbar"><div><h3>طلبات الانضمام</h3><p>اعتمد المشرفين وحدد فئتهم قبل منح الصلاحية.</p></div><span className="pill">{requests.length} طلب</span></div>{requests.length===0?<div className="empty">لا توجد طلبات معلقة.</div>:<div className="requestList">{requests.map(r=><div className="requestRow" key={r.id}><div><b>{r.display_name||"بدون اسم"}</b><small>{r.email}</small></div><select defaultValue={r.requested_group_id||""} id={"g-"+r.id}>{groups.map(g=><option key={g.id} value={g.id}>{g.name}</option>)}</select><button className="primary" onClick={()=>{const e=document.getElementById("g-"+r.id) as HTMLSelectElement;review(r.id,"approve",e.value)}}>قبول</button><button onClick={()=>review(r.id,"reject")}>رفض</button></div>)}</div>}</section>}function AccessRequests({profile,groups}:{profile:any;groups:any[]}){const[requests,setRequests]=useState<any[]>([]);const[name,setName]=useState("");const[group,setGroup]=useState("");const[msg,setMsg]=useState("");const load=async()=>{if(profile?.role==="manager"){const r=await supabase.from("staff_access_requests").select("*").eq("status","pending").order("created_at",{ascending:false});setRequests(r.data||[])}};useEffect(()=>{load()},[profile?.role]);const submit=async()=>{const g=group||groups[0]?.id;if(!g||!name.trim())return setMsg("اكتب الاسم واختر الفئة");const{error}=await supabase.rpc("submit_staff_access_request",{p_group_id:g,p_display_name:name.trim()});setMsg(error?error.message:"تم إرسال طلبك للمدير");if(!error){setName("");setGroup("")}};const review=async(id:string,action:"approve"|"reject",gid?:string)=>{const{error}=await supabase.rpc("review_staff_access_request",{p_request_id:id,p_action:action,p_group_id:gid||null});if(error)setMsg(error.message);else load()};if(profile?.role!=="manager")return <section className="accessRequest panel"><h3>طلب صلاحية مشرف</h3><p>اختر الفئة وأرسل الطلب للمدير لاعتماده.</p><div className="requestForm"><input placeholder="اسمك" value={name} onChange={e=>setName(e.target.value)}/><select value={group} onChange={e=>setGroup(e.target.value)}><option value="">اختر الفئة</option>{groups.map(g=><option key={g.id} value={g.id}>{g.name}</option>)}</select><button className="primary" onClick={submit}>إرسال الطلب</button></div>{msg&&<small>{msg}</small>}</section>;return <section className="accessRequest panel"><div className="toolbar"><div><h3>طلبات الانضمام</h3><p>اعتمد المشرفين وحدد فئتهم قبل منح الصلاحية.</p></div><span className="pill">{requests.length} طلب</span></div>{requests.length===0?<div className="empty">لا توجد طلبات معلقة.</div>:<div className="requestList">{requests.map(r=><div className="requestRow" key={r.id}><div><b>{r.display_name||"بدون اسم"}</b><small>{r.email}</small></div><select defaultValue={r.requested_group_id||""} id={"g-"+r.id}>{groups.map(g=><option key={g.id} value={g.id}>{g.name}</option>)}</select><button className="primary" onClick={()=>{const e=document.getElementById("g-"+r.id) as HTMLSelectElement;review(r.id,"approve",e.value)}}>قبول</button><button onClick={()=>review(r.id,"reject")}>رفض</button></div>)}</div>}</section>}return <div><header><div className="brand"><img src={logo}/><div><b>لوحة نقاط المغامرون</b><small>أُسوة · 2026</small></div></div><div className="headActions"><span>{profile?.role==="manager"?"المدير":"مشرف "+(groups.find(g=>g.id===profile?.group_id)?.name||"")}</span><button onClick={()=>supabase.auth.signOut()}>خروج</button></div></header><main><AccessRequests profile={profile} groups={groups} onClaim={claimManager}/><section className="hero"><div><small>الفصل الحالي</small><h1>أُسوة</h1><p>إدارة النقاط والنتائج والتكريمات.</p></div><div className="pill">{participants.length} مغامر</div></section><nav>{[["board","لوحة النقاط"],["participants","المغامرون"],["criteria","بنود النقاط"]].map(([id,n])=><button className={tab===id?"active":""} onClick={()=>setTab(id)} key={id}>{n}</button>)}</nav>{tab==="board"&&<section className="panel"><div className="toolbar"><div><h2>لوحة النتائج</h2><p>البونص يُضاف والخصم يُطرح تلقائيًا.</p></div><div className="filters">{profile?.role==="manager"&&<select value={groupFilter} onChange={e=>setGroupFilter(e.target.value)}><option value="all">كل الفئات</option>{groups.map(g=><option value={g.id} key={g.id}>{g.name}</option>)}</select>}<select value={gradeFilter} onChange={e=>setGradeFilter(e.target.value)}><option value="all">كل الصفوف</option>{[3,4,5,6,7,8].map(g=><option key={g} value={g}>الصف {g}</option>)}</select><input placeholder="بحث…" value={search} onChange={e=>setSearch(e.target.value)}/></div></div><div className="tableWrap"><table><thead><tr><th>#</th><th>المغامر</th><th>الصف</th>{criteria.map(c=><th key={c.id}>{c.name}</th>)}<th>المجموع</th></tr></thead><tbody>{ranked.map((p,i)=><tr key={p.id}><td>{i+1}</td><td className="name"><button className="link" onClick={()=>editParticipant(p)}>{p.name}</button></td><td>{p.grade}</td>{criteria.map(c=><td key={c.id}><input type="number" min="0" value={val(p.id,c.id)||""} onChange={e=>saveScore(p.id,c.id,e.target.value)} /></td>)}<td className="total">{total(p.id)}</td></tr>)}</tbody></table></div></section>}{tab==="participants"&&<section className="panel"><div className="toolbar"><div><h2>المغامرون</h2><p>إضافة وتعديل وأرشفة حسب صلاحيتك.</p></div><button className="primary" onClick={addParticipant}>+ إضافة مغامر</button></div><div className="cards">{visible.map(p=><div className="card" key={p.id}><div><b>{p.name}</b><small>الصف {p.grade}</small></div><div><button onClick={()=>editParticipant(p)}>تعديل</button><button onClick={()=>archive(p)}>إخفاء</button></div></div>)}</div></section>}{tab==="criteria"&&<section className="panel"><div className="toolbar"><div><h2>بنود النقاط</h2><p>البنود الأساسية لهذا الفصل.</p></div>{profile?.role==="manager"&&<button className="primary" onClick={addCriterion}>+ إضافة بند</button>}</div><div className="cards">{criteria.map(c=><div className="card" key={c.id}><div><b>{c.name}</b><small>{c.kind==="bonus"?"يُضاف":c.kind==="deduction"?"يُطرح":"نقاط مباشرة"}</small></div></div>)}</div></section>}{msg&&<div className="toast">{msg}</div>}{busy&&<div className="loading">جارٍ التحديث…</div>}</main></div>}
+import { useEffect, useState } from "react";
+import type { Session } from "@supabase/supabase-js";
+import { supabase } from "./lib/supabase";
+import type { Criterion, Group, Participant, Recognition, Score, StaffProfile, Term } from "./lib/types";
+import { Login } from "./components/Login";
+import { AccessRequests } from "./components/AccessRequests";
+import { Board } from "./components/Board";
+import { Participants } from "./components/Participants";
+import { Criteria } from "./components/Criteria";
+import { Recognitions } from "./components/Recognitions";
+
+const logo = "https://raw.githubusercontent.com/salehalsuwailem/ehsan-scoreboard-26/main/public/logo.png";
+
+type Tab = "board" | "participants" | "criteria" | "recognitions";
+const TABS: [Tab, string][] = [
+  ["board", "لوحة النقاط"],
+  ["participants", "المغامرون"],
+  ["criteria", "بنود النقاط"],
+  ["recognitions", "التكريمات"],
+];
+
+export default function App() {
+  const [session, setSession] = useState<Session | null>(null);
+  const [sessionLoaded, setSessionLoaded] = useState(false);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => {
+      setSession(data.session);
+      setSessionLoaded(true);
+    });
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, s) => setSession(s));
+    return () => sub.subscription.unsubscribe();
+  }, []);
+
+  if (!sessionLoaded) return null;
+  if (!session) return <Login />;
+  return <Workspace key={session.user.id} />;
+}
+
+// Everything that needs the active term's data lives here, re-mounted
+// fresh (via App's key={userId}) on every sign-in/out so no stale scoped
+// data from a previous session ever lingers in state.
+function Workspace() {
+  const [profile, setProfile] = useState<StaffProfile | null | undefined>(undefined);
+  const [term, setTerm] = useState<Term | null>(null);
+  const [groups, setGroups] = useState<Group[]>([]);
+  const [participants, setParticipants] = useState<Participant[]>([]);
+  const [criteria, setCriteria] = useState<Criterion[]>([]);
+  const [scores, setScores] = useState<Score[]>([]);
+  const [recognitions, setRecognitions] = useState<Recognition[]>([]);
+  const [tab, setTab] = useState<Tab>("board");
+  const [busy, setBusy] = useState(false);
+
+  const loadProfile = async () => {
+    const { data: userData } = await supabase.auth.getUser();
+    const uid = userData.user?.id;
+    if (!uid) return setProfile(null);
+    const { data } = await supabase.from("staff_profiles").select("user_id,role,group_id").eq("user_id", uid).maybeSingle();
+    setProfile((data as StaffProfile) ?? null);
+  };
+
+  const loadData = async () => {
+    setBusy(true);
+    const [termRes, groupsRes, participantsRes, criteriaRes, scoresRes, recognitionsRes] = await Promise.all([
+      supabase.from("terms").select("id,name,year,is_active").eq("is_active", true).maybeSingle(),
+      supabase.from("groups").select("id,term_id,name"),
+      supabase.from("participants").select("id,group_id,name,grade,is_active"),
+      supabase.from("criteria").select("id,term_id,name,kind,sort_order,is_active").eq("is_active", true).order("sort_order"),
+      supabase.from("scores").select("id,participant_id,criterion_id,value,note"),
+      supabase.from("recognitions").select("id,term_id,participant_id,type,week_date,event_date,note"),
+    ]);
+    setTerm((termRes.data as Term) ?? null);
+    setGroups((groupsRes.data as Group[]) || []);
+    setParticipants((participantsRes.data as Participant[]) || []);
+    setCriteria((criteriaRes.data as Criterion[]) || []);
+    setScores((scoresRes.data as Score[]) || []);
+    setRecognitions((recognitionsRes.data as Recognition[]) || []);
+    setBusy(false);
+  };
+
+  useEffect(() => {
+    loadProfile();
+  }, []);
+
+  useEffect(() => {
+    if (profile !== undefined) loadData();
+  }, [profile]);
+
+  const claimManager = async () => {
+    const { error } = await supabase.rpc("claim_first_manager");
+    if (!error) await loadProfile();
+  };
+
+  const onScoreSaved = (score: Score) => {
+    setScores((prev) => {
+      const next = prev.filter((s) => !(s.participant_id === score.participant_id && s.criterion_id === score.criterion_id));
+      next.push(score);
+      return next;
+    });
+  };
+
+  const activeParticipants = participants.filter((p) => p.is_active);
+
+  if (profile === undefined) return null;
+
+  return (
+    <div>
+      <header>
+        <div className="brand">
+          <img src={logo} alt="شعار المغامرون" />
+          <div>
+            <b>لوحة نقاط المغامرون</b>
+            <small>أُسوة · 2026</small>
+          </div>
+        </div>
+        <div className="headActions">
+          <span>{profile?.role === "manager" ? "المدير" : profile ? "مشرف " + (groups.find((g) => g.id === profile.group_id)?.name || "") : ""}</span>
+          <button onClick={() => supabase.auth.signOut()}>خروج</button>
+        </div>
+      </header>
+      <main>
+        <AccessRequests profile={profile} groups={groups} onClaim={claimManager} />
+
+        {profile && term && (
+          <>
+            <section className="hero">
+              <div>
+                <small>الفصل الحالي</small>
+                <h1>{term.name}</h1>
+                <p>إدارة النقاط والنتائج والتكريمات.</p>
+              </div>
+              <div className="pill">{activeParticipants.length} مغامر</div>
+            </section>
+
+            <nav>
+              {TABS.map(([id, label]) => (
+                <button key={id} className={tab === id ? "active" : ""} onClick={() => setTab(id)}>
+                  {label}
+                </button>
+              ))}
+            </nav>
+
+            {tab === "board" && (
+              <Board
+                profile={profile}
+                groups={groups}
+                participants={activeParticipants}
+                criteria={criteria}
+                scores={scores}
+                onScoreSaved={onScoreSaved}
+                onOpenParticipant={() => setTab("participants")}
+              />
+            )}
+            {tab === "participants" && (
+              <Participants profile={profile} groups={groups} participants={participants} onChanged={loadData} />
+            )}
+            {tab === "criteria" && <Criteria profile={profile} criteria={criteria} termId={term.id} onChanged={loadData} />}
+            {tab === "recognitions" && (
+              <Recognitions participants={activeParticipants} recognitions={recognitions} termId={term.id} onChanged={loadData} />
+            )}
+          </>
+        )}
+        {busy && <div className="loading">جارٍ التحديث…</div>}
+      </main>
+    </div>
+  );
+}
