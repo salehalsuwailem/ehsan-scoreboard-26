@@ -6,3 +6,26 @@
 .rank3{background:#fdf3c0;color:#8a7417}
 .filters label{display:flex;align-items:center;gap:5px;font-size:12px;color:#45615e}
 @media(max-width:800px){table th:first-child,table td:first-child,table th:nth-child(2),table td:nth-child(2){position:sticky;inset-inline-start:0}table th:first-child,table th:nth-child(2){background:#f1f6f3;z-index:3}table td:first-child,table td:nth-child(2){background:#fff;z-index:2}table td.name:nth-child(2){box-shadow:-6px 0 6px -6px #17353a26}}
+.viewToggle{display:flex;border:1px solid #d8e2df;border-radius:9px;overflow:hidden}.viewToggle button{border:0;border-radius:0;background:#fff;padding:8px 14px;color:#45615e}.viewToggle button.active{background:#1f6f78;color:#fff}
+.results{padding:22px}
+.podium{display:flex;align-items:flex-end;justify-content:center;gap:14px;margin-bottom:26px}
+.podiumTile{display:flex;flex-direction:column;align-items:center;width:150px}
+.podiumNames{min-height:44px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px;margin-bottom:8px;text-align:center}
+.podiumNames b{font-size:13px}.podiumNames small{display:block;color:#7c8a88;font-size:11px}
+.podiumEmpty{color:#b7c2bf}
+.podiumBlock{width:100%;border-radius:12px 12px 0 0;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;height:70px}
+.podiumTile.tall .podiumBlock{height:104px;font-size:15px}
+.podiumTile.gold .podiumBlock{background:linear-gradient(180deg,#f7d774,#d9a328)}
+.podiumTile.silver .podiumBlock{background:linear-gradient(180deg,#e3e8ea,#aab4b8)}
+.podiumTile.bronze .podiumBlock{background:linear-gradient(180deg,#e3a877,#b5713a)}
+.resultsList{display:flex;flex-direction:column;gap:8px}
+.resultRow{border:1px solid #e8eeeb;border-radius:12px;overflow:hidden}
+.resultRowHead{width:100%;display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border:0;text-align:right}
+.resultRank{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;font-weight:800;font-size:12px;flex:none}
+.resultName{font-weight:700;flex:1}
+.resultRowHead small{color:#7c8a88;font-size:11px}
+.resultTotal{font-size:15px;color:#1f6f78}
+.resultDetail{background:#f8faf9;padding:10px 16px;border-top:1px solid #edf1ef}
+.resultDetailRow{display:flex;justify-content:space-between;padding:5px 0;font-size:12px}
+.resultDetailRow b{color:#1e7a3a}.resultDetailRow b.neg{color:#b44f46}
+@media(max-width:800px){.podiumTile{width:100px}.podium{gap:8px}}

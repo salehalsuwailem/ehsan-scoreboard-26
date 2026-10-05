@@ -148,7 +148,6 @@ function Workspace() {
                 criteria={criteria}
                 scores={scores}
                 onScoreSaved={onScoreSaved}
-                onOpenParticipant={() => setTab("participants")}
               />
             )}
             {tab === "participants" && (
