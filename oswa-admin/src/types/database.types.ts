@@ -152,6 +152,7 @@ export type Database = {
       review_staff_access_request: { Args: { p_request_id: string; p_action: string; p_group_id?: string | null }; Returns: boolean };
       manager_exists: { Args: Record<string, never>; Returns: boolean };
       update_own_display_name: { Args: { p_display_name: string }; Returns: undefined };
+      revoke_staff_access: { Args: { p_user_id: string }; Returns: boolean };
     };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;

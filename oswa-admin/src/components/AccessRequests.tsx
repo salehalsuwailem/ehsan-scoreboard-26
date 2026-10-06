@@ -11,17 +11,23 @@ export function AccessRequests({
   profile,
   managerExists,
   groups,
+  staff,
   onClaim,
+  onStaffChanged,
 }: {
   profile: StaffProfile | null;
   managerExists: boolean;
   groups: Group[];
+  staff: StaffProfile[];
   onClaim: () => void;
+  onStaffChanged: () => void;
 }) {
   const [requests, setRequests] = useState<AccessRequest[]>([]);
   const [name, setName] = useState("");
   const [group, setGroup] = useState("");
   const [msg, setMsg] = useState("");
+  const [revokeMsg, setRevokeMsg] = useState("");
+  const [revokingId, setRevokingId] = useState<string | null>(null);
 
   const load = async () => {
     if (profile?.role !== "manager") return;
@@ -74,6 +80,23 @@ export function AccessRequests({
     else load();
   };
 
+  // Lets the manager undo a previously-approved supervisor's access --
+  // removing their staff_profiles row entirely (server-side guard also
+  // blocks revoking a manager or revoking yourself, so this never locks
+  // the manager out even if someone tampers with the request).
+  const revoke = async (userId: string, displayName: string) => {
+    if (!window.confirm(`إلغاء صلاحية "${displayName}"؟ سيحتاج لتقديم طلب جديد ليستخدم النظام مرة أخرى.`)) return;
+    setRevokingId(userId);
+    setRevokeMsg("");
+    const { data, error } = await supabase.rpc("revoke_staff_access", { p_user_id: userId });
+    setRevokingId(null);
+    if (error) setRevokeMsg(error.message);
+    else if (!data) setRevokeMsg("تعذّر إلغاء الصلاحية.");
+    else onStaffChanged();
+  };
+
+  const supervisors = staff.filter((s) => s.role === "supervisor");
+
   if (!profile) {
     return (
       <section className="accessRequest panel">
@@ -99,46 +122,80 @@ export function AccessRequests({
   }
 
   return (
-    <section className="accessRequest panel">
-      <div className="toolbar">
-        <div>
-          <h3>طلبات الانضمام</h3>
-          <p>اعتمد المشرفين وحدد فئتهم قبل منح الصلاحية.</p>
+    <>
+      <section className="accessRequest panel">
+        <div className="toolbar">
+          <div>
+            <h3>طلبات الانضمام</h3>
+            <p>اعتمد المشرفين وحدد فئتهم قبل منح الصلاحية.</p>
+          </div>
+          <span className="pill">{requests.length} طلب</span>
         </div>
-        <span className="pill">{requests.length} طلب</span>
-      </div>
-      {requests.length === 0 ? (
-        <div className="empty">لا توجد طلبات معلقة.</div>
-      ) : (
-        <div className="requestList">
-          {requests.map((r) => (
-            <div className="requestRow" key={r.id}>
-              <div>
-                <b>{r.display_name || "بدون اسم"}</b>
-                <small>{r.email}</small>
+        {requests.length === 0 ? (
+          <div className="empty">لا توجد طلبات معلقة.</div>
+        ) : (
+          <div className="requestList">
+            {requests.map((r) => (
+              <div className="requestRow" key={r.id}>
+                <div>
+                  <b>{r.display_name || "بدون اسم"}</b>
+                  <small>{r.email}</small>
+                </div>
+                <select defaultValue={r.requested_group_id || ""} id={"g-" + r.id}>
+                  {groups.map((g) => (
+                    <option key={g.id} value={g.id}>
+                      {g.name}
+                    </option>
+                  ))}
+                </select>
+                <button
+                  className="primary"
+                  onClick={() => {
+                    const e = document.getElementById("g-" + r.id) as HTMLSelectElement;
+                    review(r.id, "approve", e.value);
+                  }}
+                >
+                  قبول
+                </button>
+                <button onClick={() => review(r.id, "reject")}>رفض</button>
               </div>
-              <select defaultValue={r.requested_group_id || ""} id={"g-" + r.id}>
-                {groups.map((g) => (
-                  <option key={g.id} value={g.id}>
-                    {g.name}
-                  </option>
-                ))}
-              </select>
-              <button
-                className="primary"
-                onClick={() => {
-                  const e = document.getElementById("g-" + r.id) as HTMLSelectElement;
-                  review(r.id, "approve", e.value);
-                }}
-              >
-                قبول
-              </button>
-              <button onClick={() => review(r.id, "reject")}>رفض</button>
-            </div>
-          ))}
+            ))}
+          </div>
+        )}
+        {msg && <small>{msg}</small>}
+      </section>
+
+      <section className="accessRequest panel">
+        <div className="toolbar">
+          <div>
+            <h3>المشرفون الحاليون</h3>
+            <p>ألغِ صلاحية أي مشرف سبق قبوله -- سيحتاج لطلب جديد ليستخدم النظام مرة أخرى.</p>
+          </div>
+          <span className="pill">{supervisors.length} مشرف</span>
         </div>
-      )}
-      {msg && <small>{msg}</small>}
-    </section>
+        {supervisors.length === 0 ? (
+          <div className="empty">لا يوجد مشرفون حاليًا.</div>
+        ) : (
+          <div className="requestList">
+            {supervisors.map((s) => (
+              <div className="requestRow" key={s.user_id}>
+                <div>
+                  <b>{s.display_name || "بدون اسم"}</b>
+                  <small>{groups.find((g) => g.id === s.group_id)?.name || "بدون فئة"}</small>
+                </div>
+                <button
+                  className="dangerBtn"
+                  disabled={revokingId === s.user_id}
+                  onClick={() => revoke(s.user_id, s.display_name || "هذا المشرف")}
+                >
+                  {revokingId === s.user_id ? "جارٍ الإلغاء…" : "إلغاء الصلاحية"}
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+        {revokeMsg && <small>{revokeMsg}</small>}
+      </section>
+    </>
   );
 }

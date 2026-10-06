@@ -151,41 +151,44 @@ export function Board({
       {msg && <div className="error">{msg}</div>}
 
       {view === "entry" && (
-        <div className="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>المغامر</th>
-                <th>الصف</th>
-                {criteria.map((c) => (
-                  <th key={c.id}>{c.name}</th>
-                ))}
-                <th>المجموع</th>
-              </tr>
-            </thead>
-            <tbody>
-              {entryRows.map((p) => (
-                <tr key={p.id}>
-                  <td className={rankClass(p.rank)}>{p.rank}</td>
-                  <td className="name">{p.name}</td>
-                  <td>{p.grade}</td>
+        <>
+          <p className="scrollHint">مرّر الجدول يمينًا ويسارًا لرؤية باقي الأعمدة ⇄</p>
+          <div className="tableWrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>المغامر</th>
+                  <th>الصف</th>
                   {criteria.map((c) => (
-                    <td key={c.id}>
-                      <input
-                        type="number"
-                        min="0"
-                        defaultValue={scoreValue(p.id, c.id, scores) ?? ""}
-                        onBlur={(e) => saveScore(p.id, c.id, e.target.value)}
-                      />
-                    </td>
+                    <th key={c.id}>{c.name}</th>
                   ))}
-                  <td className="total">{p.total}</td>
+                  <th>المجموع</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {entryRows.map((p) => (
+                  <tr key={p.id}>
+                    <td className={rankClass(p.rank)}>{p.rank}</td>
+                    <td className="name">{p.name}</td>
+                    <td>{p.grade}</td>
+                    {criteria.map((c) => (
+                      <td key={c.id}>
+                        <input
+                          type="number"
+                          min="0"
+                          defaultValue={scoreValue(p.id, c.id, scores) ?? ""}
+                          onBlur={(e) => saveScore(p.id, c.id, e.target.value)}
+                        />
+                      </td>
+                    ))}
+                    <td className="total">{p.total}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
       )}
 
       {view === "results" && (
@@ -199,14 +202,18 @@ export function Board({
             {ranked.map((p) => {
               const g = groupById.get(p.group_id);
               const open = openId === p.id;
+              // Only show whichever of grade/group actually varies row to row --
+              // showing both repeats the same "الصف الخامس والسادس" wording
+              // the group name already carries, which is what made this cramped.
+              const meta = groupFilter === "all" ? g?.name || "" : `الصف ${p.grade}`;
               return (
                 <div key={p.id} className="resultRow">
-                  <button className="resultRowHead" onClick={() => setOpenId(open ? null : p.id)}>
+                  <button className={"resultRowHead" + (open ? " open" : "")} onClick={() => setOpenId(open ? null : p.id)}>
                     <span className={"resultRank " + rankClass(p.rank)}>{p.rank}</span>
-                    <span className="resultName">{p.name}</span>
-                    <small>
-                      الصف {p.grade} · {g?.name || ""}
-                    </small>
+                    <span className="resultMain">
+                      <span className="resultName">{p.name}</span>
+                      {meta && <small className="resultMeta">{meta}</small>}
+                    </span>
                     <b className="resultTotal">{p.total}</b>
                   </button>
                   {open && (

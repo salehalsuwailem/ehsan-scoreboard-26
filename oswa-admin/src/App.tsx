@@ -125,19 +125,25 @@ function Workspace() {
         <div className="brand">
           <img src={logo} alt="شعار المغامرون" />
           <div>
-            <b>لوحة نقاط المغامرون</b>
-            <small>
-              <img className="oswaBadge" src={oswaLogo} alt="" /> أُسوة · 2026
-            </small>
+            <b>
+              <img className="oswaBadge" src={oswaLogo} alt="" /> فصل أُسوة 2026
+            </b>
+            {profile && <NameTag profile={profile} groups={groups} onRenamed={loadProfile} />}
           </div>
         </div>
         <div className="headActions">
-          {profile && <NameTag profile={profile} groups={groups} onRenamed={loadProfile} />}
           <button onClick={() => supabase.auth.signOut()}>خروج</button>
         </div>
       </header>
       <main>
-        <AccessRequests profile={profile} managerExists={managerExists} groups={groups} onClaim={claimManager} />
+        <AccessRequests
+          profile={profile}
+          managerExists={managerExists}
+          groups={groups}
+          staff={staff}
+          onClaim={claimManager}
+          onStaffChanged={loadData}
+        />
 
         {profile && term && (
           <>
