@@ -21,6 +21,10 @@ export type Participant = {
 
 export type CriterionKind = "score" | "bonus" | "deduction";
 
+// group_id null = shared across every group (the historical behaviour).
+// Non-null = created by and scoped to one group's own supervisor -- only
+// that group's participants show it or get scored on it, and only a
+// manager or that same group's supervisor can edit/retire/reorder it.
 export type Criterion = {
   id: string;
   term_id: string;
@@ -28,6 +32,7 @@ export type Criterion = {
   kind: CriterionKind;
   sort_order: number;
   is_active: boolean;
+  group_id: string | null;
 };
 
 // value is always stored as a non-negative magnitude (DB check: value >= 0).

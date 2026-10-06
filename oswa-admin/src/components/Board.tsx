@@ -29,7 +29,12 @@ export function Board({
   const [msg, setMsg] = useState("");
   const [openId, setOpenId] = useState<string | null>(null);
 
+  // criteriaById keeps every criterion (even disabled/group-scoped ones a
+  // viewer can't currently see) because a past score can still reference
+  // one and computeTotal/results need to resolve its kind regardless.
   const criteriaById = useMemo(() => new Map(criteria.map((c) => [c.id, c])), [criteria]);
+
+  const activeCriteria = useMemo(() => criteria.filter((c) => c.is_active), [criteria]);
 
   // Only the grades that actually exist within the currently selected group
   // (and, for a supervisor, participants are already RLS-scoped to their
@@ -50,6 +55,16 @@ export function Board({
       ),
     [participants, groupFilter, gradeFilter, search],
   );
+
+  // Columns for the entry table / rows for the results detail: a global
+  // criterion (group_id null) always applies; a group-scoped one only
+  // applies when at least one currently-visible participant belongs to
+  // that group -- so a supervisor only ever sees their own group's extra
+  // columns, and a manager viewing "كل الفئات" sees the union of everyone's.
+  const entryCriteria = useMemo(() => {
+    const visibleGroupIds = new Set(filtered.map((p) => p.group_id));
+    return activeCriteria.filter((c) => !c.group_id || visibleGroupIds.has(c.group_id));
+  }, [activeCriteria, filtered]);
 
   // Ranked once here (by total, competition-style) and reused by both views —
   // the entry table below displays this same rank number/color per row, it
@@ -160,7 +175,7 @@ export function Board({
                   <th>#</th>
                   <th>المغامر</th>
                   <th>الصف</th>
-                  {criteria.map((c) => (
+                  {entryCriteria.map((c) => (
                     <th key={c.id}>{c.name}</th>
                   ))}
                   <th>المجموع</th>
@@ -172,16 +187,22 @@ export function Board({
                     <td className={rankClass(p.rank)}>{p.rank}</td>
                     <td className="name">{p.name}</td>
                     <td>{p.grade}</td>
-                    {criteria.map((c) => (
-                      <td key={c.id}>
-                        <input
-                          type="number"
-                          min="0"
-                          defaultValue={scoreValue(p.id, c.id, scores) ?? ""}
-                          onBlur={(e) => saveScore(p.id, c.id, e.target.value)}
-                        />
-                      </td>
-                    ))}
+                    {entryCriteria.map((c) =>
+                      c.group_id && c.group_id !== p.group_id ? (
+                        <td key={c.id} className="notApplicable">
+                          —
+                        </td>
+                      ) : (
+                        <td key={c.id}>
+                          <input
+                            type="number"
+                            min="0"
+                            defaultValue={scoreValue(p.id, c.id, scores) ?? ""}
+                            onBlur={(e) => saveScore(p.id, c.id, e.target.value)}
+                          />
+                        </td>
+                      ),
+                    )}
                     <td className="total">{p.total}</td>
                   </tr>
                 ))}
@@ -206,6 +227,7 @@ export function Board({
               // showing both repeats the same "الصف الخامس والسادس" wording
               // the group name already carries, which is what made this cramped.
               const meta = groupFilter === "all" ? g?.name || "" : `الصف ${p.grade}`;
+              const myCriteria = activeCriteria.filter((c) => !c.group_id || c.group_id === p.group_id);
               return (
                 <div key={p.id} className="resultRow">
                   <button className={"resultRowHead" + (open ? " open" : "")} onClick={() => setOpenId(open ? null : p.id)}>
@@ -218,7 +240,7 @@ export function Board({
                   </button>
                   {open && (
                     <div className="resultDetail">
-                      {criteria.map((c) => {
+                      {myCriteria.map((c) => {
                         const s = scores.find((x) => x.participant_id === p.id && x.criterion_id === c.id);
                         if (!s) return null;
                         const signed = signedContribution(s.value, c.kind);
@@ -239,7 +261,7 @@ export function Board({
                           </div>
                         );
                       })}
-                      {criteria.every((c) => scoreValue(p.id, c.id, scores) === null) && (
+                      {myCriteria.every((c) => scoreValue(p.id, c.id, scores) === null) && (
                         <div className="resultDetailRow">
                           <span>لا توجد نقاط مسجّلة بعد.</span>
                         </div>

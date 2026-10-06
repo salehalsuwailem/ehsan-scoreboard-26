@@ -73,7 +73,10 @@ function Workspace() {
       supabase.from("terms").select("id,name,year,is_active").eq("is_active", true).maybeSingle(),
       supabase.from("groups").select("id,term_id,name"),
       supabase.from("participants").select("id,group_id,name,grade,is_active"),
-      supabase.from("criteria").select("id,term_id,name,kind,sort_order,is_active").eq("is_active", true).order("sort_order"),
+      // Not filtered to is_active here -- "بنود النقاط" needs to see disabled
+      // items too so "تفعيل" (re-enable) has something to act on. Scoring
+      // and results screens filter to active themselves (Board.tsx).
+      supabase.from("criteria").select("id,term_id,name,kind,sort_order,is_active,group_id").order("sort_order"),
       supabase.from("scores").select("id,participant_id,criterion_id,value,note,updated_by,updated_at"),
       supabase.from("recognitions").select("id,term_id,participant_id,type,week_date,event_date,note"),
       supabase.from("staff_profiles").select("user_id,role,group_id,display_name"),
@@ -186,7 +189,9 @@ function Workspace() {
             {tab === "participants" && (
               <Participants profile={profile} groups={groups} participants={participants} onChanged={loadData} />
             )}
-            {tab === "criteria" && <Criteria profile={profile} criteria={criteria} termId={term.id} onChanged={loadData} />}
+            {tab === "criteria" && (
+              <Criteria profile={profile} groups={groups} criteria={criteria} termId={term.id} onChanged={loadData} />
+            )}
             {tab === "recognitions" && (
               <Recognitions participants={activeParticipants} recognitions={recognitions} termId={term.id} onChanged={loadData} />
             )}

@@ -37,6 +37,7 @@ export type Database = {
           kind: string;
           sort_order: number;
           is_active: boolean;
+          group_id: string | null;
           created_at: string;
           updated_at: string;
         };
@@ -47,6 +48,7 @@ export type Database = {
           kind?: string;
           sort_order?: number;
           is_active?: boolean;
+          group_id?: string | null;
           created_at?: string;
           updated_at?: string;
         };
