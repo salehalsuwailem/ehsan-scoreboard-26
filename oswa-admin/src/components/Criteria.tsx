@@ -152,7 +152,7 @@ export function Criteria({
                   <span className={"criterionScope" + (c.group_id ? " own" : "")}>{scopeLabel(c)}</span>
                 </div>
               </div>
-              {editable && (
+              {editable ? (
                 <div className="criterionActions">
                   <button
                     className="moveBtn"
@@ -173,6 +173,12 @@ export function Criteria({
                   <button onClick={() => setEditing(c)}>تعديل</button>
                   <button onClick={() => toggleActive(c)}>{c.is_active ? "تعطيل" : "تفعيل"}</button>
                 </div>
+              ) : (
+                !isManager && (
+                  <small className="criterionLocked">
+                    {c.group_id ? "بند فئة أخرى -- لا يمكنك تعديله" : "بند عام -- يعدّله المدير فقط"}
+                  </small>
+                )
               )}
             </div>
           );

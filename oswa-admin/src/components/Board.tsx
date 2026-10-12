@@ -114,11 +114,16 @@ export function Board({
 
   const rankClass = (rank: number) => (rank === 1 ? "rank1" : rank === 2 ? "rank2" : rank === 3 ? "rank3" : "");
 
-  const podium = {
-    first: ranked.filter((p) => p.rank === 1),
-    second: ranked.filter((p) => p.rank === 2),
-    third: ranked.filter((p) => p.rank === 3),
-  };
+  // The podium's three tiles are the top three *distinct* totals, not
+  // rank===1/2/3 -- with competition ranking a four-way tie at 1st makes
+  // the next rank jump straight to 5 (1,1,1,1,5), which would leave the
+  // silver/bronze tiles empty even though there plainly is a 2nd- and
+  // 3rd-best score to show.
+  const podiumTiers = useMemo(() => {
+    const distinctTotals = [...new Set(ranked.map((p) => p.total))].sort((a, b) => b - a);
+    const byTotal = (t: number | undefined) => (t === undefined ? [] : ranked.filter((p) => p.total === t));
+    return { first: byTotal(distinctTotals[0]), second: byTotal(distinctTotals[1]), third: byTotal(distinctTotals[2]) };
+  }, [ranked]);
 
   return (
     <section className="panel">
@@ -215,9 +220,9 @@ export function Board({
       {view === "results" && (
         <div className="results">
           <div className="podium">
-            <PodiumTile people={podium.second} cls="silver" label="الثاني" />
-            <PodiumTile people={podium.first} cls="gold" label="الأول" tall />
-            <PodiumTile people={podium.third} cls="bronze" label="الثالث" />
+            <PodiumTile people={podiumTiers.second} cls="silver" label="الثاني" />
+            <PodiumTile people={podiumTiers.first} cls="gold" label="الأول" tall />
+            <PodiumTile people={podiumTiers.third} cls="bronze" label="الثالث" />
           </div>
           <div className="resultsList">
             {ranked.map((p) => {
